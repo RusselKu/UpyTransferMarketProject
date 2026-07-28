@@ -1,0 +1,21 @@
+# Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE files
+.vscode/
+.idea/
+
+# Generated dataset and graph outputs (can be rebuilt with scripts)
+
+# We keep the instructions and PDF convocatory tracked so they are in the repository:
+# !instrucciones.md
+# !Convocatoria_Visualizacion_Redes_Semana_de_Ingenierías_UPY_2026.pdf
