@@ -2,6 +2,7 @@ import json
 import os
 import sys
 import subprocess
+import re
 
 # Self-install dependencies if missing
 for lib in ["networkx", "matplotlib"]:
@@ -12,12 +13,20 @@ for lib in ["networkx", "matplotlib"]:
         subprocess.run([sys.executable, "-m", "pip", "install", lib], check=True)
 
 import networkx as nx
+
+try:
+    import networkx.algorithms.community as nx_comm
+except ImportError:
+    try:
+        import networkx.community as nx_comm
+    except ImportError:
+        nx_comm = None
+
 import matplotlib.pyplot as plt
 
 # Reconfigure stdout for UTF-8
 sys.stdout.reconfigure(encoding='utf-8')
 
-# Division classifications of clubs
 DIVISION_1 = {
     "Real Madrid", "FC Barcelona", "Atlético de Madrid", "Real Sociedad", "Celta de Vigo",
     "Athletic Bilbao", "Sevilla", "Real Betis", "Villarreal", "Valencia", "Alavés",
@@ -26,6 +35,8 @@ DIVISION_1 = {
     "Racing de Santander", "Real Oviedo"
 }
 
+EXTERNAL_LEAGUES = {"Premier League", "Bundesliga", "Ligue 1", "Serie A", "Resto del mundo"}
+
 def clean_cost(cost_str):
     if not cost_str:
         return 0.0
@@ -33,7 +44,6 @@ def clean_cost(cost_str):
     if "gratis" in cost_str_clean or "libre" in cost_str_clean or "cesión" in cost_str_clean or "regreso" in cost_str_clean or "fin de contrato" in cost_str_clean:
         return 0.0
     
-    # Extract numbers (e.g. "55,00M €" -> 55.0)
     match = re.search(r'([\d,\.]+)\s*([mk]?)', cost_str_clean)
     if match:
         val_str = match.group(1).replace('.', '').replace(',', '.')
@@ -41,15 +51,13 @@ def clean_cost(cost_str):
             val = float(val_str)
             unit = match.group(2)
             if unit == 'm':
-                return val # in Millions
+                return val
             elif unit == 'k':
-                return val / 1000.0 # convert to Millions
+                return val / 1000.0
             return val
         except ValueError:
             return 0.0
     return 0.0
-
-import re
 
 def main():
     dataset_file = "transfers_dataset.json"
@@ -62,15 +70,15 @@ def main():
         
     print(f"Loaded {len(transfers)} transfers from dataset.")
     
-    # -------------------------------------------------------------
-    # 1. Build Club-Only Graph (Direct transfers between clubs)
-    # -------------------------------------------------------------
     G_clubs = nx.MultiDiGraph()
+    G_clubs_weighted = nx.DiGraph()
+    financials = {}
+    cantera_transfers = []
     
-    # Add external leagues explicitly to ensure nodes exist
-    external_leagues = {"Premier League", "Bundesliga", "Ligue 1", "Serie A", "Resto del mundo"}
-    for league in external_leagues:
+    for league in EXTERNAL_LEAGUES:
         G_clubs.add_node(league, type="external_league", division="None", label=league)
+        G_clubs_weighted.add_node(league, type="external_league", division="None", label=league)
+        financials[league] = {"spent_m": 0.0, "earned_m": 0.0, "arrivals": 0, "departures": 0}
         
     for t in transfers:
         source = t["source_node"]
@@ -78,18 +86,28 @@ def main():
         player = t["player"]
         cost_val = clean_cost(t["cost"])
         
-        # Add nodes if they don't exist
+        # Check if cantera / filial transfer
+        if " b" in source.lower() or " b" in target.lower() or "ii" in source.lower() or "ii" in target.lower():
+            cantera_transfers.append(t)
+            
         for node in [source, target]:
+            if node not in financials:
+                financials[node] = {"spent_m": 0.0, "earned_m": 0.0, "arrivals": 0, "departures": 0}
+        
+        financials[source]["earned_m"] += cost_val
+        financials[source]["departures"] += 1
+        financials[target]["spent_m"] += cost_val
+        financials[target]["arrivals"] += 1
+        
+        for node in [source, target]:
+            div_str = "None" if node in EXTERNAL_LEAGUES else ("1" if node in DIVISION_1 else "2")
+            node_type = "external_league" if node in EXTERNAL_LEAGUES else ("filial" if " B" in node or " II" in node else "club")
+            
             if not G_clubs.has_node(node):
-                div = 1 if node in DIVISION_1 else 2
-                if node in external_leagues:
-                    div_str = "None"
-                else:
-                    div_str = str(div)
-                node_type = "external_league" if node in external_leagues else "club"
                 G_clubs.add_node(node, type=node_type, division=div_str, label=node)
+            if not G_clubs_weighted.has_node(node):
+                G_clubs_weighted.add_node(node, type=node_type, division=div_str, label=node)
                 
-        # Add edge
         G_clubs.add_edge(
             source, target,
             player=player,
@@ -99,13 +117,21 @@ def main():
             season=t["season"]
         )
         
-    # -------------------------------------------------------------
-    # 2. Build Heterogeneous Graph (Clubs and Players as Nodes)
-    # -------------------------------------------------------------
+        if G_clubs_weighted.has_edge(source, target):
+            G_clubs_weighted[source][target]["weight"] += 1
+            G_clubs_weighted[source][target]["cost_millions"] += cost_val
+            G_clubs_weighted[source][target]["players"].append(player)
+        else:
+            G_clubs_weighted.add_edge(
+                source, target,
+                weight=1,
+                cost_millions=cost_val,
+                players=[player]
+            )
+
+    # Heterogeneous Graph
     G_hetero = nx.DiGraph()
-    
-    # Add external leagues
-    for league in external_leagues:
+    for league in EXTERNAL_LEAGUES:
         G_hetero.add_node(league, type="external_league", division="None", label=league)
         
     for t in transfers:
@@ -114,18 +140,12 @@ def main():
         player = t["player"]
         cost_val = clean_cost(t["cost"])
         
-        # Add source and target club nodes
         for node in [source, target]:
             if not G_hetero.has_node(node):
-                div = 1 if node in DIVISION_1 else 2
-                if node in external_leagues:
-                    div_str = "None"
-                else:
-                    div_str = str(div)
-                node_type = "external_league" if node in external_leagues else "club"
+                div_str = "None" if node in EXTERNAL_LEAGUES else ("1" if node in DIVISION_1 else "2")
+                node_type = "external_league" if node in EXTERNAL_LEAGUES else ("filial" if " B" in node or " II" in node else "club")
                 G_hetero.add_node(node, type=node_type, division=div_str, label=node)
                 
-        # Add player node (differentiate if players have same name using unique identifier)
         player_node_id = f"Player: {player}"
         G_hetero.add_node(
             player_node_id,
@@ -137,171 +157,171 @@ def main():
             cost_millions=cost_val,
             season=t["season"]
         )
-        
-        # Add edges: Source Club -> Player -> Target Club
         G_hetero.add_edge(source, player_node_id, type="departure", season=t["season"], cost_millions=cost_val)
         G_hetero.add_edge(player_node_id, target, type="arrival", season=t["season"], cost_millions=cost_val)
-        
-    # Save GEXF files for Gephi
-    nx.write_gexf(G_clubs, "la_liga_transfers_clubs_only.gexf")
-    nx.write_gexf(G_hetero, "la_liga_transfers_heterogeneous.gexf")
-    print("Exported GEXF graph files successfully.")
+
+    # Calculate Network Analysis Metrics
+    G_clubs_simple = nx.DiGraph(G_clubs)
     
-    # -------------------------------------------------------------
-    # 3. Calculate Network Analysis Metrics
-    # -------------------------------------------------------------
-    
-    # We will run analysis on the Heterogeneous Graph for structural properties,
-    # and on the Club-Only Graph for club-to-club connections.
-    
-    # Graph size
-    nodes_count_h = G_hetero.number_of_nodes()
-    edges_count_h = G_hetero.number_of_edges()
-    
-    nodes_count_c = G_clubs.number_of_nodes()
-    edges_count_c = G_clubs.number_of_edges()
-    
-    # Weakly connected components
-    components_h = list(nx.weakly_connected_components(G_hetero))
-    components_c = list(nx.weakly_connected_components(G_clubs))
-    
-    # Density
-    density_h = nx.density(G_hetero)
-    density_c = nx.density(G_clubs)
-    
-    # Centralities for clubs (in Club-Only Graph for direct relationships)
-    # Compute in-degree (who buys most) and out-degree (who sells most)
     in_degrees = dict(G_clubs.in_degree())
     out_degrees = dict(G_clubs.out_degree())
     total_degrees = dict(G_clubs.degree())
     
-    # Betweenness centrality (treating as simple directed graph to compute standard betweenness)
-    # Convert MultiDiGraph to DiGraph for standard centrality metrics
-    G_clubs_simple = nx.DiGraph(G_clubs)
     betweenness = nx.betweenness_centrality(G_clubs_simple)
     closeness = nx.closeness_centrality(G_clubs_simple)
     
-    # Sort and rank clubs
+    try:
+        pagerank = nx.pagerank(G_clubs_simple, alpha=0.85)
+    except Exception:
+        pagerank = {node: 0.0 for node in G_clubs_simple.nodes()}
+        
+    # Assortativity by division
+    try:
+        assortativity = nx.attribute_assortativity_coefficient(G_clubs_simple, "division")
+    except Exception:
+        assortativity = 0.0
+        
+    G_undirected = G_clubs_simple.to_undirected()
+    communities_tuple = []
+    if nx_comm and hasattr(nx_comm, "greedy_modularity_communities"):
+        try:
+            communities_tuple = list(nx_comm.greedy_modularity_communities(G_undirected))
+        except Exception:
+            communities_tuple = [set(G_undirected.nodes())]
+    else:
+        communities_tuple = [set(G_undirected.nodes())]
+        
+    community_map = {}
+    for comm_id, comm_nodes in enumerate(communities_tuple, 1):
+        for node in comm_nodes:
+            community_map[node] = comm_id
+
+    for node in G_clubs.nodes():
+        G_clubs.nodes[node]["betweenness"] = betweenness.get(node, 0.0)
+        G_clubs.nodes[node]["closeness"] = closeness.get(node, 0.0)
+        G_clubs.nodes[node]["pagerank"] = pagerank.get(node, 0.0)
+        G_clubs.nodes[node]["community"] = community_map.get(node, 1)
+        G_clubs.nodes[node]["spent_m"] = financials.get(node, {}).get("spent_m", 0.0)
+        G_clubs.nodes[node]["earned_m"] = financials.get(node, {}).get("earned_m", 0.0)
+
+    for node in G_hetero.nodes():
+        G_hetero.nodes[node]["community"] = community_map.get(node, 1) if node in community_map else 0
+
+    nx.write_gexf(G_clubs, "la_liga_transfers_clubs_only.gexf")
+    nx.write_gexf(G_hetero, "la_liga_transfers_heterogeneous.gexf")
+    print("Exported enhanced GEXF graph files successfully.")
+
     top_in_degrees = sorted(in_degrees.items(), key=lambda x: x[1], reverse=True)[:5]
     top_out_degrees = sorted(out_degrees.items(), key=lambda x: x[1], reverse=True)[:5]
     top_total_degrees = sorted(total_degrees.items(), key=lambda x: x[1], reverse=True)[:5]
     top_betweenness = sorted(betweenness.items(), key=lambda x: x[1], reverse=True)[:5]
     top_closeness = sorted(closeness.items(), key=lambda x: x[1], reverse=True)[:5]
-    
-    # Bridges (undirected representation of club-only graph)
-    G_undirected = nx.Graph(G_clubs_simple)
-    bridges = list(nx.bridges(G_undirected))
-    
-    # Write analysis to markdown file
+    top_pagerank = sorted(pagerank.items(), key=lambda x: x[1], reverse=True)[:5]
+    top_spenders = sorted(financials.items(), key=lambda x: x[1]["spent_m"], reverse=True)[:5]
+    top_earners = sorted(financials.items(), key=lambda x: x[1]["earned_m"], reverse=True)[:5]
+
     analysis_file = "network_analysis.md"
     with open(analysis_file, "w", encoding="utf-8") as f:
         f.write("# Ficha Técnica y Reporte de Análisis de Redes\n\n")
-        f.write("Este documento contiene las métricas y el análisis del mercado de fichajes de La Liga (temporadas 2025/2026 y 2026/2027) útil para completar la visualización y la ficha técnica A4.\n\n")
+        f.write("Este documento contiene las métricas avanzadas y el análisis del mercado de fichajes de LaLiga (2025-2027) útil para completar la visualización y la ficha técnica A4.\n\n")
         
         f.write("## 1. Ficha Técnica General (Formato A4)\n\n")
         f.write("| Campo | Contenido |\n")
         f.write("| --- | --- |\n")
         f.write("| **Nombre de la red** | Red de Traspasos de LaLiga (2025-2027) |\n")
         f.write("| **Fuente** | Fichajes.com (Mercado Oficial de Fichajes) |\n")
-        f.write(f"| **Tipo de Grafo** | Dirigido, Heterogéneo (Clubes, Jugadores y Ligas) / Multígrafo Dirigido (Clubes únicamente) |\n")
-        f.write(f"| **Tamaño (Grafo Heterogéneo)** | {nodes_count_h} nodos, {edges_count_h} aristas |\n")
-        f.write(f"| **Tamaño (Grafo Clubes únicamente)** | {nodes_count_c} nodos, {edges_count_c} aristas |\n")
-        f.write(f"| **Densidad del Grafo (Heterogéneo)** | {density_h:.5f} |\n")
-        f.write(f"| **Componentes Conectadas (Débiles)** | {len(components_h)} componente(s) |\n")
-        f.write("| **Herramientas utilizadas** | Python, BeautifulSoup4, NetworkX, Gephi |\n\n")
+        f.write(f"| **Tipo de Grafo** | Dirigido, Heterogéneo / Multígrafo Dirigido Ponderado |\n")
+        f.write(f"| **Tamaño (Grafo Heterogéneo)** | {G_hetero.number_of_nodes()} nodos, {G_hetero.number_of_edges()} aristas |\n")
+        f.write(f"| **Tamaño (Grafo Clubes)** | {G_clubs.number_of_nodes()} nodos, {G_clubs.number_of_edges()} traspasos ({G_clubs_weighted.number_of_edges()} enlaces únicos) |\n")
+        f.write(f"| **Coeficiente de Homofilia (División)** | {assortativity:.4f} |\n")
+        f.write(f"| **Número de Comunidades (Louvain/Greedy)** | {len(communities_tuple)} comunidades detectadas |\n")
+        f.write(f"| **Traspasos de Cantera (Equipos B)** | {len(cantera_transfers)} movimientos detectados |\n")
+        f.write("| **Herramientas utilizadas** | Python, BeautifulSoup4, NetworkX, Gephi, Vis.js, Chart.js |\n\n")
         
-        f.write("## 2. Análisis del Grafo de Clubes (Centralidad y Traspasos)\n\n")
-        f.write("A continuación se detallan los nodos con mayor influencia en la red de clubes:\n\n")
-        
-        f.write("### Nodos con Mayor Grado Total (Mayor Actividad de Fichajes)\n")
-        f.write("Representa el número total de movimientos de entrada y salida de un club.\n\n")
+        f.write("## 2. Métricas de Centralidad SNA\n\n")
+        f.write("### Nodos con Mayor Grado Total\n")
         for rank, (club, deg) in enumerate(top_total_degrees, 1):
             f.write(f"{rank}. **{club}** (Grado: {deg})\n")
             
-        f.write("\n### Nodos con Mayor In-Degree (Mayores Compradores/Altas)\n")
-        f.write("Clubs que han recibido más jugadores durante las últimas dos temporadas.\n\n")
-        for rank, (club, deg) in enumerate(top_in_degrees, 1):
-            f.write(f"{rank}. **{club}** (In-Degree: {deg})\n")
-            
-        f.write("\n### Nodos con Mayor Out-Degree (Mayores Vendedores/Bajas)\n")
-        f.write("Clubs que han enviado más jugadores a otros destinos.\n\n")
-        for rank, (club, deg) in enumerate(top_out_degrees, 1):
-            f.write(f"{rank}. **{club}** (Out-Degree: {deg})\n")
-            
-        f.write("\n### Nodos con Mayor Intermediación (Betweenness Centrality - Puentes del Mercado)\n")
-        f.write("Mide la frecuencia con la que un club aparece en el camino más corto entre otros dos clubes. ")
-        f.write("Los clubes con alta intermediación actúan como puentes o intermediarios en el flujo de jugadores.\n\n")
+        f.write("\n### Nodos con Mayor Intermediación (Betweenness Centrality - Puentes)\n")
         for rank, (club, bet) in enumerate(top_betweenness, 1):
             f.write(f"{rank}. **{club}** (Intermediación: {bet:.5f})\n")
-            
-        f.write("\n### Nodos con Mayor Cercanía (Closeness Centrality)\n")
-        f.write("Mide qué tan rápido se puede llegar de un club a cualquier otro club en la red. ")
-        f.write("Indica qué tan centralizado o bien posicionado está un club para interactuar con toda la red.\n\n")
-        for rank, (club, clos) in enumerate(top_closeness, 1):
-            f.write(f"{rank}. **{club}** (Cercanía: {clos:.5f})\n")
-            
-        f.write("\n## 3. Puentes (Bridges) en la Red de Clubes\n")
-        f.write("Un puente es una arista cuya eliminación divide la red en más componentes. ")
-        f.write("En nuestro mercado de fichajes (tratado como no dirigido), estos pares de clubes representan las únicas conexiones ")
-        f.write("que mantienen conectados ciertos componentes aislados con la red principal:\n\n")
-        if bridges:
-            for u, v in bridges[:10]:
-                f.write(f"- Puente entre **{u}** y **{v}**\n")
-            if len(bridges) > 10:
-                f.write(f"- ... y otros {len(bridges) - 10} puentes.\n")
-        else:
-            f.write("No se identificaron puentes críticos en la red simplificada.\n")
-            
-        f.write("\n## 4. Respuestas a Preguntas de Análisis y Hallazgos\n\n")
-        f.write("> [!TIP]\n")
-        f.write("> **Hallazgo 1: Centralidad de las Grandes Ligas Externas**\n")
-        f.write("> Ligas como la *Premier League* y la *Serie A* se comportan como enormes \"hubs\" o concentradores ")
-        f.write("> en la periferia de LaLiga, absorbiendo un alto volumen de ventas y proveyendo fichajes de renombre. ")
-        f.write("> Esto confirma que, en lugar de modelar cada club extranjero, agruparlos en un único nodo de liga ")
-        f.write("> simplifica el grafo sin perder la riqueza del flujo internacional.\n\n")
-        
-        f.write("> [!TIP]\n")
-        f.write("> **Hallazgo 2: Conexión de Filiales (Equipos B)**\n")
-        f.write("> Los equipos B (filiales) muestran conexiones directas y exclusivas con sus equipos principales ")
-        f.write("> (ej. Celta de Vigo a Celta de Vigo B o Real Sociedad a Real Sociedad B), sirviendo como canteras de promoción. ")
-        f.write("> Esto genera estructuras tipo árbol o de estrella locales dentro del grafo que reflejan fielmente ")
-        f.write("> la estructura de canteras del fútbol español.\n\n")
-        
-        f.write("> [!TIP]\n")
-        f.write("> **Hallazgo 3: Los Conectores Clave de LaLiga**\n")
-        f.write("> A través de la métrica de Intermediación, podemos ver cómo clubes de rango medio-alto de España ")
-        f.write("> (como Betis, Sevilla o Villarreal) actúan como puentes principales de compra-venta, reciclando talento ")
-        f.write("> de equipos recién descendidos o de segunda división y transfiriéndolo hacia los gigantes españoles ")
-        f.write("> (Real Madrid, Barcelona, Atlético) o al extranjero.\n")
-        
+
+        f.write("\n### Nodos con Mayor PageRank\n")
+        for rank, (club, pr) in enumerate(top_pagerank, 1):
+            f.write(f"{rank}. **{club}** (PageRank: {pr:.5f})\n")
+
+        f.write("\n## 3. Análisis Financiero (€ M)\n\n")
+        f.write("### Mayor Gasto en Fichajes\n")
+        for rank, (club, fin) in enumerate(top_spenders, 1):
+            f.write(f"{rank}. **{club}**: {fin['spent_m']:.2f} M€ ({fin['arrivals']} fichajes)\n")
+
+        f.write("\n### Mayor Ingreso por Ventas\n")
+        for rank, (club, fin) in enumerate(top_earners, 1):
+            f.write(f"{rank}. **{club}**: {fin['earned_m']:.2f} M€ ({fin['departures']} ventas)\n")
+
     print(f"Generated network analysis report in {analysis_file}")
+
+    # Generate Static PNG
+    fig, ax = plt.subplots(figsize=(16, 16), facecolor="#0f172a")
+    ax.set_facecolor("#0f172a")
+    pos = nx.spring_layout(G_clubs_weighted, k=1.4, iterations=120, seed=42)
     
-    # -------------------------------------------------------------
-    # 4. Generate visual layout check
-    # -------------------------------------------------------------
-    plt.figure(figsize=(12, 12))
-    # Simple layout for the club-only graph
-    pos = nx.spring_layout(G_clubs_simple, k=0.5, iterations=50)
+    max_bet = max(betweenness.values()) if max(betweenness.values()) > 0 else 1.0
+    node_sizes = [300 + (betweenness.get(n, 0.0) / max_bet) * 1200 for n in G_clubs_weighted.nodes()]
     
-    # Node color mapping: Spain clubs vs External leagues
     node_colors = []
-    for node, data in G_clubs_simple.nodes(data=True):
-        if data.get("type") == "external_league":
-            node_colors.append("lightcoral")
-        elif data.get("division") == "1":
-            node_colors.append("skyblue")
+    for n in G_clubs_weighted.nodes():
+        if n in EXTERNAL_LEAGUES:
+            node_colors.append("#ef4444")
+        elif n in DIVISION_1:
+            node_colors.append("#38bdf8")
         else:
-            node_colors.append("lightgreen")
+            node_colors.append("#34d399")
             
-    nx.draw_networkx_nodes(G_clubs_simple, pos, node_size=300, node_color=node_colors, alpha=0.8)
-    nx.draw_networkx_edges(G_clubs_simple, pos, width=1.0, alpha=0.5, edge_color="gray")
-    nx.draw_networkx_labels(G_clubs_simple, pos, font_size=8, font_family="sans-serif")
+    weights = [G_clubs_weighted[u][v]["weight"] for u, v in G_clubs_weighted.edges()]
+    max_w = max(weights) if weights else 1
+    edge_widths = [0.5 + (w / max_w) * 3.5 for w in weights]
     
-    plt.title("Visualización del Grafo de Traspasos de La Liga (Simplificado)")
+    nx.draw_networkx_edges(
+        G_clubs_weighted, pos, ax=ax,
+        width=edge_widths, alpha=0.35, edge_color="#94a3b8",
+        arrows=True, arrowsize=10, min_source_margin=12, min_target_margin=12
+    )
+    nx.draw_networkx_nodes(
+        G_clubs_weighted, pos, ax=ax,
+        node_size=node_sizes, node_color=node_colors, alpha=0.9,
+        linewidths=1.5, edgecolors="#ffffff"
+    )
+    
+    for node, (x, y) in pos.items():
+        bet_val = betweenness.get(node, 0.0)
+        font_weight = "bold" if bet_val > 0.03 or node in EXTERNAL_LEAGUES else "normal"
+        font_size = 9 if font_weight == "bold" else 7.5
+        
+        ax.text(
+            x, y + 0.025, node,
+            fontsize=font_size, fontweight=font_weight, color="#f8fafc",
+            ha="center", va="bottom",
+            bbox=dict(boxstyle="round,pad=0.2", facecolor="#1e293b", edgecolor="#475569", alpha=0.85, lw=0.5)
+        )
+        
+    ax.set_title("Red de Traspasos de LaLiga (2025-2027) - Grafo Consolidado de Clubes", color="#f8fafc", fontsize=16, fontweight="bold", pad=20)
+    
+    from matplotlib.lines import Line2D
+    legend_elements = [
+        Line2D([0], [0], marker='o', color='w', label='Ligas Internacionales', markerfacecolor='#ef4444', markersize=10),
+        Line2D([0], [0], marker='o', color='w', label='Primera División', markerfacecolor='#38bdf8', markersize=10),
+        Line2D([0], [0], marker='o', color='w', label='Segunda División', markerfacecolor='#34d399', markersize=10),
+        Line2D([0], [0], color='#94a3b8', lw=2, label='Grosor arista = Nº Traspasos')
+    ]
+    ax.legend(handles=legend_elements, loc='lower left', facecolor='#1e293b', edgecolor='#475569', labelcolor='#f8fafc', fontsize=10)
+    
     plt.axis("off")
     plt.tight_layout()
-    plt.savefig("la_liga_transfers_layout.png", dpi=300)
-    print("Saved preview visualization to la_liga_transfers_layout.png")
+    plt.savefig("la_liga_transfers_layout.png", dpi=300, facecolor="#0f172a")
+    plt.close()
+    print("Saved enhanced preview visualization to la_liga_transfers_layout.png")
 
 if __name__ == "__main__":
     main()
