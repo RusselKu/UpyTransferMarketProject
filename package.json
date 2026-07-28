@@ -1,0 +1,12 @@
+{
+  "name": "laliga-transfer-market-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build tooling for the LaLiga Transfer Market Analytics dashboard (docs/ static site).",
+  "scripts": {
+    "build:css": "tailwindcss -i ./docs/assets/css/tailwind.src.css -o ./docs/assets/css/app.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
+  }
+}

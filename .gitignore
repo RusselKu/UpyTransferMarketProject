@@ -14,6 +14,9 @@ env/
 .vscode/
 .idea/
 
+# Node build tooling (Tailwind)
+node_modules/
+
 # Generated dataset and graph outputs (can be rebuilt with scripts)
 
 # We keep the instructions and PDF convocatory tracked so they are in the repository:

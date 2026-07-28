@@ -1,0 +1,50 @@
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #090d16;
+    color: #f8fafc;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.theme-cyberpunk {
+    background-color: #040209;
+    color: #00f0ff;
+}
+body.theme-light {
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+.app-sidebar {
+    background-color: #0b0f19;
+    border-right: 1px solid #1e293b;
+}
+body.theme-light .app-sidebar {
+    background-color: #ffffff;
+    border-right: 1px solid #e2e8f0;
+}
+
+.app-header {
+    background-color: #0b0f19;
+    border-bottom: 1px solid #1e293b;
+}
+body.theme-light .app-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.slide-drawer {
+    background-color: #0b0f19;
+    border-left: 1px solid #1e293b;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+body.theme-light .slide-drawer {
+    background-color: #ffffff;
+    border-left: 1px solid #e2e8f0;
+}
+
+.btn-pill {
+    transition: all 0.2s ease;
+}
+.btn-pill:hover {
+    background-color: #1e293b;
+}
