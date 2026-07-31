@@ -23,6 +23,13 @@ let isFocused = false;        // hay actualmente un nodo aislado
 let timelinePlaying = false;
 let timelineInterval = null;
 
+// Helper para convertir strings de HTML en nodos DOM y evitar tooltips nativos del navegador
+function htmlTitle(html) {
+    const container = document.createElement("div");
+    container.innerHTML = html;
+    return container;
+}
+
 let nodesDataset = null;
 let edgesDataset = null;
 
@@ -60,6 +67,9 @@ function getActiveNodes() {
             // de detalle al hacer clic, evitando el solapamiento masivo.
             if (!showPlayerLabels) copy.label = undefined;
         }
+        if (copy.title && typeof copy.title === 'string') {
+            copy.title = htmlTitle(copy.title);
+        }
         return copy;
     });
 }
@@ -73,6 +83,12 @@ function getActiveEdges() {
             if (c < minFinancialCost) return false;
         }
         return true;
+    }).map(e => {
+        let copy = Object.assign({}, e);
+        if (copy.title && typeof copy.title === 'string') {
+            copy.title = htmlTitle(copy.title);
+        }
+        return copy;
     });
 }
 

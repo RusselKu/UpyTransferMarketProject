@@ -95,3 +95,35 @@ body.theme-light .slide-drawer {
         z-index: 45;
     }
 }
+
+/* Premium Styling for vis-network HTML Tooltips */
+div.vis-tooltip {
+    position: absolute;
+    visibility: hidden;
+    padding: 10px 14px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 11px;
+    color: #f8fafc;
+    background-color: rgba(11, 15, 25, 0.96); /* app sidebar bg color */
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+    pointer-events: none;
+    backdrop-filter: blur(4px);
+    transition: opacity 0.15s ease;
+}
+
+body.theme-cyberpunk div.vis-tooltip {
+    background-color: rgba(4, 2, 9, 0.96);
+    border: 1px solid #00f0ff;
+    color: #00f0ff;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.35);
+}
+
+body.theme-light div.vis-tooltip {
+    background-color: rgba(255, 255, 255, 0.96);
+    border: 1px solid #e2e8f0;
+    color: #0f172a;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
