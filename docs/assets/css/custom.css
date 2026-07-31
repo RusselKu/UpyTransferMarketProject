@@ -48,3 +48,40 @@ body.theme-light .slide-drawer {
 .btn-pill:hover {
     background-color: #1e293b;
 }
+
+/* Scrollbar utility to hide default scrollbars while keeping swipe scroll functional */
+.scrollbar-none::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-none {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    #left-sidebar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 280px;
+        max-width: 85%;
+        z-index: 40;
+        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.6);
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex !important; /* Force flex container layout */
+    }
+    
+    #left-sidebar.show-mobile {
+        transform: translateX(0);
+    }
+    
+    /* Ensure drawer doesn't overflow mobile width */
+    #right-drawer {
+        width: 100%;
+        max-width: 100%;
+        z-index: 45;
+    }
+}

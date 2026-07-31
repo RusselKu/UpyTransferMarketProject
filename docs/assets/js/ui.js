@@ -20,9 +20,48 @@ function changeTheme(themeKey) {
 // ---- Sidebar ----
 function toggleSidebar() {
     const sidebar = document.getElementById('left-sidebar');
-    sidebar.classList.toggle('hidden');
+    const showBtn = document.getElementById('btn-show-sidebar');
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile) {
+        const isShown = sidebar.classList.toggle('show-mobile');
+        if (showBtn) {
+            showBtn.style.display = isShown ? 'none' : 'flex';
+        }
+    } else {
+        const isHidden = sidebar.classList.toggle('hidden');
+        if (showBtn) {
+            showBtn.style.display = isHidden ? 'flex' : 'none';
+        }
+    }
     setTimeout(() => { if (network) network.fit({ animation: true }); }, 200);
 }
+
+function initSidebarResponsive() {
+    const isMobile = window.innerWidth <= 768;
+    const sidebar = document.getElementById('left-sidebar');
+    const showBtn = document.getElementById('btn-show-sidebar');
+    
+    if (!sidebar) return;
+    
+    if (isMobile) {
+        sidebar.classList.remove('hidden');
+        sidebar.classList.remove('show-mobile');
+        if (showBtn) {
+            showBtn.style.display = 'flex';
+        }
+    } else {
+        sidebar.classList.remove('hidden');
+        sidebar.classList.remove('show-mobile');
+        if (showBtn) {
+            showBtn.style.display = 'none';
+        }
+    }
+}
+
+window.addEventListener('DOMContentLoaded', initSidebarResponsive);
+window.addEventListener('resize', initSidebarResponsive);
+window.initSidebarResponsive = initSidebarResponsive;
 
 // ---- Drawer de detalle ----
 function openDrawer() {
@@ -457,7 +496,7 @@ function updateCompareView() {
             </div>
         </div>
 
-        <div class="col-span-2 bg-slate-950 p-3 rounded-xl border border-slate-800 text-xs text-slate-300 text-center">
+        <div class="col-span-1 md:col-span-2 bg-slate-950 p-3 rounded-xl border border-slate-800 text-xs text-slate-300 text-center">
             <span class="font-bold text-amber-400 uppercase tracking-wider text-[10px] block mb-1">Conexión Directa Entre Ambos Clubes</span>
             <div>${directText}</div>
         </div>

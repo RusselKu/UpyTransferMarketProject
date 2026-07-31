@@ -14,42 +14,42 @@
 <body class="h-screen w-screen flex flex-col overflow-hidden" id="main-body">
 
     <!-- Fixed App Header -->
-    <header class="h-14 w-full app-header px-6 flex justify-between items-center z-30 shrink-0">
-        <div class="flex items-center gap-3">
+    <header class="h-auto md:h-14 w-full app-header px-4 md:px-6 flex flex-col md:flex-row justify-between items-center z-30 shrink-0 py-2.5 md:py-0 gap-2.5 md:gap-0">
+        <div class="flex items-center gap-3 w-full md:w-auto">
             <div class="relative flex h-3 w-3">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-3 w-3 bg-violet-500"></span>
             </div>
-            <h1 class="text-base font-extrabold tracking-tight text-white">
+            <h1 class="text-base font-extrabold tracking-tight text-white whitespace-nowrap">
                 LaLiga Transfer Network Explorer <span class="text-xs font-normal text-slate-400">UPY 2026</span>
             </h1>
         </div>
 
-        <div class="flex items-center gap-2">
-            <button onclick="resetGlobalView()" class="btn-pill bg-violet-600 hover:bg-violet-500 text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow border border-violet-500 flex items-center gap-1">
+        <div class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-1.5 md:pb-0 scrollbar-none whitespace-nowrap">
+            <button onclick="resetGlobalView()" class="btn-pill bg-violet-600 hover:bg-violet-500 text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow border border-violet-500 flex items-center gap-1 shrink-0">
                 <span>🔄 Restablecer Vista</span>
             </button>
-            <button onclick="openAnalyticsModal()" class="btn-pill bg-slate-900 text-slate-200 text-xs font-bold px-3 py-1.5 rounded-xl border border-slate-800">
+            <button onclick="openAnalyticsModal()" class="btn-pill bg-slate-900 text-slate-200 text-xs font-bold px-3 py-1.5 rounded-xl border border-slate-800 shrink-0">
                 📊 Analytics Hub
             </button>
-            <button onclick="openCompareModal()" class="btn-pill bg-slate-900 text-slate-200 text-xs font-bold px-3 py-1.5 rounded-xl border border-slate-800">
+            <button onclick="openCompareModal()" class="btn-pill bg-slate-900 text-slate-200 text-xs font-bold px-3 py-1.5 rounded-xl border border-slate-800 shrink-0">
                 ⚔️ Comparador
             </button>
-            <button onclick="openPathModal()" class="btn-pill bg-slate-900 text-slate-200 text-xs font-bold px-3 py-1.5 rounded-xl border border-slate-800">
+            <button onclick="openPathModal()" class="btn-pill bg-slate-900 text-slate-200 text-xs font-bold px-3 py-1.5 rounded-xl border border-slate-800 shrink-0">
                 🔍 Camino Corto
             </button>
-            <button onclick="openWhatIfModal()" class="btn-pill bg-slate-900 text-slate-200 text-xs font-bold px-3 py-1.5 rounded-xl border border-slate-800">
+            <button onclick="openWhatIfModal()" class="btn-pill bg-slate-900 text-slate-200 text-xs font-bold px-3 py-1.5 rounded-xl border border-slate-800 shrink-0">
                 🧪 Simulador
             </button>
-            <button onclick="openGuideModal()" class="btn-pill bg-amber-950/60 text-amber-300 text-xs font-bold px-3 py-1.5 rounded-xl border border-amber-800/50">
+            <button onclick="openGuideModal()" class="btn-pill bg-amber-950/60 text-amber-300 text-xs font-bold px-3 py-1.5 rounded-xl border border-amber-800/50 shrink-0">
                 💡 Ayuda
             </button>
-            <button onclick="openFichaModal()" class="btn-pill bg-emerald-950/60 text-emerald-300 text-xs font-bold px-3 py-1.5 rounded-xl border border-emerald-800/50">
+            <button onclick="openFichaModal()" class="btn-pill bg-emerald-950/60 text-emerald-300 text-xs font-bold px-3 py-1.5 rounded-xl border border-emerald-800/50 shrink-0">
                 📄 Ficha A4
             </button>
 
             <!-- Theme Switcher Selector -->
-            <select onchange="changeTheme(this.value)" class="bg-slate-900 text-slate-200 font-bold px-2 py-1 rounded-xl text-xs border border-slate-800 ml-1 focus:outline-none">
+            <select onchange="changeTheme(this.value)" class="bg-slate-900 text-slate-200 font-bold px-2 py-1 rounded-xl text-xs border border-slate-800 ml-1 focus:outline-none shrink-0">
                 <option value="oled">🌙 OLED Slate</option>
                 <option value="cyberpunk">⚡ Cyberpunk Glow</option>
                 <option value="light">☀️ Light Print Mode</option>
@@ -203,6 +203,11 @@
         <!-- Main HD Graph Canvas Area -->
         <main class="flex-1 h-full relative bg-slate-950 flex flex-col">
 
+            <!-- Floating "show filters" button (visible when sidebar is hidden) -->
+            <button id="btn-show-sidebar" onclick="toggleSidebar()" class="absolute top-4 left-4 z-20 bg-slate-900/90 text-slate-200 hover:text-white hover:bg-slate-800 text-xs font-bold px-3 py-2 rounded-xl shadow-lg border border-slate-800 flex items-center gap-1.5 transition">
+                <span>⚡ Mostrar Filtros</span>
+            </button>
+
             <!-- Loading Overlay -->
             <div id="loading-overlay" class="absolute inset-0 bg-slate-950/90 flex items-center justify-center z-40 transition-all duration-300">
                 <div class="flex flex-col items-center gap-3">
@@ -220,13 +225,12 @@
             </button>
 
             <!-- Bottom Floating Star Transfers Bar -->
-            <div class="absolute bottom-4 left-6 z-10 bg-slate-900/90 px-4 py-2 rounded-2xl flex items-center gap-3 border border-slate-800 shadow-xl max-w-xl overflow-x-auto">
+            <div class="absolute bottom-4 left-4 right-4 md:left-6 md:right-auto z-10 bg-slate-900/90 px-4 py-2 rounded-2xl flex items-center gap-3 border border-slate-800 shadow-xl max-w-full md:max-w-xl overflow-x-auto">
                 <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 whitespace-nowrap">⭐ Fichajes Estrella:</span>
                 <div class="flex items-center gap-2" id="star-transfers-container"></div>
             </div>
         </main>
 
-        <!-- Right Slide-Over Detail Drawer -->
         <aside class="w-80 h-full slide-drawer p-5 flex flex-col gap-4 shrink-0 z-30 translate-x-full absolute right-0" id="right-drawer">
             <div class="flex justify-between items-start border-b border-slate-800 pb-3">
                 <div>
@@ -409,7 +413,7 @@
 
     <!-- Modal: Guide -->
     <div id="modal-guide" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-md flex items-center justify-center z-50 p-4">
-        <div class="bg-slate-900 w-full max-w-2xl rounded-3xl p-6 flex flex-col gap-4 border border-slate-800 shadow-2xl">
+        <div class="bg-slate-900 w-full max-w-2xl max-h-[92vh] overflow-y-auto rounded-3xl p-6 flex flex-col gap-4 border border-slate-800 shadow-2xl">
             <div class="flex justify-between items-center border-b border-slate-800 pb-3">
                 <h2 class="text-lg font-bold text-amber-400">💡 ¿Cómo entender esta Red en 30 Segundos?</h2>
                 <button onclick="closeGuideModal()" class="text-slate-400 hover:text-white p-1 rounded-lg bg-slate-950">✕</button>
@@ -433,7 +437,7 @@
 
     <!-- Modal: Path -->
     <div id="modal-path" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-md flex items-center justify-center z-50 p-4">
-        <div class="bg-slate-900 w-full max-w-xl rounded-3xl p-6 flex flex-col gap-4 border border-slate-800 shadow-2xl">
+        <div class="bg-slate-900 w-full max-w-xl max-h-[92vh] overflow-y-auto rounded-3xl p-6 flex flex-col gap-4 border border-slate-800 shadow-2xl">
             <div class="flex justify-between items-center border-b border-slate-800 pb-3">
                 <h2 class="text-lg font-bold text-cyan-400">🔍 Camino Más Corto (Grados de Separación)</h2>
                 <button onclick="closePathModal()" class="text-slate-400 hover:text-white p-1 rounded-lg bg-slate-950">✕</button>
@@ -457,7 +461,7 @@
 
     <!-- Modal: WhatIf -->
     <div id="modal-whatif" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-md flex items-center justify-center z-50 p-4">
-        <div class="bg-slate-900 w-full max-w-xl rounded-3xl p-6 flex flex-col gap-4 border border-slate-800 shadow-2xl">
+        <div class="bg-slate-900 w-full max-w-xl max-h-[92vh] overflow-y-auto rounded-3xl p-6 flex flex-col gap-4 border border-slate-800 shadow-2xl">
             <div class="flex justify-between items-center border-b border-slate-800 pb-3">
                 <h2 class="text-lg font-bold text-teal-400">🧪 Simulador de Fichaje ("Qué Pasa Si...")</h2>
                 <button onclick="closeWhatIfModal()" class="text-slate-400 hover:text-white p-1 rounded-lg bg-slate-950">✕</button>
@@ -481,7 +485,7 @@
 
     <!-- Modal: Compare -->
     <div id="modal-compare" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-md flex items-center justify-center z-50 p-4">
-        <div class="bg-slate-900 w-full max-w-4xl rounded-3xl p-6 flex flex-col gap-4 border border-slate-800 shadow-2xl">
+        <div class="bg-slate-900 w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-3xl p-6 flex flex-col gap-4 border border-slate-800 shadow-2xl">
             <div class="flex justify-between items-center border-b border-slate-800 pb-3">
                 <h2 class="text-lg font-bold text-amber-400">⚔️ Comparador de Clubes Cara a Cara</h2>
                 <button onclick="closeCompareModal()" class="text-slate-400 hover:text-white p-1 rounded-lg bg-slate-950">✕</button>
@@ -496,7 +500,7 @@
                     <select id="compare-select-b" onchange="updateCompareView()" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-xs text-white"></select>
                 </div>
             </div>
-            <div class="grid grid-cols-2 gap-4 mt-2" id="compare-cards-container"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2" id="compare-cards-container"></div>
         </div>
     </div>
 
