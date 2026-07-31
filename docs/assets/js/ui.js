@@ -74,6 +74,11 @@ function closeDrawer() {
 }
 
 function resetGlobalView() {
+    // Parar la reproducción del timeline si está activa antes de limpiar filtros
+    if (typeof stopTimeline === 'function') {
+        stopTimeline();
+    }
+
     viewMode = 'clubs_only';
     selectedSeason = 'all';
     selectedDivision = 'all';
@@ -83,24 +88,38 @@ function resetGlobalView() {
     if (typeof clearFocus === 'function') clearFocus();
     focusMode = false;
 
-    const lblToggle = document.getElementById('toggle-player-labels');
-    if (lblToggle) lblToggle.checked = false;
-    const focusToggle = document.getElementById('toggle-focus-mode');
-    if (focusToggle) focusToggle.checked = false;
+    // Helper de reseteo defensivo para evitar caídas de script si algún elemento no está en el DOM
+    const safeSetChecked = (id, val) => {
+        const el = document.getElementById(id);
+        if (el) el.checked = val;
+    };
+    const safeSetValue = (id, val) => {
+        const el = document.getElementById(id);
+        if (el) el.value = val;
+    };
+    const safeSetText = (id, txt) => {
+        const el = document.getElementById(id);
+        if (el) el.innerText = txt;
+    };
+
+    safeSetChecked('toggle-player-labels', false);
+    safeSetChecked('toggle-focus-mode', false);
+    
     const focusHint = document.getElementById('focus-mode-hint');
     if (focusHint) focusHint.classList.add('hidden');
-    document.getElementById('select-division-filter').value = 'all';
-    document.getElementById('select-scaling').value = 'degree';
-    document.getElementById('select-financial').value = '0';
-    document.getElementById('select-season').value = 'all';
-    document.getElementById('search-input').value = '';
-    document.getElementById('timeline-slider').value = 0;
-    document.getElementById('timeline-label').innerText = 'Todas';
+    
+    safeSetValue('select-division-filter', 'all');
+    safeSetValue('select-scaling', 'degree');
+    safeSetValue('select-financial', '0');
+    safeSetValue('select-season', 'all');
+    safeSetValue('search-input', '');
+    safeSetValue('timeline-slider', 0);
+    safeSetText('timeline-label', 'Todas');
 
-    setViewMode('clubs_only');
+    if (typeof setViewMode === 'function') setViewMode('clubs_only');
     closeDrawer();
-    resetEgoHighlight();
-    fitNetwork();
+    if (typeof resetEgoHighlight === 'function') resetEgoHighlight();
+    if (typeof fitNetwork === 'function') fitNetwork();
 }
 
 // ---- Búsqueda predictiva / autocomplete ----

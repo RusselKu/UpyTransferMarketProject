@@ -325,31 +325,43 @@ function onSeasonDropdownChange(val) {
     let sliderVal = 0;
     if (val === '2025-2026') sliderVal = 1;
     else if (val === '2026-2027') sliderVal = 2;
-    document.getElementById('timeline-slider').value = sliderVal;
-    document.getElementById('timeline-label').innerText = (val === 'all') ? 'Todas' : (val === '2025-2026' ? '2025/26' : '2026/27');
+    const slider = document.getElementById('timeline-slider');
+    if (slider) slider.value = sliderVal;
+    const label = document.getElementById('timeline-label');
+    if (label) label.innerText = (val === 'all') ? 'Todas' : (val === '2025-2026' ? '2025/26' : '2026/27');
     updateNetworkData();
 }
 
 function onTimelineStep(val) {
     const step = timelineSteps[val];
-    document.getElementById('timeline-label').innerText = step.label;
-    setSeason(step.season);
+    if (step) {
+        const label = document.getElementById('timeline-label');
+        if (label) label.innerText = step.label;
+        setSeason(step.season);
+    }
 }
 
 function toggleTimelinePlay() {
     timelinePlaying = !timelinePlaying;
     const btnIcon = document.getElementById('icon-play');
+    const slider = document.getElementById('timeline-slider');
     if (timelinePlaying) {
-        btnIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6" />`;
-        let currentVal = parseInt(document.getElementById('timeline-slider').value);
+        if (btnIcon) btnIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6" />`;
+        let currentVal = slider ? parseInt(slider.value) : 0;
         timelineInterval = setInterval(() => {
             currentVal = (currentVal + 1) % 3;
-            document.getElementById('timeline-slider').value = currentVal;
+            if (slider) slider.value = currentVal;
             onTimelineStep(currentVal);
         }, 1800);
     } else {
-        btnIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />`;
+        if (btnIcon) btnIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />`;
         clearInterval(timelineInterval);
+    }
+}
+
+function stopTimeline() {
+    if (timelinePlaying) {
+        toggleTimelinePlay();
     }
 }
 
@@ -375,4 +387,5 @@ window.setSeason = setSeason;
 window.onSeasonDropdownChange = onSeasonDropdownChange;
 window.onTimelineStep = onTimelineStep;
 window.toggleTimelinePlay = toggleTimelinePlay;
+window.stopTimeline = stopTimeline;
 window.fitNetwork = fitNetwork;
