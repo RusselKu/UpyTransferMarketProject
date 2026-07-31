@@ -77,11 +77,24 @@ function getActiveEdges() {
 }
 
 function showLoadingOverlay() {
-    document.getElementById('loading-overlay').classList.remove('opacity-0', 'pointer-events-none');
+    const overlay = document.getElementById('loading-overlay');
+    if (overlay) {
+        overlay.classList.remove('hidden');
+        overlay.offsetWidth; // trigger reflow
+        overlay.classList.remove('opacity-0', 'pointer-events-none');
+    }
 }
 
 function hideLoadingOverlay() {
-    document.getElementById('loading-overlay').classList.add('opacity-0', 'pointer-events-none');
+    const overlay = document.getElementById('loading-overlay');
+    if (overlay) {
+        overlay.classList.add('opacity-0', 'pointer-events-none');
+        setTimeout(() => {
+            if (overlay.classList.contains('opacity-0')) {
+                overlay.classList.add('hidden');
+            }
+        }, 300);
+    }
 }
 
 function initNetwork() {
