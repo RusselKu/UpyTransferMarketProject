@@ -97,7 +97,7 @@ function applyMetaToDOM(meta) {
     setText('stat-total-clubs', `${meta.total_clubs} Clubes`);
     setText('stat-hetero-nodes', `${meta.total_hetero_nodes} nodos heterogéneos`);
     setText('stat-total-transfers', `${meta.total_transfers.toLocaleString('es-ES')} Traspasos`);
-    setText('stat-homophily', `+${meta.assortativity.toFixed(4)}`);
+    setText('stat-homophily', (meta.assortativity >= 0 ? '+' : '') + meta.assortativity.toFixed(4));
     setText('stat-money-moved', `${meta.total_market_money.toFixed(1)} M€`);
     setText('nodes-count', meta.total_clubs);
     setText('edges-count', meta.total_transfers);

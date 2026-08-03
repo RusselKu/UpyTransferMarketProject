@@ -21,7 +21,7 @@ A diferencia del repositorio base, la versión desarrollada en la rama **`Rivald
 | :--- | :--- | :--- |
 | **Volumen de Datos** | Muestra reducida o estática de fichajes. | **1,034 traspasos oficiales** extraídos en tiempo real desde *Fichajes.com* para las temporadas 2025/2026 y 2026/2027. |
 | **Modelación de Grafos** | Grafo simple sin distinguir roles. | **Doble Modelo de Grafo**: <br>1. *Solo Clubes* (Multígrafo Dirigido Ponderado, 56 nodos).<br>2. *Clubes + Jugadores* (Grafo Bipartito/Heterogéneo, 856 nodos). |
-| **Métricas SNA Calculadas** | Grado de entrada / salida básico. | **Métricas Avanzadas de Redes Complejas**: <br>• Centralidad de Intermediación (*Betweenness*) para hallar clubes puente.<br>• PageRank y Closeness.<br>• Algoritmo de Comunidades de Modularidad (*Greedy Modularity*).<br>• Coeficiente de Homofilia (*Asortatividad por División = +0.3421*). |
+| **Métricas SNA Calculadas** | Grado de entrada / salida básico. | **Métricas Avanzadas de Redes Complejas**: <br>• Centralidad de Intermediación (*Betweenness*) para hallar clubes puente.<br>• PageRank y Closeness.<br>• Algoritmo de Comunidades de Modularidad (*Greedy Modularity*).<br>• Coeficiente de Homofilia (*Asortatividad por División = +0.0064*). |
 | **Interfaz de Usuario (UI)** | Vista básica tradicional. | **Arquitectura App Shell Profesional (Vercel / Linear Style)** con lienzo HD panorámico libre de tarjetas encimadas. |
 | **Buscador de Red** | Filtro manual por texto sin guía. | **Buscador Predictivo con Autocompletado en Tiempo Real**: clasifica entre `⚽ Clubes` y `👤 Jugadores` con cambio automático de modo de vista. |
 | **Ficha de Detalles** | Listado estático de datos. | **Ficha Dinámica Contextual & Scouting Card**: <br>• Para clubes: calcula gasto/ventas dinámicos según la temporada seleccionada.<br>• Para jugadores: Ficha de Scouting con Edad, Coste, Vendedor y Comprador (`De ➔ A`). |
@@ -39,7 +39,7 @@ Para el desarrollo de esta versión, nos basamos en los datos primarios y script
 
 2. **Cálculos Matemáticos SNA (`generate_graph.py` ➔ `network_analysis.md`)**:
    * Se aplicó NetworkX para demostrar la hipótesis **Scale-Free** (la distribución de grado sigue una Ley de Potencia, indicando que unos pocos clubes dominan las transacciones).
-   * Se demostró la **Homofilia Financiera (+0.3421)**: los clubes de Primera División tienden a realizar transferencias principalmente con otros clubes de Primera o ligas internacionales de similar poder adquisitivo.
+   * Se demostró la **Asortatividad por División (+0.0064)**: al ser cercana a cero, se concluye que no existe homofilia rígida; los clubes realizan traspasos fluidos entre diferentes divisiones y ligas extranjeras sin limitarse a su propio nivel.
 
 3. **Compilación de la Plataforma Web (`generate_web_dashboard.py` ➔ `transfer_market_graph.html`)**:
    * Motor Python que procesa las métricas de NetworkX y genera una aplicación web autónoma en HTML/JS utilizando **Vis.js** para la física de partículas en canvas y **Chart.js** para el tablero de análisis.

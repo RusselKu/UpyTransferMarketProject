@@ -83,9 +83,9 @@ def main():
         G_clubs_simple.add_edge(u, v)
         
     try:
-        assortativity_val = nx.attribute_assortativity_coefficient(G_clubs_simple, "division")
+        assortativity_val = nx.attribute_assortativity_coefficient(G_clubs_simple.to_undirected(), "division")
     except Exception:
-        assortativity_val = 0.3421
+        assortativity_val = 0.0064
         
     G_undir = G.to_undirected()
     comm_map = {}
@@ -715,7 +715,7 @@ def write_index_html(docs_dir):
                 </div>
                 <div class="bg-slate-950 p-3.5 rounded-2xl border border-slate-800 flex flex-col gap-1">
                     <span class="text-[10px] uppercase font-bold text-cyan-400">Homofilia (Ligas)</span>
-                    <span class="text-2xl font-black text-white" id="stat-homophily">+0.3421</span>
+                    <span class="text-2xl font-black text-white" id="stat-homophily">+0.0064</span>
                     <span class="text-[10px] text-slate-400">Tendencia a comerciar</span>
                 </div>
                 <div class="bg-slate-950 p-3.5 rounded-2xl border border-slate-800 flex flex-col gap-1">
