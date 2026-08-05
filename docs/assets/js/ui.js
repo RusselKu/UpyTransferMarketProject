@@ -9,6 +9,46 @@
  * setViewMode, highlightEgoNetwork, resetEgoHighlight, fitNetwork, etc).
  */
 
+// ---- Toast (feedback no bloqueante) ----
+let __toastTimer = null;
+function showToast(message, ms) {
+    const el = document.getElementById('app-toast');
+    if (!el) return;
+    el.innerHTML = message;
+    el.classList.remove('hidden');
+    // Reflow para que la transición de entrada siempre se ejecute.
+    el.offsetWidth;
+    el.classList.remove('opacity-0', 'translate-y-2');
+    clearTimeout(__toastTimer);
+    __toastTimer = setTimeout(() => {
+        el.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => el.classList.add('hidden'), 250);
+    }, ms || 3200);
+}
+
+// ---- Escape: salir de modales > drawer > modo enfoque ----
+document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+
+    const openModal = Array.from(document.querySelectorAll('[id^="modal-"]'))
+        .find(m => !m.classList.contains('hidden'));
+    if (openModal) {
+        openModal.classList.add('hidden');
+        return;
+    }
+
+    const drawer = document.getElementById('right-drawer');
+    if (drawer && !drawer.classList.contains('translate-x-full')) {
+        closeDrawer();
+        if (typeof resetEgoHighlight === 'function') resetEgoHighlight();
+        return;
+    }
+
+    if (typeof isNetworkFocused === 'function' && isNetworkFocused()) {
+        clearFocus();
+    }
+});
+
 // ---- Tema visual ----
 function changeTheme(themeKey) {
     const body = document.getElementById('main-body');
@@ -63,6 +103,25 @@ window.addEventListener('DOMContentLoaded', initSidebarResponsive);
 window.addEventListener('resize', initSidebarResponsive);
 window.initSidebarResponsive = initSidebarResponsive;
 
+// ---- Selección/encuadre defensivos ----
+// vis-network lanza excepción si se selecciona o encuadra un id que no está en
+// el DataSet (pasa cuando hay filtros o el Modo Enfoque redujo la red).
+function nodeIsOnCanvas(id) {
+    return !!(nodesDataset && nodesDataset.get(id));
+}
+
+function safeSelectNodes(ids) {
+    if (!network) return;
+    const present = (Array.isArray(ids) ? ids : [ids]).filter(nodeIsOnCanvas);
+    if (present.length) network.selectNodes(present);
+    else network.unselectAll();
+}
+
+function safeFocusNode(id, scale) {
+    if (!network || !nodeIsOnCanvas(id)) return;
+    network.focus(id, { scale: scale || 1.1, animation: true });
+}
+
 // ---- Drawer de detalle ----
 function openDrawer() {
     document.getElementById('right-drawer').classList.remove('translate-x-full');
@@ -85,8 +144,9 @@ function resetGlobalView() {
     minFinancialCost = 0;
     nodeScalingMetric = 'degree';
     showPlayerLabels = false;
-    if (typeof clearFocus === 'function') clearFocus();
-    focusMode = false;
+    // setFocusMode(false) apaga el modo, restaura el grafo completo y
+    // sincroniza el checkbox + el chrome flotante de una sola vez.
+    if (typeof setFocusMode === 'function') setFocusMode(false);
 
     // Helper de reseteo defensivo para evitar caídas de script si algún elemento no está en el DOM
     const safeSetChecked = (id, val) => {
@@ -116,23 +176,43 @@ function resetGlobalView() {
     safeSetValue('timeline-slider', 0);
     safeSetText('timeline-label', 'Todas');
 
+    // Reset JS global variables in network.js
+    if (typeof resetFiltersAndVariables === 'function') {
+        resetFiltersAndVariables();
+    }
+
     if (typeof setViewMode === 'function') setViewMode('clubs_only');
     closeDrawer();
-    if (typeof resetEgoHighlight === 'function') resetEgoHighlight();
-    if (typeof fitNetwork === 'function') fitNetwork();
 }
 
 // ---- Búsqueda predictiva / autocomplete ----
 function handleSearchInput(query) {
     const box = document.getElementById('search-suggestions');
+    const activeNodes = (viewMode === 'clubs_only') ? clubNodes : heteroNodes;
+
     if (!query || !query.trim()) {
-        box.classList.add('hidden');
-        box.innerHTML = '';
+        // Mostrar todos los clubes ordenados alfabéticamente si está vacío/enfocado
+        const clubsOnly = activeNodes.filter(n => n.group !== 'Jugador').sort((a, b) => a.label.localeCompare(b.label));
+        if (clubsOnly.length === 0) {
+            box.classList.add('hidden');
+            box.innerHTML = '';
+            return;
+        }
+
+        box.innerHTML = '<div class="p-2 text-slate-400 text-[10px] font-extrabold uppercase border-b border-slate-800 tracking-wider">Lista de Clubes:</div>';
+        clubsOnly.forEach(m => {
+            box.innerHTML += `
+                <div onclick="selectSearchResult('${m.id}')" class="p-2.5 hover:bg-slate-800 cursor-pointer border-b border-slate-800/60 last:border-none flex justify-between items-center transition">
+                    <span class="font-bold text-slate-200 text-xs">${m.label}</span>
+                    <span class="bg-sky-950/80 text-sky-300 px-1.5 py-0.5 rounded text-[9px] font-bold border border-sky-800/60">⚽ ${m.group}</span>
+                </div>
+            `;
+        });
+        box.classList.remove('hidden');
         return;
     }
 
     const q = query.toLowerCase().trim();
-    const activeNodes = (viewMode === 'clubs_only') ? clubNodes : heteroNodes;
 
     const matches = activeNodes.filter(n => n.label.toLowerCase().includes(q)).slice(0, 8);
 
@@ -184,10 +264,25 @@ async function selectSearchResult(nodeId) {
 
         document.getElementById('search-input').value = node.label;
         currentlySelectedNodeId = nodeId;
-        network.focus(nodeId, { scale: 1.2, animation: true });
-        network.selectNodes([nodeId]);
-        showNodeDetails(nodeId);
+        // Primero el énfasis (puede reconstruir el dataset en Modo Enfoque) y
+        // después el encuadre, para no encuadrar un id que ya no está.
         applyNodeEmphasis(nodeId);
+        if (!nodeIsOnCanvas(nodeId)) {
+            showToast(`«${node.label}» quedaba fuera de los filtros activos: se limpiaron para poder mostrarlo.`);
+            selectedDivision = 'all';
+            minFinancialCost = 0;
+            selectedSeason = 'all';
+            ['select-division-filter', 'select-season'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.value = 'all';
+            });
+            const finSel = document.getElementById('select-financial');
+            if (finSel) finSel.value = '0';
+            updateNetworkData();
+        }
+        safeSelectNodes([nodeId]);
+        safeFocusNode(nodeId, 1.2);
+        showNodeDetails(nodeId);
         openDrawer();
     }
 }
@@ -333,17 +428,19 @@ async function playStory(num) {
     if (!network) return;
     if (num === 1) {
         currentlySelectedNodeId = 'Alavés';
-        network.focus('Alavés', { scale: 1.1, animation: true });
-        network.selectNodes(['Alavés', 'Espanyol', 'Mirandés']);
+        safeSelectNodes(['Alavés', 'Espanyol', 'Mirandés']);
+        safeFocusNode('Alavés', 1.1);
         showNodeDetails('Alavés');
         highlightEgoNetwork('Alavés');
+        showToast('Reflector sobre <b>Alavés</b>. Pulsa <b>Esc</b> o clic en el vacío para volver.');
         openDrawer();
     } else if (num === 2) {
         currentlySelectedNodeId = 'Resto del mundo';
-        network.focus('Resto del mundo', { scale: 1.0, animation: true });
-        network.selectNodes(['Resto del mundo', 'Premier League']);
+        safeSelectNodes(['Resto del mundo', 'Premier League']);
+        safeFocusNode('Resto del mundo', 1.0);
         showNodeDetails('Resto del mundo');
         highlightEgoNetwork('Resto del mundo');
+        showToast('Reflector sobre <b>Resto del mundo</b>. Pulsa <b>Esc</b> para volver.');
         openDrawer();
     } else if (num === 3) {
         setDivisionFilter('Cantera / Filial');
@@ -365,14 +462,14 @@ function renderStarTransfers() {
 }
 
 function focusStarTransfer(src, tgt) {
-    if (network) {
-        currentlySelectedNodeId = src;
-        network.selectNodes([src, tgt]);
-        network.focus(src, { scale: 1.1, animation: true });
-        showNodeDetails(src);
-        applyNodeEmphasis(src);
-        openDrawer();
-    }
+    if (!network) return;
+    currentlySelectedNodeId = src;
+    // Énfasis primero (puede reconstruir el dataset), encuadre después.
+    applyNodeEmphasis(src);
+    safeSelectNodes([src, tgt]);
+    safeFocusNode(src, 1.1);
+    showNodeDetails(src);
+    openDrawer();
 }
 
 // ---- Modales: abrir/cerrar ----
@@ -443,8 +540,11 @@ function findAndHighlightPath() {
 
     if (foundPath) {
         box.innerHTML = `<span class="text-emerald-400 font-bold">¡Camino encontrado (${foundPath.length - 1} pasos de distancia)!</span><br><br>` + foundPath.join(' ➔ ');
-        network.selectNodes(foundPath);
-        network.focus(src, { scale: 1.0, animation: true });
+        // El camino se calcula sobre el grafo completo, así que si el Modo
+        // Enfoque o un filtro redujo el canvas hay que salir para poder verlo.
+        if (typeof isNetworkFocused === 'function' && isNetworkFocused()) clearFocus();
+        safeSelectNodes(foundPath);
+        safeFocusNode(src, 1.0);
     } else {
         box.innerHTML = `<span class="text-red-400 font-bold">No se encontró un camino directo en la muestra de datos.</span>`;
     }
@@ -454,6 +554,15 @@ function findAndHighlightPath() {
 function simulateWhatIfTransfer() {
     const src = document.getElementById('whatif-select-a').value;
     const tgt = document.getElementById('whatif-select-b').value;
+
+    // Un enlace hacia un nodo ausente del DataSet rompe el render de vis.
+    if (typeof isNetworkFocused === 'function' && isNetworkFocused()) clearFocus();
+    if (!nodeIsOnCanvas(src) || !nodeIsOnCanvas(tgt)) {
+        const box0 = document.getElementById('whatif-result-box');
+        box0.classList.remove('hidden');
+        box0.innerHTML = `<span class="text-amber-400 font-bold">Uno de los dos clubes no está visible con los filtros actuales.</span><br>Limpia los filtros (o pulsa «Reset Vista Global») e inténtalo de nuevo.`;
+        return;
+    }
 
     const tempId = `temp_edge_${Date.now()}`;
     edgesDataset.add({
@@ -465,7 +574,7 @@ function simulateWhatIfTransfer() {
     box.classList.remove('hidden');
     box.innerHTML = `<span class="text-emerald-400 font-bold">¡Fichaje Simulado Añadido!</span><br>Se ha dibujado un enlace temporal verde desde <b>${src}</b> hasta <b>${tgt}</b>. Observa cómo cambia la estructura de la red.`;
 
-    network.focus(src, { scale: 1.1, animation: true });
+    safeFocusNode(src, 1.1);
 }
 
 // ---- Comparador de clubes cara a cara ----
@@ -523,6 +632,10 @@ function updateCompareView() {
 }
 
 // Expuestas globalmente para los atributos onclick/onchange del HTML.
+window.showToast = showToast;
+window.nodeIsOnCanvas = nodeIsOnCanvas;
+window.safeSelectNodes = safeSelectNodes;
+window.safeFocusNode = safeFocusNode;
 window.changeTheme = changeTheme;
 window.toggleSidebar = toggleSidebar;
 window.openDrawer = openDrawer;

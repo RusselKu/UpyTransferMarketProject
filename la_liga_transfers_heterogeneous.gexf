@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
-  <meta lastmodifieddate="2026-07-27">
-    <creator>NetworkX 3.6.1</creator>
+  <meta lastmodifieddate="2026-08-05">
+    <creator>NetworkX 3.4.2</creator>
   </meta>
   <graph defaultedgetype="directed" mode="static" name="">
     <attributes mode="static" class="edge">
@@ -18,28 +18,14 @@
       <attribute id="6" title="season" type="string" />
     </attributes>
     <nodes>
-      <node id="Ligue 1" label="Ligue 1">
-        <attvalues>
-          <attvalue for="0" value="external_league" />
-          <attvalue for="1" value="None" />
-          <attvalue for="2" value="2" />
-        </attvalues>
-      </node>
-      <node id="Resto del mundo" label="Resto del mundo">
-        <attvalues>
-          <attvalue for="0" value="external_league" />
-          <attvalue for="1" value="None" />
-          <attvalue for="2" value="1" />
-        </attvalues>
-      </node>
-      <node id="Bundesliga" label="Bundesliga">
-        <attvalues>
-          <attvalue for="0" value="external_league" />
-          <attvalue for="1" value="None" />
-          <attvalue for="2" value="2" />
-        </attvalues>
-      </node>
       <node id="Serie A" label="Serie A">
+        <attvalues>
+          <attvalue for="0" value="external_league" />
+          <attvalue for="1" value="None" />
+          <attvalue for="2" value="2" />
+        </attvalues>
+      </node>
+      <node id="Ligue 1" label="Ligue 1">
         <attvalues>
           <attvalue for="0" value="external_league" />
           <attvalue for="1" value="None" />
@@ -51,6 +37,20 @@
           <attvalue for="0" value="external_league" />
           <attvalue for="1" value="None" />
           <attvalue for="2" value="2" />
+        </attvalues>
+      </node>
+      <node id="Bundesliga" label="Bundesliga">
+        <attvalues>
+          <attvalue for="0" value="external_league" />
+          <attvalue for="1" value="None" />
+          <attvalue for="2" value="2" />
+        </attvalues>
+      </node>
+      <node id="Resto del mundo" label="Resto del mundo">
+        <attvalues>
+          <attvalue for="0" value="external_league" />
+          <attvalue for="1" value="None" />
+          <attvalue for="2" value="1" />
         </attvalues>
       </node>
       <node id="Real Madrid" label="Real Madrid">
@@ -9212,1861 +9212,1861 @@
       </node>
     </nodes>
     <edges>
-      <edge source="Ligue 1" target="Player: Endrick" id="0" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Ligue 1" target="Player: Kang-In Lee" id="1" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="40.0" />
-        </attvalues>
-      </edge>
-      <edge source="Ligue 1" target="Player: Carlos Soler" id="2" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="6.0" />
-        </attvalues>
-      </edge>
-      <edge source="Ligue 1" target="Player: Duje Ćaleta-Car" id="3" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Ligue 1" target="Player: Neal Maupay" id="4" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Ligue 1" target="Player: Georges Mikautadze" id="5" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="31.0" />
-        </attvalues>
-      </edge>
-      <edge source="Ligue 1" target="Player: Arnau Tenas" id="6" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="2.5" />
-        </attvalues>
-      </edge>
-      <edge source="Ligue 1" target="Player: Baptiste Santamaría" id="7" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="2.0" />
-        </attvalues>
-      </edge>
-      <edge source="Ligue 1" target="Player: Martín Satriano" id="8" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="6.5" />
-        </attvalues>
-      </edge>
-      <edge source="Ligue 1" target="Player: Felipe" id="9" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Ligue 1" target="Player: Gabriel Silva Moscardo de Salles" id="10" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Ligue 1" target="Player: Mohamed Jaouab" id="11" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Ligue 1" target="Player: Julien Ponceau" id="12" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Ligue 1" target="Player: Pierre-Emerick Aubameyang" id="13" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="1.5" />
-        </attvalues>
-      </edge>
-      <edge source="Ligue 1" target="Player: Léo Pétrot" id="14" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Ligue 1" target="Player: Ugo Raghouber" id="15" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Ligue 1" target="Player: Mathew Ryan" id="16" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Ligue 1" target="Player: Goduine Koyalipou" id="17" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Ligue 1" target="Player: Aïssa Mandi" id="18" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Ligue 1" target="Player: César Gelabert" id="19" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="2.0" />
-        </attvalues>
-      </edge>
-      <edge source="Ligue 1" target="Player: Miloš Luković" id="20" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Ligue 1" target="Player: Paul Akouokou" id="21" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Franco Mastantuono" id="22" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="45.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Álvaro Carreras" id="23" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="50.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: João Cancelo" id="24" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Roony Bardghji" id="25" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="2.5" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Obed Gómez Vargas" id="26" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="3.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Dávid Hancko" id="27" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="26.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Thiago Almada" id="28" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="21.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Morten Hjulmand" id="29" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="40.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Carlos Giménez Bachiller" id="30" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Wesley Gassova" id="31" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Kazunari Kita" id="32" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Ionuț Radu" id="33" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Ferran Jutglà" id="34" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="5.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Carles Pérez" id="35" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Aymeric Laporte" id="36" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="10.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Álex Padilla" id="37" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Álvaro Djaló" id="38" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Federico  Gattoni" id="39" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Batista Mendy" id="40" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Fábio Cardoso" id="41" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Kelechi Iheanacho" id="42" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Arouna Sangante" id="43" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Álvaro Fidalgo Fernández" id="44" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="2.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Gonzalo Ezequiel Petit Abad" id="45" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="4.5" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Sofyan Amrabat" id="46" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Nelson Alexander Deossa Suárez" id="47" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="11.7" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Diego Valentín Gómez" id="48" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="5.3" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Pau López" id="49" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Yanis Senhadji Chikhaoui" id="50" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Facundo Bernal Cruz" id="51" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="10.5" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Mateo Flores Lozano" id="52" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Thiago Cruz Fernández" id="53" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Marc Jurado Manzano" id="54" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Filip Ugrinic" id="55" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="4.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Gustavo Hidalgo Albarracín" id="56" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.32" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Ibrahim Yalatif Diabate" id="57" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Ville Aleksi Jukanpoika Koski" id="58" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="3.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Calebe" id="59" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Jonny Otto" id="60" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Joseda  Álvarez" id="61" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Miguel Rodríguez" id="62" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="5.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Unai Ropero Pérez" id="63" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Alejandro Fidel Jay Agustín" id="64" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Tomás Alage Mendes Mendes" id="65" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Moussa Diarra" id="66" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Raúl Moro" id="67" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="5.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Veljko Birmančević" id="68" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Luis Ismael Vázquez" id="69" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Zaid Abner Romero" id="70" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="5.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Juan Sebastián Boselli Graf" id="71" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="1.5" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Marc Vilaplana Dachs" id="72" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: José Luis Pérez del Amo" id="73" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: David Cordón Mancha" id="74" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.6" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Guillem Trilla Cortiñas" id="75" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Alejandro Herranz López" id="76" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Jean Yves Valou" id="77" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Coba Gomes da Costa" id="78" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Yvan Neyou" id="79" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Alemão" id="80" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="4.5" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Augusto  Batalla" id="81" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="1.6" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Raúl de Tomás" id="82" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Etienne Eto'o Pineda" id="83" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Miguel Morro" id="84" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Hugo Pérez" id="85" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Charles Pickel" id="86" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="1.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Tyrhys Dolan" id="87" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Roger Martínez Santamaría" id="88" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Kenneth Soler Fernández" id="89" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Gastón Joaquín Valles Velázquez" id="90" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Roberto Fernández" id="91" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="6.2" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Ian Forns Montes" id="92" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Omar Sadik" id="93" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Yáser Asprilla" id="94" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Toni Fuidias" id="95" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Lucas Martín Sanseviero Pérez" id="96" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Noah Ohio" id="97" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Álvaro Pérez Campo" id="98" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Vegard Østraat Erlien" id="99" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Iván Alejo" id="100" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Stipe Biuk" id="101" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Jesús Martínez Girón" id="102" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Jorge Iglesias González" id="103" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Adrián Arnuncio Baquerín" id="104" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Jorge Delgado Caballero" id="105" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Kevin Sánchez Rey" id="106" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Martín Ochoa Ruiz" id="107" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Álvaro Mardones Esplúguez" id="108" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Teun Gijselhart" id="109" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="1.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Adrián Guerrero Mouriz" id="110" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Jairo Noriega Figueroa" id="111" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Diego Gómez Pérez" id="112" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Gonzalo Villar" id="113" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Lucas Antonio Cepeda Barturen" id="114" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="1.85" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Abiel Alesio Osorio" id="115" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Grady Diangana" id="116" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Martim Carvalho Neto" id="117" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="1.5" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Nordin Al lal Milud" id="118" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Tai Abed Kassus" id="119" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.2" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Alan Agustín Matturro Romero" id="120" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Kervin Fabián Arriaga Villanueva" id="121" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.5" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Pablo Cuñat" id="122" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: José Cambra Albero" id="123" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Edgar Alcañiz Baldovi" id="124" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Xavier Grande Sánchez" id="125" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Hugo Francisco Cuenca Martínez" id="126" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Pablo  Galdames" id="127" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Chus Ruiz" id="128" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Mario González" id="129" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: José Mateo Mejía Piedrahita" id="130" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.2" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Alejandro Lizancos Saldaña" id="131" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.2" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Brais Martínez Prado" id="132" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Saúl del Cerro García" id="133" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Luís Miguel Nlavo Asué" id="134" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Benjamin Pauwels" id="135" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Sebastián María Figueredo Vilar del Valle" id="136" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.2" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Álex Millán" id="137" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Naim García García" id="138" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Carlos Guirao Mora" id="139" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Javier Garrido López" id="140" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Yassine Kechta" id="141" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Javi Hernández" id="142" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: David Akwesi Osei" id="143" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Álvaro Abajas Martín" id="144" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Sergio Aragoneses Padilla" id="145" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Josep Calavera" id="146" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Pol Fernández Serra" id="147" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Joaquim Utgés Almeda" id="148" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Víctor Sánchez Morales" id="149" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: George Bernard Andrews" id="150" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Mariano Emilio Carmona Cerezo" id="151" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Daniel Requena Sánchez" id="152" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Franck Ferry Fomeyem Sob" id="153" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Dalisson de Almeida Leite" id="154" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Adrián Fuentes González" id="155" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Iker Álvarez" id="156" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Damián Cáceres" id="157" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Ntji Tounkara Diarrá" id="158" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Efe Akman" id="159" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.5" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Antonino Jastin García Lopéz" id="160" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Imanol García" id="161" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Min-Su Kim" id="162" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Áron Yaakobishvili" id="163" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Aitor Uzkudun Arruti" id="164" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Théo Philippe Le Normand" id="165" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Thomas Carrique" id="166" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Marc Domènech Costa" id="167" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Iván Rodríguez Martos" id="168" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Christos Almpanis" id="169" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Luis Miguel Redondo Fernandez" id="170" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Bilal Achhiba Dedas" id="171" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Juan David Fuentes Garrido" id="172" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Albert Rosas Ubach" id="173" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Hugo Solozábal Granados" id="174" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Izan González Muñoz" id="175" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Luka Gagnidze" id="176" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Diego Hormigo Iturralde" id="177" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Baïla Diallo" id="178" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Pedro Alemañ Serna" id="179" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Theo Mickael Kevin Folgado" id="180" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Jakes Gorosabel Añorga" id="181" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Iker Ropero Saizar" id="182" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Sydney Ehizogie Osazuwa Omoruyi" id="183" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Francisco Javier Soroeta Rodríguez" id="184" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Andrés Cuenca Cejudo" id="185" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Andrés Martín Ferrari Malveira" id="186" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Óscar  Cortés" id="187" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Mamadou Loum" id="188" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.5" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Íker Venteo Plaza" id="189" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Lucas Perrin" id="190" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Álex Corredera" id="191" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Alejandro Lozano Cárdenas" id="192" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Uroš Milovanović" id="193" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Jonathan Dubasin" id="194" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="1.5" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Yann Kembo" id="195" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Marco Moreno" id="196" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Aleix Garrido" id="197" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Jorge Luis Yriarte González" id="198" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Aritz Muguruza Peña" id="199" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Aitor Galarza Altuna" id="200" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Eric Pérez Albarrán" id="201" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Óscar Carrasco Sojo" id="202" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Ángel Troncho Beltrán" id="203" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Taisei Miyashiro" id="204" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Nicolás Benedetti Roa" id="205" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Jesé Rodríguez" id="206" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Jeremía Alexandre Recoba Perrone" id="207" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.645" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Jonathan Viera" id="208" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Edward Edier Cedeño Guerrel" id="209" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.5" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Sergio Barcia" id="210" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Iñaki González Zambrano" id="211" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Gabriel Felipe Arrocha" id="212" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Alejandro Rodríguez Cabrera" id="213" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: José Adam Arvelo López" id="214" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Saliou Mandiang" id="215" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Iván Cédric Bikoue Embolo" id="216" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Iomar Francisco Ajouaou Vidal" id="217" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Konrad" id="218" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Manu Vallejo" id="219" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Taufek Bayoud Mohamed" id="220" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Víctor Corral Herranz" id="221" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Samuel Bernard Ntamack Ndimba" id="222" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.1" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Michael Agbekpornu" id="223" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.15" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Ignacio Jesús Laquintana Marsico" id="224" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Alejandro Cantero" id="225" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Jordi Escobar" id="226" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Enol Rodríguez Heres" id="227" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Liberto Luis Beltrán Martínez" id="228" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Jesús Álvarez Aguado" id="229" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Rodrigo Abajas Martín" id="230" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Diego Aznar Valero" id="231" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Pablo López Gómez" id="232" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Toni Tamarit Tamarit" id="233" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Thiago Emanuel Helguera Merello" id="234" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Igor Nikić" id="235" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Aarón Martín Luis" id="236" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Ismael Barea Fernández" id="237" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Juan Palomares Pulpillo" id="238" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Jawad Yamiq" id="239" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Nikola Čumić" id="240" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: William Agada" id="241" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Rober González" id="242" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Esteban Maximiliano Andrada" id="243" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Martín Aguirregabiria" id="244" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Kenan Kodro" id="245" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Manuel Obón Salido" id="246" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Juan Sebastián Serrano" id="247" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Resto del mundo" target="Player: Sinan Bakış" id="248" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Bundesliga" target="Player: Alejandro Grimaldo" id="249" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="22.0" />
-        </attvalues>
-      </edge>
-      <edge source="Bundesliga" target="Player: Bryan Zaragoza" id="250" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Bundesliga" target="Player: Ilaix Moriba" id="251" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="6.0" />
-        </attvalues>
-      </edge>
-      <edge source="Bundesliga" target="Player: Sheraldo Rudi Salomo Willem Becker" id="252" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2026-2027" />
-          <attvalue for="8" value="0.0" />
-        </attvalues>
-      </edge>
-      <edge source="Bundesliga" target="Player: Clemens Riedel" id="253" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="2.0" />
-        </attvalues>
-      </edge>
-      <edge source="Bundesliga" target="Player: Guille Bueno" id="254" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="0.2" />
-        </attvalues>
-      </edge>
-      <edge source="Bundesliga" target="Player: André Silva" id="255" type="departure">
-        <attvalues>
-          <attvalue for="7" value="2025-2026" />
-          <attvalue for="8" value="1.0" />
-        </attvalues>
-      </edge>
-      <edge source="Serie A" target="Player: Denzel Dumfries" id="256" type="departure">
+      <edge source="Serie A" target="Player: Denzel Dumfries" id="0" type="departure">
         <attvalues>
           <attvalue for="7" value="2026-2027" />
           <attvalue for="8" value="20.0" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Ademola Lookman" id="257" type="departure">
+      <edge source="Serie A" target="Player: Ademola Lookman" id="1" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="35.0" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Nicolás González" id="258" type="departure">
+      <edge source="Serie A" target="Player: Nicolás González" id="2" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Juan Musso" id="259" type="departure">
+      <edge source="Serie A" target="Player: Juan Musso" id="3" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="3.0" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Matteo Ruggeri" id="260" type="departure">
+      <edge source="Serie A" target="Player: Matteo Ruggeri" id="4" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="17.0" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Matías Vecino" id="261" type="departure">
+      <edge source="Serie A" target="Player: Matías Vecino" id="5" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Alexis Sánchez" id="262" type="departure">
+      <edge source="Serie A" target="Player: Alexis Sánchez" id="6" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Natan" id="263" type="departure">
+      <edge source="Serie A" target="Player: Natan" id="7" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="9.0" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Tajon Buchanan" id="264" type="departure">
+      <edge source="Serie A" target="Player: Tajon Buchanan" id="8" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="9.0" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Rafa Marín" id="265" type="departure">
+      <edge source="Serie A" target="Player: Rafa Marín" id="9" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Lucas Ezequiel Beltrán" id="266" type="departure">
+      <edge source="Serie A" target="Player: Lucas Ezequiel Beltrán" id="10" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Cyril Ngonge" id="267" type="departure">
+      <edge source="Serie A" target="Player: Cyril Ngonge" id="11" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Álex Sala" id="268" type="departure">
+      <edge source="Serie A" target="Player: Álex Sala" id="12" type="departure">
         <attvalues>
           <attvalue for="7" value="2026-2027" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Aboubacar Sangaré Traoré" id="269" type="departure">
+      <edge source="Serie A" target="Player: Aboubacar Sangaré Traoré" id="13" type="departure">
         <attvalues>
           <attvalue for="7" value="2026-2027" />
           <attvalue for="8" value="4.5" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Tete Morente" id="270" type="departure">
+      <edge source="Serie A" target="Player: Tete Morente" id="14" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Federico Redondo Solari" id="271" type="departure">
+      <edge source="Serie A" target="Player: Federico Redondo Solari" id="15" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="2.15" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Matías Agustín Moreno" id="272" type="departure">
+      <edge source="Serie A" target="Player: Matías Agustín Moreno" id="16" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Jeremy Isaiah Richard Toljan" id="273" type="departure">
+      <edge source="Serie A" target="Player: Jeremy Isaiah Richard Toljan" id="17" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Leonardo Buta" id="274" type="departure">
+      <edge source="Serie A" target="Player: Leonardo Buta" id="18" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Iker Bravo" id="275" type="departure">
+      <edge source="Serie A" target="Player: Iker Bravo" id="19" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Estanislau Pedrola Fortuny" id="276" type="departure">
+      <edge source="Serie A" target="Player: Estanislau Pedrola Fortuny" id="20" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Lorenzo Amatucci" id="277" type="departure">
+      <edge source="Serie A" target="Player: Lorenzo Amatucci" id="21" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Diego Sia" id="278" type="departure">
+      <edge source="Serie A" target="Player: Diego Sia" id="22" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Serie A" target="Player: Siren Diao Balde" id="279" type="departure">
+      <edge source="Serie A" target="Player: Siren Diao Balde" id="23" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Trent Alexander-Arnold" id="280" type="departure">
+      <edge source="Ligue 1" target="Player: Endrick" id="24" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Ligue 1" target="Player: Kang-In Lee" id="25" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Ligue 1" target="Player: Carlos Soler" id="26" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="6.0" />
+        </attvalues>
+      </edge>
+      <edge source="Ligue 1" target="Player: Duje Ćaleta-Car" id="27" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Ligue 1" target="Player: Neal Maupay" id="28" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Ligue 1" target="Player: Georges Mikautadze" id="29" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="31.0" />
+        </attvalues>
+      </edge>
+      <edge source="Ligue 1" target="Player: Arnau Tenas" id="30" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="2.5" />
+        </attvalues>
+      </edge>
+      <edge source="Ligue 1" target="Player: Baptiste Santamaría" id="31" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="2.0" />
+        </attvalues>
+      </edge>
+      <edge source="Ligue 1" target="Player: Martín Satriano" id="32" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="6.5" />
+        </attvalues>
+      </edge>
+      <edge source="Ligue 1" target="Player: Felipe" id="33" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Ligue 1" target="Player: Gabriel Silva Moscardo de Salles" id="34" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Ligue 1" target="Player: Mohamed Jaouab" id="35" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Ligue 1" target="Player: Julien Ponceau" id="36" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Ligue 1" target="Player: Pierre-Emerick Aubameyang" id="37" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="1.5" />
+        </attvalues>
+      </edge>
+      <edge source="Ligue 1" target="Player: Léo Pétrot" id="38" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Ligue 1" target="Player: Ugo Raghouber" id="39" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Ligue 1" target="Player: Mathew Ryan" id="40" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Ligue 1" target="Player: Goduine Koyalipou" id="41" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Ligue 1" target="Player: Aïssa Mandi" id="42" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Ligue 1" target="Player: César Gelabert" id="43" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="2.0" />
+        </attvalues>
+      </edge>
+      <edge source="Ligue 1" target="Player: Miloš Luković" id="44" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Ligue 1" target="Player: Paul Akouokou" id="45" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Premier League" target="Player: Trent Alexander-Arnold" id="46" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="10.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Dean Donny Huijsen Wijsmuller" id="281" type="departure">
+      <edge source="Premier League" target="Player: Dean Donny Huijsen Wijsmuller" id="47" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="62.5" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Bernardo Silva" id="282" type="departure">
+      <edge source="Premier League" target="Player: Bernardo Silva" id="48" type="departure">
         <attvalues>
           <attvalue for="7" value="2026-2027" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Marc Cucurella" id="283" type="departure">
+      <edge source="Premier League" target="Player: Marc Cucurella" id="49" type="departure">
         <attvalues>
           <attvalue for="7" value="2026-2027" />
           <attvalue for="8" value="55.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Ibrahima Konaté" id="284" type="departure">
+      <edge source="Premier League" target="Player: Ibrahima Konaté" id="50" type="departure">
         <attvalues>
           <attvalue for="7" value="2026-2027" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Marcus Rashford" id="285" type="departure">
+      <edge source="Premier League" target="Player: Marcus Rashford" id="51" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Anthony Gordon" id="286" type="departure">
+      <edge source="Premier League" target="Player: Anthony Gordon" id="52" type="departure">
         <attvalues>
           <attvalue for="7" value="2026-2027" />
           <attvalue for="8" value="80.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Gonçalo Guedes" id="287" type="departure">
+      <edge source="Premier League" target="Player: Gonçalo Guedes" id="53" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="4.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Odysseas Vlachodimos" id="288" type="departure">
+      <edge source="Premier League" target="Player: Odysseas Vlachodimos" id="54" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Antony" id="289" type="departure">
+      <edge source="Premier League" target="Player: Antony" id="55" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="22.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Junior Firpo" id="290" type="departure">
+      <edge source="Premier League" target="Player: Junior Firpo" id="56" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Ricardo Visus Contreras" id="291" type="departure">
+      <edge source="Premier League" target="Player: Ricardo Visus Contreras" id="57" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Alexander Michael Freeman" id="292" type="departure">
+      <edge source="Premier League" target="Player: Alexander Michael Freeman" id="58" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="3.5" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Manor Solomon" id="293" type="departure">
+      <edge source="Premier League" target="Player: Manor Solomon" id="59" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Tanitoluwa Oluwatimikhin Oluwaseyi" id="294" type="departure">
+      <edge source="Premier League" target="Player: Tanitoluwa Oluwatimikhin Oluwaseyi" id="60" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="8.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Renato Palma Veiga" id="295" type="departure">
+      <edge source="Premier League" target="Player: Renato Palma Veiga" id="61" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="24.5" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Thomas Partey" id="296" type="departure">
+      <edge source="Premier League" target="Player: Thomas Partey" id="62" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Guido Rodríguez" id="297" type="departure">
+      <edge source="Premier League" target="Player: Guido Rodríguez" id="63" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Largie Ramazani" id="298" type="departure">
+      <edge source="Premier League" target="Player: Largie Ramazani" id="64" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Abu Bakarr Kamara" id="299" type="departure">
+      <edge source="Premier League" target="Player: Abu Bakarr Kamara" id="65" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Andrés García Robledo" id="300" type="departure">
+      <edge source="Premier League" target="Player: Andrés García Robledo" id="66" type="departure">
         <attvalues>
           <attvalue for="7" value="2026-2027" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Christantus Ugonna Uche" id="301" type="departure">
+      <edge source="Premier League" target="Player: Christantus Ugonna Uche" id="67" type="departure">
         <attvalues>
           <attvalue for="7" value="2026-2027" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Juan Berrocal" id="302" type="departure">
+      <edge source="Premier League" target="Player: Juan Berrocal" id="68" type="departure">
         <attvalues>
           <attvalue for="7" value="2026-2027" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Luca Koleosho" id="303" type="departure">
+      <edge source="Premier League" target="Player: Luca Koleosho" id="69" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Quilindschy Jermaine Hartman" id="304" type="departure">
+      <edge source="Premier League" target="Player: Quilindschy Jermaine Hartman" id="70" type="departure">
         <attvalues>
           <attvalue for="7" value="2026-2027" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Ladislav Krejčí" id="305" type="departure">
+      <edge source="Premier League" target="Player: Ladislav Krejčí" id="71" type="departure">
         <attvalues>
           <attvalue for="7" value="2026-2027" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Jhon  Solis" id="306" type="departure">
+      <edge source="Premier League" target="Player: Jhon  Solis" id="72" type="departure">
         <attvalues>
           <attvalue for="7" value="2026-2027" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Cyle Larin" id="307" type="departure">
+      <edge source="Premier League" target="Player: Cyle Larin" id="73" type="departure">
         <attvalues>
           <attvalue for="7" value="2026-2027" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Joaquín Fernández" id="308" type="departure">
+      <edge source="Premier League" target="Player: Joaquín Fernández" id="74" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />
         </attvalues>
       </edge>
-      <edge source="Premier League" target="Player: Juan Larios" id="309" type="departure">
+      <edge source="Premier League" target="Player: Juan Larios" id="75" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Bundesliga" target="Player: Alejandro Grimaldo" id="76" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="22.0" />
+        </attvalues>
+      </edge>
+      <edge source="Bundesliga" target="Player: Bryan Zaragoza" id="77" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Bundesliga" target="Player: Ilaix Moriba" id="78" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="6.0" />
+        </attvalues>
+      </edge>
+      <edge source="Bundesliga" target="Player: Sheraldo Rudi Salomo Willem Becker" id="79" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Bundesliga" target="Player: Clemens Riedel" id="80" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="2.0" />
+        </attvalues>
+      </edge>
+      <edge source="Bundesliga" target="Player: Guille Bueno" id="81" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.2" />
+        </attvalues>
+      </edge>
+      <edge source="Bundesliga" target="Player: André Silva" id="82" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="1.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Franco Mastantuono" id="83" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="45.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Álvaro Carreras" id="84" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="50.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: João Cancelo" id="85" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Roony Bardghji" id="86" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="2.5" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Obed Gómez Vargas" id="87" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="3.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Dávid Hancko" id="88" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="26.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Thiago Almada" id="89" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="21.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Morten Hjulmand" id="90" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="40.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Carlos Giménez Bachiller" id="91" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Wesley Gassova" id="92" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Kazunari Kita" id="93" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Ionuț Radu" id="94" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Ferran Jutglà" id="95" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="5.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Carles Pérez" id="96" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Aymeric Laporte" id="97" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="10.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Álex Padilla" id="98" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Álvaro Djaló" id="99" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Federico  Gattoni" id="100" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Batista Mendy" id="101" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Fábio Cardoso" id="102" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Kelechi Iheanacho" id="103" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Arouna Sangante" id="104" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Álvaro Fidalgo Fernández" id="105" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="2.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Gonzalo Ezequiel Petit Abad" id="106" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="4.5" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Sofyan Amrabat" id="107" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Nelson Alexander Deossa Suárez" id="108" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="11.7" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Diego Valentín Gómez" id="109" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="5.3" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Pau López" id="110" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Yanis Senhadji Chikhaoui" id="111" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Facundo Bernal Cruz" id="112" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="10.5" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Mateo Flores Lozano" id="113" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Thiago Cruz Fernández" id="114" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Marc Jurado Manzano" id="115" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Filip Ugrinic" id="116" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="4.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Gustavo Hidalgo Albarracín" id="117" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.32" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Ibrahim Yalatif Diabate" id="118" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Ville Aleksi Jukanpoika Koski" id="119" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="3.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Calebe" id="120" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Jonny Otto" id="121" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Joseda  Álvarez" id="122" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Miguel Rodríguez" id="123" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="5.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Unai Ropero Pérez" id="124" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Alejandro Fidel Jay Agustín" id="125" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Tomás Alage Mendes Mendes" id="126" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Moussa Diarra" id="127" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Raúl Moro" id="128" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="5.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Veljko Birmančević" id="129" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Luis Ismael Vázquez" id="130" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Zaid Abner Romero" id="131" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="5.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Juan Sebastián Boselli Graf" id="132" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="1.5" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Marc Vilaplana Dachs" id="133" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: José Luis Pérez del Amo" id="134" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: David Cordón Mancha" id="135" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.6" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Guillem Trilla Cortiñas" id="136" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Alejandro Herranz López" id="137" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Jean Yves Valou" id="138" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Coba Gomes da Costa" id="139" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Yvan Neyou" id="140" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Alemão" id="141" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="4.5" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Augusto  Batalla" id="142" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="1.6" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Raúl de Tomás" id="143" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Etienne Eto'o Pineda" id="144" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Miguel Morro" id="145" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Hugo Pérez" id="146" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Charles Pickel" id="147" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="1.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Tyrhys Dolan" id="148" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Roger Martínez Santamaría" id="149" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Kenneth Soler Fernández" id="150" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Gastón Joaquín Valles Velázquez" id="151" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Roberto Fernández" id="152" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="6.2" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Ian Forns Montes" id="153" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Omar Sadik" id="154" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Yáser Asprilla" id="155" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Toni Fuidias" id="156" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Lucas Martín Sanseviero Pérez" id="157" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Noah Ohio" id="158" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Álvaro Pérez Campo" id="159" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Vegard Østraat Erlien" id="160" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Iván Alejo" id="161" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Stipe Biuk" id="162" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Jesús Martínez Girón" id="163" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Jorge Iglesias González" id="164" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Adrián Arnuncio Baquerín" id="165" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Jorge Delgado Caballero" id="166" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Kevin Sánchez Rey" id="167" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Martín Ochoa Ruiz" id="168" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Álvaro Mardones Esplúguez" id="169" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Teun Gijselhart" id="170" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="1.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Adrián Guerrero Mouriz" id="171" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Jairo Noriega Figueroa" id="172" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Diego Gómez Pérez" id="173" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Gonzalo Villar" id="174" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Lucas Antonio Cepeda Barturen" id="175" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="1.85" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Abiel Alesio Osorio" id="176" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Grady Diangana" id="177" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Martim Carvalho Neto" id="178" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="1.5" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Nordin Al lal Milud" id="179" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Tai Abed Kassus" id="180" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.2" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Alan Agustín Matturro Romero" id="181" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Kervin Fabián Arriaga Villanueva" id="182" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.5" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Pablo Cuñat" id="183" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: José Cambra Albero" id="184" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Edgar Alcañiz Baldovi" id="185" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Xavier Grande Sánchez" id="186" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Hugo Francisco Cuenca Martínez" id="187" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Pablo  Galdames" id="188" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Chus Ruiz" id="189" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Mario González" id="190" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: José Mateo Mejía Piedrahita" id="191" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.2" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Alejandro Lizancos Saldaña" id="192" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.2" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Brais Martínez Prado" id="193" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Saúl del Cerro García" id="194" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Luís Miguel Nlavo Asué" id="195" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Benjamin Pauwels" id="196" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Sebastián María Figueredo Vilar del Valle" id="197" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.2" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Álex Millán" id="198" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Naim García García" id="199" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Carlos Guirao Mora" id="200" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Javier Garrido López" id="201" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Yassine Kechta" id="202" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Javi Hernández" id="203" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: David Akwesi Osei" id="204" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Álvaro Abajas Martín" id="205" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Sergio Aragoneses Padilla" id="206" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Josep Calavera" id="207" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Pol Fernández Serra" id="208" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Joaquim Utgés Almeda" id="209" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Víctor Sánchez Morales" id="210" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: George Bernard Andrews" id="211" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Mariano Emilio Carmona Cerezo" id="212" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Daniel Requena Sánchez" id="213" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Franck Ferry Fomeyem Sob" id="214" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Dalisson de Almeida Leite" id="215" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Adrián Fuentes González" id="216" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Iker Álvarez" id="217" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Damián Cáceres" id="218" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Ntji Tounkara Diarrá" id="219" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Efe Akman" id="220" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.5" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Antonino Jastin García Lopéz" id="221" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Imanol García" id="222" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Min-Su Kim" id="223" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Áron Yaakobishvili" id="224" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Aitor Uzkudun Arruti" id="225" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Théo Philippe Le Normand" id="226" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Thomas Carrique" id="227" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Marc Domènech Costa" id="228" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Iván Rodríguez Martos" id="229" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Christos Almpanis" id="230" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Luis Miguel Redondo Fernandez" id="231" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Bilal Achhiba Dedas" id="232" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Juan David Fuentes Garrido" id="233" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Albert Rosas Ubach" id="234" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Hugo Solozábal Granados" id="235" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Izan González Muñoz" id="236" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Luka Gagnidze" id="237" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Diego Hormigo Iturralde" id="238" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Baïla Diallo" id="239" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Pedro Alemañ Serna" id="240" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Theo Mickael Kevin Folgado" id="241" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Jakes Gorosabel Añorga" id="242" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Iker Ropero Saizar" id="243" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Sydney Ehizogie Osazuwa Omoruyi" id="244" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Francisco Javier Soroeta Rodríguez" id="245" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Andrés Cuenca Cejudo" id="246" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Andrés Martín Ferrari Malveira" id="247" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Óscar  Cortés" id="248" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Mamadou Loum" id="249" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.5" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Íker Venteo Plaza" id="250" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Lucas Perrin" id="251" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Álex Corredera" id="252" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Alejandro Lozano Cárdenas" id="253" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Uroš Milovanović" id="254" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Jonathan Dubasin" id="255" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="1.5" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Yann Kembo" id="256" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Marco Moreno" id="257" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Aleix Garrido" id="258" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Jorge Luis Yriarte González" id="259" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Aritz Muguruza Peña" id="260" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Aitor Galarza Altuna" id="261" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Eric Pérez Albarrán" id="262" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Óscar Carrasco Sojo" id="263" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Ángel Troncho Beltrán" id="264" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Taisei Miyashiro" id="265" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Nicolás Benedetti Roa" id="266" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Jesé Rodríguez" id="267" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Jeremía Alexandre Recoba Perrone" id="268" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.645" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Jonathan Viera" id="269" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Edward Edier Cedeño Guerrel" id="270" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.5" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Sergio Barcia" id="271" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Iñaki González Zambrano" id="272" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Gabriel Felipe Arrocha" id="273" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Alejandro Rodríguez Cabrera" id="274" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: José Adam Arvelo López" id="275" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Saliou Mandiang" id="276" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Iván Cédric Bikoue Embolo" id="277" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Iomar Francisco Ajouaou Vidal" id="278" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Konrad" id="279" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Manu Vallejo" id="280" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Taufek Bayoud Mohamed" id="281" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Víctor Corral Herranz" id="282" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2026-2027" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Samuel Bernard Ntamack Ndimba" id="283" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.1" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Michael Agbekpornu" id="284" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.15" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Ignacio Jesús Laquintana Marsico" id="285" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Alejandro Cantero" id="286" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Jordi Escobar" id="287" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Enol Rodríguez Heres" id="288" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Liberto Luis Beltrán Martínez" id="289" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Jesús Álvarez Aguado" id="290" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Rodrigo Abajas Martín" id="291" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Diego Aznar Valero" id="292" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Pablo López Gómez" id="293" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Toni Tamarit Tamarit" id="294" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Thiago Emanuel Helguera Merello" id="295" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Igor Nikić" id="296" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Aarón Martín Luis" id="297" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Ismael Barea Fernández" id="298" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Juan Palomares Pulpillo" id="299" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Jawad Yamiq" id="300" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Nikola Čumić" id="301" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: William Agada" id="302" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Rober González" id="303" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Esteban Maximiliano Andrada" id="304" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Martín Aguirregabiria" id="305" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Kenan Kodro" id="306" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Manuel Obón Salido" id="307" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Juan Sebastián Serrano" id="308" type="departure">
+        <attvalues>
+          <attvalue for="7" value="2025-2026" />
+          <attvalue for="8" value="0.0" />
+        </attvalues>
+      </edge>
+      <edge source="Resto del mundo" target="Player: Sinan Bakış" id="309" type="departure">
         <attvalues>
           <attvalue for="7" value="2025-2026" />
           <attvalue for="8" value="0.0" />

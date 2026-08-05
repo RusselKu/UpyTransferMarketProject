@@ -19,6 +19,7 @@ let currentlySelectedNodeId = null;
 let showPlayerLabels = false; // en vista hetero, ocultar los ~1034 nombres de jugador por defecto (anti-hairball)
 let focusMode = false;        // si está activo, al hacer clic se aísla el nodo y su vecindario
 let isFocused = false;        // hay actualmente un nodo aislado
+let focusedNodeId = null;     // qué nodo está aislado (para poder recomponerlo tras un cambio de filtro)
 
 let timelinePlaying = false;
 let timelineInterval = null;
@@ -39,39 +40,24 @@ const timelineSteps = [
     { value: 2, season: '2026-2027', label: 'Temporada 2026/2027' }
 ];
 
-function getActiveNodes() {
-    let baseNodes = (viewMode === 'clubs_only') ? clubNodes : heteroNodes;
-    return baseNodes.filter(n => {
-        if (selectedDivision !== 'all') {
-            if (n.group !== 'Jugador' && n.group !== selectedDivision) return false;
-        }
-        if (viewMode === 'hetero' && n.group === 'Jugador') {
-            if (selectedSeason !== 'all' && n.season !== selectedSeason) return false;
-            if (minFinancialCost > 0 && n.cost_val < minFinancialCost) return false;
-        }
-        return true;
-    }).map(n => {
-        let copy = Object.assign({}, n);
-        if (n.group !== 'Jugador') {
-            if (nodeScalingMetric === 'betweenness') {
-                copy.value = 12 + Math.min(copy.betweenness * 400, 45);
-            } else if (nodeScalingMetric === 'spent_m') {
-                copy.value = 12 + Math.min(copy.spent_m * 0.5, 45);
-            } else {
-                copy.value = 12 + Math.min(copy.degree * 1.2, 35);
-            }
+function formatNodeCopy(n) {
+    let copy = Object.assign({}, n);
+    if (n.group !== 'Jugador') {
+        if (nodeScalingMetric === 'betweenness') {
+            copy.value = 12 + Math.min(copy.betweenness * 400, 45);
+        } else if (nodeScalingMetric === 'spent_m') {
+            copy.value = 12 + Math.min(copy.spent_m * 0.5, 45);
         } else {
-            copy.value = 6;
-            // Ocultar el nombre del jugador salvo que el usuario lo active.
-            // El nombre sigue disponible en el tooltip (title) y en el panel
-            // de detalle al hacer clic, evitando el solapamiento masivo.
-            if (!showPlayerLabels) copy.label = undefined;
+            copy.value = 12 + Math.min(copy.degree * 1.2, 35);
         }
-        if (copy.title && typeof copy.title === 'string') {
-            copy.title = htmlTitle(copy.title);
-        }
-        return copy;
-    });
+    } else {
+        copy.value = 6;
+        if (!showPlayerLabels) copy.label = undefined;
+    }
+    if (copy.title && typeof copy.title === 'string') {
+        copy.title = htmlTitle(copy.title);
+    }
+    return copy;
 }
 
 function getActiveEdges() {
@@ -82,6 +68,36 @@ function getActiveEdges() {
             let c = e.cost_total || e.cost_val || 0;
             if (c < minFinancialCost) return false;
         }
+        
+        // FILTRO INTELIGENTE DE DIVISION/LIGA:
+        if (selectedDivision !== 'all') {
+            if (viewMode === 'clubs_only') {
+                const fromNode = clubNodes.find(n => n.id === e.from);
+                const toNode = clubNodes.find(n => n.id === e.to);
+                const fromGroup = fromNode ? fromNode.group : '';
+                const toGroup = toNode ? toNode.group : '';
+                if (fromGroup !== selectedDivision && toGroup !== selectedDivision) return false;
+            } else {
+                // En modo hetero, cada arista conecta un Jugador con un Club.
+                const fromNode = heteroNodes.find(n => n.id === e.from);
+                const toNode = heteroNodes.find(n => n.id === e.to);
+                
+                const playerNode = (fromNode && fromNode.group === 'Jugador') ? fromNode : 
+                                   ((toNode && toNode.group === 'Jugador') ? toNode : null);
+                
+                if (playerNode) {
+                    const pFromClub = clubNodes.find(c => c.id === playerNode.from_club);
+                    const pToClub = clubNodes.find(c => c.id === playerNode.to_club);
+                    const pFromGroup = pFromClub ? pFromClub.group : '';
+                    const pToGroup = pToClub ? pToClub.group : '';
+                    if (pFromGroup !== selectedDivision && pToGroup !== selectedDivision) return false;
+                } else {
+                    const fromGroup = fromNode ? fromNode.group : '';
+                    const toGroup = toNode ? toNode.group : '';
+                    if (fromGroup !== selectedDivision && toGroup !== selectedDivision) return false;
+                }
+            }
+        }
         return true;
     }).map(e => {
         let copy = Object.assign({}, e);
@@ -90,6 +106,30 @@ function getActiveEdges() {
         }
         return copy;
     });
+}
+
+function getActiveNodes() {
+    let baseNodes = (viewMode === 'clubs_only') ? clubNodes : heteroNodes;
+    
+    if (selectedDivision !== 'all') {
+        const activeEdges = getActiveEdges();
+        const activeNodeIds = new Set();
+        activeEdges.forEach(e => {
+            activeNodeIds.add(e.from);
+            activeNodeIds.add(e.to);
+        });
+        
+        // Incluir los clubes de la división seleccionada por si hay nodos huérfanos/aislados
+        baseNodes.forEach(n => {
+            if (n.group === selectedDivision) {
+                activeNodeIds.add(n.id);
+            }
+        });
+
+        return baseNodes.filter(n => activeNodeIds.has(n.id)).map(n => formatNodeCopy(n));
+    }
+
+    return baseNodes.map(n => formatNodeCopy(n));
 }
 
 function showLoadingOverlay() {
@@ -120,8 +160,7 @@ function initNetwork() {
     nodesDataset = new vis.DataSet(getActiveNodes());
     edgesDataset = new vis.DataSet(getActiveEdges());
 
-    document.getElementById('nodes-count').innerText = nodesDataset.length;
-    document.getElementById('edges-count').innerText = (viewMode === 'clubs_only') ? (window.__META__ ? window.__META__.total_transfers : clubEdges.length) : edgesDataset.length;
+    setCounters(nodesDataset.length, totalEdgeCountLabel(edgesDataset.get()));
 
     const data = { nodes: nodesDataset, edges: edgesDataset };
 
@@ -172,9 +211,21 @@ function initNetwork() {
         if (params.nodes.length > 0) {
             const selectedId = params.nodes[0];
             currentlySelectedNodeId = selectedId;
-            showNodeDetails(selectedId);
-            openDrawer();
-            applyNodeEmphasis(selectedId);
+
+            // El ENFOQUE va primero y aislado en su propio try: si el panel de
+            // detalle fallara con algún nodo, el aislamiento debe ocurrir igual.
+            try {
+                applyNodeEmphasis(selectedId);
+            } catch (err) {
+                console.error('Fallo al enfocar el nodo', selectedId, err);
+            }
+
+            try {
+                showNodeDetails(selectedId);
+                openDrawer();
+            } catch (err) {
+                console.error('Fallo al pintar el panel de detalle de', selectedId, err);
+            }
         } else {
             closeDrawer();
             if (focusMode && isFocused) {
@@ -189,68 +240,199 @@ function initNetwork() {
     renderStarTransfers();
 }
 
-// Aplica énfasis a un nodo segun el modo activo: aislar (enfoque) o atenuar.
+// Helper para obtener vecinos de un nodo desde el grafo original (sin importar el estado de filtrado actual)
+function getFullNeighborhood(nodeId) {
+    const neighbors = new Set();
+    neighbors.add(nodeId);
+    
+    const baseEdges = (viewMode === 'clubs_only') ? clubEdges : heteroEdges;
+    baseEdges.forEach(e => {
+        if (e.from === nodeId) neighbors.add(e.to);
+        if (e.to === nodeId) neighbors.add(e.from);
+    });
+    return neighbors;
+}
+
+// Aplica énfasis a un nodo segun el modo activo: aislar (enfoque) o normal.
 function applyNodeEmphasis(nodeId) {
-    if (focusMode) focusOnNode(nodeId);
-    else highlightEgoNetwork(nodeId);
+    if (focusMode) {
+        focusOnNode(nodeId);
+    } else {
+        // En modo normal, no atenuamos ni aislamos nada al hacer clic en un club/jugador
+        resetEgoHighlight();
+    }
+}
+
+// ---- Chrome de UI del Modo Enfoque (badge + botón de salida) ----
+// Debe ejecutarse SIEMPRE que cambie isFocused: si no, el botón "Ver todo el
+// grafo" nunca aparece y el usuario queda encerrado en la vista aislada.
+function updateFocusChrome(nodeCount, edgeCount) {
+    const btn = document.getElementById('btn-clear-focus');
+    if (btn) btn.classList.toggle('hidden', !isFocused);
+
+    const badge = document.getElementById('focus-badge');
+    if (badge) {
+        badge.classList.toggle('hidden', !isFocused);
+        if (isFocused) {
+            const neighbors = Math.max((nodeCount || 1) - 1, 0);
+            badge.innerHTML = `🎯 <b class="text-white">${focusedNodeId}</b>` +
+                `<span class="text-cyan-200/70"> · ${neighbors} vecino${neighbors === 1 ? '' : 's'} · ${edgeCount || 0} enlaces</span>`;
+        }
+    }
+}
+
+function setCounters(nodeCount, edgeCount) {
+    const n = document.getElementById('nodes-count');
+    const e = document.getElementById('edges-count');
+    if (n) n.innerText = nodeCount;
+    if (e) e.innerText = edgeCount;
+}
+
+function totalEdgeCountLabel(activeEdges) {
+    // En la vista de clubes las aristas están agregadas (una por par de clubes),
+    // así que mostramos el total real de traspasos que viene de meta.json.
+    if (viewMode === 'clubs_only' && selectedSeason === 'all' && selectedDivision === 'all' && minFinancialCost === 0) {
+        return window.__META__ ? window.__META__.total_transfers : clubEdges.length;
+    }
+    return activeEdges.length;
 }
 
 // ---- Modo Enfoque: aislar un nodo y su vecindario (ocultar el resto) ----
 function focusOnNode(nodeId) {
-    if (!network || !nodesDataset) return;
-    const neighborhood = new Set(network.getConnectedNodes(nodeId));
-    neighborhood.add(nodeId);
+    if (!network || !nodesDataset || !edgesDataset) return;
 
-    const nodeUpdates = nodesDataset.get().map(n => ({ id: n.id, hidden: !neighborhood.has(n.id) }));
-    nodesDataset.update(nodeUpdates);
-
-    // Ocultar aristas que no conecten dos nodos visibles.
-    const edgeUpdates = edgesDataset.get().map(e => ({
-        id: e.id,
-        hidden: !(neighborhood.has(e.from) && neighborhood.has(e.to))
-    }));
-    edgesDataset.update(edgeUpdates);
+    // La vecindad SIEMPRE se calcula sobre los arreglos globales (clubEdges /
+    // heteroEdges), nunca sobre lo que hay en el canvas: si se calculara con
+    // network.getConnectedNodes() la red se encogería en cada clic sucesivo.
+    const neighborhood = getFullNeighborhood(nodeId);
 
     isFocused = true;
-    const btn = document.getElementById('btn-clear-focus');
-    if (btn) btn.classList.remove('hidden');
+    focusedNodeId = nodeId;
 
-    network.fit({ nodes: Array.from(neighborhood), animation: { duration: 500, easingFunction: 'easeInOutQuad' } });
+    // Mantener SOLO el nodo y sus vecinos, resaltando el nodo raíz.
+    const filteredNodes = getActiveNodes()
+        .filter(n => neighborhood.has(n.id))
+        .map(n => (n.id !== nodeId) ? n : Object.assign({}, n, {
+            borderWidth: 5,
+            shadow: { enabled: true, color: 'rgba(34,211,238,0.9)', size: 28, x: 0, y: 0 }
+        }));
+
+    // Aristas incidentes al nodo raíz en cian y gruesas; las aristas entre
+    // vecinos (subgrafo inducido) quedan tenues para no robar atención.
+    const filteredEdges = getActiveEdges()
+        .filter(e => neighborhood.has(e.from) && neighborhood.has(e.to))
+        .map(e => Object.assign({}, e, (e.from === nodeId || e.to === nodeId)
+            ? { width: 3, color: { color: '#22d3ee', highlight: '#67e8f9', opacity: 1, inherit: false } }
+            : { width: 0.6, color: { color: '#475569', opacity: 0.35, inherit: false } }));
+
+    // Con physics:false, .update({hidden:true}) NO repinta el canvas estático:
+    // hay que reemplazar el contenido del DataSet (clear + add) para forzar el
+    // redibujado inmediato del motor.
+    nodesDataset.clear();
+    nodesDataset.add(filteredNodes);
+
+    edgesDataset.clear();
+    edgesDataset.add(filteredEdges);
+
+    setCounters(filteredNodes.length, filteredEdges.length);
+    updateFocusChrome(filteredNodes.length, filteredEdges.length);
+
+    network.selectNodes([nodeId]);
+
+    // Encuadrar SOLO con ids que existen realmente en el dataset: los ids de la
+    // vecindad que quedaron fuera por los filtros harían que fit() calculara un
+    // encuadre imposible (zoom disparado / grafo "encogido").
+    const presentIds = filteredNodes.map(n => n.id);
+    const anim = { duration: 500, easingFunction: 'easeInOutQuad' };
+    if (presentIds.length > 1) {
+        network.fit({ nodes: presentIds, maxZoomLevel: 1.6, animation: anim });
+    } else {
+        const root = filteredNodes[0];
+        const pos = (root && typeof root.x === 'number')
+            ? { x: root.x, y: root.y }
+            : network.getPositions([nodeId])[nodeId];
+        if (pos) network.moveTo({ position: pos, scale: 1.1, animation: anim });
+    }
 }
 
 function clearFocus() {
     isFocused = false;
-    const btn = document.getElementById('btn-clear-focus');
-    if (btn) btn.classList.add('hidden');
-    if (!nodesDataset) return;
-    nodesDataset.update(nodesDataset.get().map(n => ({ id: n.id, hidden: false })));
-    edgesDataset.update(edgesDataset.get().map(e => ({ id: e.id, hidden: false })));
+    focusedNodeId = null;
+    updateFocusChrome();
+
+    if (!nodesDataset || !edgesDataset) return;
+
+    // Cargar todos los nodos y aristas activos según los filtros normales
+    const activeNodes = getActiveNodes();
+    const activeEdges = getActiveEdges();
+
+    nodesDataset.clear();
+    nodesDataset.add(activeNodes);
+
+    edgesDataset.clear();
+    edgesDataset.add(activeEdges);
+
+    setCounters(activeNodes.length, totalEdgeCountLabel(activeEdges));
+
     resetEgoHighlight();
-    if (network) network.fit({ animation: { duration: 500, easingFunction: 'easeInOutQuad' } });
+    if (network) {
+        network.unselectAll();
+        network.fit({ animation: { duration: 500, easingFunction: 'easeInOutQuad' } });
+    }
 }
 
 function setFocusMode(on) {
     focusMode = !!on;
-    if (!focusMode && isFocused) clearFocus();
     const hint = document.getElementById('focus-mode-hint');
     if (hint) hint.classList.toggle('hidden', !focusMode);
+
+    // Mantener el checkbox sincronizado aunque se llame desde código (Escape,
+    // reset global, tours): así el control nunca queda "invertido".
+    const toggle = document.getElementById('toggle-focus-mode');
+    if (toggle) toggle.checked = focusMode;
+
+    const state = document.getElementById('focus-mode-state');
+    if (state) {
+        state.innerText = focusMode ? 'On' : 'Off';
+        state.className = 'text-[9px] font-extrabold uppercase tracking-wider ' + (focusMode ? 'text-cyan-300' : 'text-slate-500');
+    }
+
+    if (focusMode) {
+        // El toggle SOLO arma el modo: no aísla el nodo que estuviera
+        // seleccionado de antes. El aislamiento ocurre con el clic siguiente,
+        // sobre cualquier nodo. (Auto-aislar al activar se sentía "invertido".)
+        if (typeof showToast === 'function') {
+            showToast('🎯 Modo Enfoque <b>activo</b>: toca cualquier nodo para aislar su red.');
+        }
+    } else {
+        // Al desactivar, la red vuelve al 100% de color/opacidad y sin aislamiento.
+        clearFocus();
+    }
 }
 
-function updateNetworkData() {
+function updateNetworkData(options) {
     if (!nodesDataset || !edgesDataset) return;
-    // Cualquier cambio de filtro/vista reconstruye el dataset y sale del enfoque.
-    if (isFocused) {
-        isFocused = false;
-        const btn = document.getElementById('btn-clear-focus');
-        if (btn) btn.classList.add('hidden');
-    }
+    const preserveFocus = !(options && options.preserveFocus === false);
+
+    // Si había un nodo aislado, intentamos recomponer el enfoque con los nuevos
+    // filtros en vez de expulsar al usuario de la vista enfocada.
+    const refocusId = (preserveFocus && isFocused && focusMode) ? focusedNodeId : null;
+    isFocused = false;
+    focusedNodeId = null;
+    updateFocusChrome();
+
     nodesDataset.clear();
     edgesDataset.clear();
-    nodesDataset.add(getActiveNodes());
-    edgesDataset.add(getActiveEdges());
+    const activeNodes = getActiveNodes();
+    const activeEdges = getActiveEdges();
+    nodesDataset.add(activeNodes);
+    edgesDataset.add(activeEdges);
 
-    document.getElementById('nodes-count').innerText = nodesDataset.length;
-    document.getElementById('edges-count').innerText = (viewMode === 'clubs_only') ? (window.__META__ ? window.__META__.total_transfers : clubEdges.length) : edgesDataset.length;
+    setCounters(activeNodes.length, totalEdgeCountLabel(activeEdges));
+
+    if (refocusId && nodesDataset.get(refocusId)) {
+        focusOnNode(refocusId);
+    }
 
     if (currentlySelectedNodeId) {
         showNodeDetails(currentlySelectedNodeId);
@@ -300,19 +482,18 @@ function setPlayerLabels(show) {
     updateNetworkData();
 }
 
+// Atenúa todo lo que no es el ego-network del nodo. OJO: esto NO se dispara al
+// hacer clic (eso confundía al usuario porque parecía un aislamiento a medias);
+// solo lo usan los tours guiados, que sí quieren un efecto de reflector.
 function highlightEgoNetwork(selectedId) {
-    if (!network) return;
-    const connectedNodes = network.getConnectedNodes(selectedId);
-    connectedNodes.push(selectedId);
-
-    const allNodes = nodesDataset.get();
-    const updateNodes = allNodes.map(n => {
-        if (connectedNodes.includes(n.id)) {
-            return { id: n.id, opacity: 1.0 };
-        } else {
-            return { id: n.id, opacity: 0.15 };
-        }
-    });
+    if (!nodesDataset) return;
+    // Vecindad desde los datos globales, no desde el canvas: así funciona
+    // igual aunque haya filtros activos o una vista previamente reducida.
+    const neighborhood = getFullNeighborhood(selectedId);
+    const updateNodes = nodesDataset.get().map(n => ({
+        id: n.id,
+        opacity: neighborhood.has(n.id) ? 1.0 : 0.15
+    }));
     nodesDataset.update(updateNodes);
 }
 
@@ -383,6 +564,19 @@ function stopTimeline() {
 
 function fitNetwork() { if (network) network.fit({ animation: true }); }
 
+function resetFiltersAndVariables() {
+    selectedSeason = 'all';
+    selectedDivision = 'all';
+    minFinancialCost = 0;
+    nodeScalingMetric = 'degree';
+    currentlySelectedNodeId = null;
+    showPlayerLabels = false;
+    focusMode = false;
+    isFocused = false;
+    focusedNodeId = null;
+    updateFocusChrome();
+}
+
 // Expuestas globalmente para los atributos onclick/onchange del HTML.
 window.getActiveNodes = getActiveNodes;
 window.getActiveEdges = getActiveEdges;
@@ -405,3 +599,6 @@ window.onTimelineStep = onTimelineStep;
 window.toggleTimelinePlay = toggleTimelinePlay;
 window.stopTimeline = stopTimeline;
 window.fitNetwork = fitNetwork;
+window.resetFiltersAndVariables = resetFiltersAndVariables;
+window.updateFocusChrome = updateFocusChrome;
+window.isNetworkFocused = () => isFocused;

@@ -1,0 +1,3658 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-08-03">
+    <creator>NetworkX 3.4.2</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="division" type="string" />
+      <attribute id="1" title="type" type="string" />
+      <attribute id="2" title="spent_m" type="double" />
+      <attribute id="3" title="earned_m" type="double" />
+    </attributes>
+    <nodes>
+      <node id="Real Madrid" label="Real Madrid">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="242.5" />
+          <attvalue for="3" value="9.5" />
+        </attvalues>
+      </node>
+      <node id="Olympique de Lyon" label="Olympique de Lyon">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="37.5" />
+        </attvalues>
+      </node>
+      <node id="Bayer Leverkusen" label="Bayer Leverkusen">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="25.0" />
+          <attvalue for="3" value="22.0" />
+        </attvalues>
+      </node>
+      <node id="River Plate" label="River Plate">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="3.0" />
+          <attvalue for="3" value="48.1" />
+        </attvalues>
+      </node>
+      <node id="Atlético Mineiro" label="Atlético Mineiro">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Getafe" label="Getafe">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="20.8" />
+          <attvalue for="3" value="21.6" />
+        </attvalues>
+      </node>
+      <node id="Elche" label="Elche">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="13.1" />
+          <attvalue for="3" value="56.5" />
+        </attvalues>
+      </node>
+      <node id="Milan" label="Milan">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Benfica" label="Benfica">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="20.0" />
+          <attvalue for="3" value="51.5" />
+        </attvalues>
+      </node>
+      <node id="Albacete" label="Albacete">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Deportivo de la Coruña" label="Deportivo de la Coruña">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="3.0" />
+          <attvalue for="3" value="0.1" />
+        </attvalues>
+      </node>
+      <node id="Liverpool" label="Liverpool">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="Bournemouth" label="Bournemouth">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="25.0" />
+          <attvalue for="3" value="62.5" />
+        </attvalues>
+      </node>
+      <node id="Real Betis" label="Real Betis">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="77.0" />
+          <attvalue for="3" value="83.65" />
+        </attvalues>
+      </node>
+      <node id="Inter de Milán" label="Inter de Milán">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="29.0" />
+        </attvalues>
+      </node>
+      <node id="Manchester City" label="Manchester City">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Chelsea" label="Chelsea">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="79.5" />
+        </attvalues>
+      </node>
+      <node id="FC Barcelona" label="FC Barcelona">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="107.5" />
+          <attvalue for="3" value="46.4" />
+        </attvalues>
+      </node>
+      <node id="Paris Saint-Germain" label="Paris Saint-Germain">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="8.2" />
+          <attvalue for="3" value="48.5" />
+        </attvalues>
+      </node>
+      <node id="Girona" label="Girona">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.15" />
+          <attvalue for="3" value="11.0" />
+        </attvalues>
+      </node>
+      <node id="Al Hilal" label="Al Hilal">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Southampton" label="Southampton">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Al Nassr" label="Al Nassr">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="Sporting Braga" label="Sporting Braga">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="12.0" />
+          <attvalue for="3" value="6.2" />
+        </attvalues>
+      </node>
+      <node id="Manchester United" label="Manchester United">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="22.0" />
+        </attvalues>
+      </node>
+      <node id="Mallorca" label="Mallorca">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="5.0" />
+          <attvalue for="3" value="6.300000000000001" />
+        </attvalues>
+      </node>
+      <node id="FC Copenhague" label="FC Copenhague">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="2.5" />
+        </attvalues>
+      </node>
+      <node id="RCD Espanyol" label="RCD Espanyol">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="19.2" />
+          <attvalue for="3" value="25.0" />
+        </attvalues>
+      </node>
+      <node id="Granada" label="Granada">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.5" />
+          <attvalue for="3" value="20.25" />
+        </attvalues>
+      </node>
+      <node id="Como" label="Como">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="34.5" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="AS Monaco" label="AS Monaco">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="21.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Atlético de Madrid" label="Atlético de Madrid">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="309.0" />
+          <attvalue for="3" value="145.88" />
+        </attvalues>
+      </node>
+      <node id="Dinamo Zagreb" label="Dinamo Zagreb">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="4.2" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Chicago Fire" label="Chicago Fire">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Lyngby BK" label="Lyngby BK">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Panathinaikos" label="Panathinaikos">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="3.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Newcastle United" label="Newcastle United">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="80.0" />
+        </attvalues>
+      </node>
+      <node id="Seattle Sounders" label="Seattle Sounders">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="3.0" />
+        </attvalues>
+      </node>
+      <node id="Atalanta" label="Atalanta">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="22.0" />
+          <attvalue for="3" value="55.0" />
+        </attvalues>
+      </node>
+      <node id="Inter Miami" label="Inter Miami">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="20.0" />
+          <attvalue for="3" value="2.15" />
+        </attvalues>
+      </node>
+      <node id="Tottenham Hotspur" label="Tottenham Hotspur">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="40.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Rayo Vallecano" label="Rayo Vallecano">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="12.1" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Osasuna" label="Osasuna">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="14.5" />
+          <attvalue for="3" value="12.0" />
+        </attvalues>
+      </node>
+      <node id="Juventus" label="Juventus">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Sevilla" label="Sevilla">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="55.0" />
+        </attvalues>
+      </node>
+      <node id="Villarreal" label="Villarreal">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="104.5" />
+          <attvalue for="3" value="106.5" />
+        </attvalues>
+      </node>
+      <node id="Flamengo" label="Flamengo">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="22.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Almería" label="Almería">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.6" />
+          <attvalue for="3" value="16.65" />
+        </attvalues>
+      </node>
+      <node id="Feyenoord" label="Feyenoord">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="26.0" />
+        </attvalues>
+      </node>
+      <node id="Real Oviedo" label="Real Oviedo">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.7" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Botafogo" label="Botafogo">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="21.0" />
+        </attvalues>
+      </node>
+      <node id="Málaga" label="Málaga">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.38" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Tigres UANL" label="Tigres UANL">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="8.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Sunderland" label="Sunderland">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="11.6" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="RB Leipzig" label="RB Leipzig">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="40.0" />
+          <attvalue for="3" value="7.0" />
+        </attvalues>
+      </node>
+      <node id="Vizela" label="Vizela">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Orlando City" label="Orlando City">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="3.5" />
+        </attvalues>
+      </node>
+      <node id="Sporting de Lisboa" label="Sporting de Lisboa">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="34.75" />
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </node>
+      <node id="PAOK II" label="PAOK II">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Real Sociedad" label="Real Sociedad">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="22.5" />
+          <attvalue for="3" value="85.0" />
+        </attvalues>
+      </node>
+      <node id="Córdoba" label="Córdoba">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="2.5" />
+        </attvalues>
+      </node>
+      <node id="Valencia" label="Valencia">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="14.6" />
+          <attvalue for="3" value="27.650000000000002" />
+        </attvalues>
+      </node>
+      <node id="Paris FC" label="Paris FC">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="4.5" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Deportivo Alavés" label="Deportivo Alavés">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="21.12" />
+          <attvalue for="3" value="37.5" />
+        </attvalues>
+      </node>
+      <node id="Mirandés" label="Mirandés">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Wolverhampton Wanderers" label="Wolverhampton Wanderers">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="50.0" />
+          <attvalue for="3" value="4.0" />
+        </attvalues>
+      </node>
+      <node id="Levante UD" label="Levante UD">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="2.7" />
+          <attvalue for="3" value="5.6" />
+        </attvalues>
+      </node>
+      <node id="Arsenal" label="Arsenal">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="85.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="West Ham United" label="West Ham United">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Eibar" label="Eibar">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.8" />
+        </attvalues>
+      </node>
+      <node id="Racing de Santander" label="Racing de Santander">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Kyoto Sanga" label="Kyoto Sanga">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="1.5" />
+        </attvalues>
+      </node>
+      <node id="PAOK" label="PAOK">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Celta de Vigo" label="Celta de Vigo">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="14.0" />
+          <attvalue for="3" value="56.7" />
+        </attvalues>
+      </node>
+      <node id="Lazio" label="Lazio">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Charlotte" label="Charlotte">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.3" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Bayern Múnich" label="Bayern Múnich">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Aris Salónica" label="Aris Salónica">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="1.3" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Racing de Ferrol" label="Racing de Ferrol">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Venecia" label="Venecia">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Real Valladolid" label="Real Valladolid">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.2" />
+          <attvalue for="3" value="12.0" />
+        </attvalues>
+      </node>
+      <node id="Brujas" label="Brujas">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="FC Utrecht" label="FC Utrecht">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="1.25" />
+          <attvalue for="3" value="5.0" />
+        </attvalues>
+      </node>
+      <node id="Rosario Central" label="Rosario Central">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Crystal Palace" label="Crystal Palace">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="30.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Athletic Club de Bilbao" label="Athletic Club de Bilbao">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="22.0" />
+          <attvalue for="3" value="6.15" />
+        </attvalues>
+      </node>
+      <node id="Al Gharafa" label="Al Gharafa">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Pumas UNAM" label="Pumas UNAM">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Sporting de Gijón" label="Sporting de Gijón">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="4.1" />
+          <attvalue for="3" value="4.0" />
+        </attvalues>
+      </node>
+      <node id="Cádiz" label="Cádiz">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="2.3499999999999996" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Udinese" label="Udinese">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="4.5" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Castellón" label="Castellón">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="6.5" />
+        </attvalues>
+      </node>
+      <node id="Olympique de Marsella" label="Olympique de Marsella">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="1.5" />
+        </attvalues>
+      </node>
+      <node id="Trabzonspor" label="Trabzonspor">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="1.75" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Oporto" label="Oporto">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Estrela" label="Estrela">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Middlesbrough" label="Middlesbrough">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="UD Las Palmas" label="UD Las Palmas">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="1.945" />
+          <attvalue for="3" value="16.0" />
+        </attvalues>
+      </node>
+      <node id="RAAL La Louvière" label="RAAL La Louvière">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Lille" label="Lille">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="3.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Le Havre" label="Le Havre">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Antequera" label="Antequera">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Real Zaragoza" label="Real Zaragoza">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.8999999999999999" />
+        </attvalues>
+      </node>
+      <node id="América" label="América">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="2.0" />
+        </attvalues>
+      </node>
+      <node id="Nacional" label="Nacional">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="5.145" />
+        </attvalues>
+      </node>
+      <node id="Fenerbahçe" label="Fenerbahçe">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Monterrey" label="Monterrey">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="11.7" />
+        </attvalues>
+      </node>
+      <node id="Pachuca" label="Pachuca">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.5" />
+          <attvalue for="3" value="4.5" />
+        </attvalues>
+      </node>
+      <node id="Vélez Sarsfield" label="Vélez Sarsfield">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="5.3" />
+        </attvalues>
+      </node>
+      <node id="Arouca" label="Arouca">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.5" />
+        </attvalues>
+      </node>
+      <node id="Toluca" label="Toluca">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="5.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Leeds United" label="Leeds United">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Hércules" label="Hércules">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Al Shamal" label="Al Shamal">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="2.5" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Almere City" label="Almere City">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="SSC Nápoles" label="SSC Nápoles">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="9.0" />
+        </attvalues>
+      </node>
+      <node id="Al Duhail" label="Al Duhail">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="2.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Fluminense" label="Fluminense">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="10.5" />
+        </attvalues>
+      </node>
+      <node id="Huesca" label="Huesca">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.25" />
+          <attvalue for="3" value="3.25" />
+        </attvalues>
+      </node>
+      <node id="Minnesota United" label="Minnesota United">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="Everton" label="Everton">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="30.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="CD Leganés" label="CD Leganés">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="2.95" />
+          <attvalue for="3" value="22.0" />
+        </attvalues>
+      </node>
+      <node id="Sant Andreu" label="Sant Andreu">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Fiorentina" label="Fiorentina">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Hajduk Split" label="Hajduk Split">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1. FC Colonia" label="1. FC Colonia">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Young Boys" label="Young Boys">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="4.0" />
+        </attvalues>
+      </node>
+      <node id="Rennes" label="Rennes">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="2.0" />
+        </attvalues>
+      </node>
+      <node id="PSV Eindhoven" label="PSV Eindhoven">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="9.8" />
+          <attvalue for="3" value="0.2" />
+        </attvalues>
+      </node>
+      <node id="Celta de Vigo II" label="Celta de Vigo II">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Aston Villa" label="Aston Villa">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Talleres de Córdoba" label="Talleres de Córdoba">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.32" />
+        </attvalues>
+      </node>
+      <node id="GAIS" label="GAIS">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Istra 1961" label="Istra 1961">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="3.0" />
+        </attvalues>
+      </node>
+      <node id="Birmingham City" label="Birmingham City">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="8.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Anderlecht" label="Anderlecht">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Deportivo Alavés B" label="Deportivo Alavés B">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Cultural Leonesa" label="Cultural Leonesa">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Estrasburgo" label="Estrasburgo">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="16.5" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Fortaleza" label="Fortaleza">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Tractor" label="Tractor">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Real Madrid Castilla" label="Real Madrid Castilla">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="8.8" />
+        </attvalues>
+      </node>
+      <node id="FC Andorra" label="FC Andorra">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.5" />
+          <attvalue for="3" value="0.7" />
+        </attvalues>
+      </node>
+      <node id="Racing Club" label="Racing Club">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="3.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Alverca" label="Alverca">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Sestao River" label="Sestao River">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Real Sociedad B" label="Real Sociedad B">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="2.0" />
+        </attvalues>
+      </node>
+      <node id="Spartak Moscú" label="Spartak Moscú">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="5.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Ajax" label="Ajax">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="11.0" />
+          <attvalue for="3" value="5.0" />
+        </attvalues>
+      </node>
+      <node id="Eldense" label="Eldense">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Panaitolikos" label="Panaitolikos">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Mainz 05" label="Mainz 05">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Sparta Praga" label="Sparta Praga">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Hull City" label="Hull City">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Cornellà" label="Cornellà">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="FC Cartagena" label="FC Cartagena">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Atlanta United" label="Atlanta United">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Hellas Verona" label="Hellas Verona">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Johor Darul Ta'zim" label="Johor Darul Ta'zim">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Valencia II" label="Valencia II">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.1" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Ponferradina" label="Ponferradina">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Recreativo Huelva" label="Recreativo Huelva">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.6" />
+        </attvalues>
+      </node>
+      <node id="Burgos" label="Burgos">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.4" />
+          <attvalue for="3" value="1.3" />
+        </attvalues>
+      </node>
+      <node id="Girona II" label="Girona II">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Utebo" label="Utebo">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Górnik Zabrze" label="Górnik Zabrze">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Villarreal CF B" label="Villarreal CF B">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Al Okhdood" label="Al Okhdood">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Qarabag" label="Qarabag">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Al Wakrah" label="Al Wakrah">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.75" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Leixões" label="Leixões">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Al Fateh" label="Al Fateh">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Cremonese" label="Cremonese">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="Darmstadt 98" label="Darmstadt 98">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="2.0" />
+        </attvalues>
+      </node>
+      <node id="Burnley" label="Burnley">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Blackburn Rovers" label="Blackburn Rovers">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Pau" label="Pau">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Lugo" label="Lugo">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.2" />
+        </attvalues>
+      </node>
+      <node id="Real Murcia" label="Real Murcia">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Roma" label="Roma">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="4.5" />
+        </attvalues>
+      </node>
+      <node id="Unión Berlín" label="Unión Berlín">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Torreense" label="Torreense">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Ceuta" label="Ceuta">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.7" />
+        </attvalues>
+      </node>
+      <node id="Galatasaray" label="Galatasaray">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.5" />
+        </attvalues>
+      </node>
+      <node id="Gimnàstic Tarragona" label="Gimnàstic Tarragona">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Lecce" label="Lecce">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="1.5" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Cagliari" label="Cagliari">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Olympiakos de El Pireo" label="Olympiakos de El Pireo">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="2.7" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Danubio" label="Danubio">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Barça B" label="Barça B">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Real Madrid C" label="Real Madrid C">
+        <attvalues>
+          <attvalue for="0" value="1ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Tromsø IL" label="Tromsø IL">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Rio Ave" label="Rio Ave">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.5" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Al Riyadh" label="Al Riyadh">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Gaziantep FK" label="Gaziantep FK">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="UCV" label="UCV">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Moreirense" label="Moreirense">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Borussia Dortmund B" label="Borussia Dortmund B">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.2" />
+        </attvalues>
+      </node>
+      <node id="Lorient" label="Lorient">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Arenas Getxo" label="Arenas Getxo">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="APOEL" label="APOEL">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Osasuna Promesas" label="Osasuna Promesas">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Barakaldo" label="Barakaldo">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="1899 Hoffenheim" label="1899 Hoffenheim">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Sabadell" label="Sabadell">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Chaves" label="Chaves">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Académica" label="Académica">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Arenteiro" label="Arenteiro">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="De Graafschap" label="De Graafschap">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="Ourense CF" label="Ourense CF">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Sassuolo" label="Sassuolo">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Colo Colo" label="Colo Colo">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="1.85" />
+        </attvalues>
+      </node>
+      <node id="Aldosivi" label="Aldosivi">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Defensa y Justicia" label="Defensa y Justicia">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Tijuana" label="Tijuana">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="1.5" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="AEK Larnaca" label="AEK Larnaca">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="West Bromwich Albion" label="West Bromwich Albion">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="New York City" label="New York City">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="8.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Club Atlético de Madrid B" label="Club Atlético de Madrid B">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Saint-Étienne" label="Saint-Étienne">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Rayo Majadahonda" label="Rayo Majadahonda">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Talavera" label="Talavera">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Jagiellonia Białystok" label="Jagiellonia Białystok">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.3" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Lens" label="Lens">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Grasshopper" label="Grasshopper">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="AVS" label="AVS">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Marítimo" label="Marítimo">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Génova" label="Génova">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Partizán de Belgrado" label="Partizán de Belgrado">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.5" />
+        </attvalues>
+      </node>
+      <node id="Juventud" label="Juventud">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Tianjin Jinmen Tiger" label="Tianjin Jinmen Tiger">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.3" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Independiente" label="Independiente">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Rubin Kazan" label="Rubin Kazan">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Eupen" label="Eupen">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Los Angeles" label="Los Angeles">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Tenerife" label="Tenerife">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Sevilla II" label="Sevilla II">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.2" />
+        </attvalues>
+      </node>
+      <node id="Arka Gdynia" label="Arka Gdynia">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Gil Vicente" label="Gil Vicente">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Mérida" label="Mérida">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Ludogorets" label="Ludogorets">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="FC Noah" label="FC Noah">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Shanghai Shenhua" label="Shanghai Shenhua">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Cambuur" label="Cambuur">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="1.3" />
+        </attvalues>
+      </node>
+      <node id="Getafe B" label="Getafe B">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Wanderers" label="Wanderers">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.2" />
+        </attvalues>
+      </node>
+      <node id="Guadalajara" label="Guadalajara">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Real Betis II" label="Real Betis II">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Atlas" label="Atlas">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="2.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Artis Brno" label="Artis Brno">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="FC Volendam" label="FC Volendam">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Reddis" label="Reddis">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Atlètic Lleida" label="Atlètic Lleida">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="UD Ibiza" label="UD Ibiza">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Móstoles" label="Móstoles">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Widzew Łódź" label="Widzew Łódź">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Zalaegerszeg" label="Zalaegerszeg">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Puente Genil" label="Puente Genil">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Grimsby Town" label="Grimsby Town">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Atlético Baleares" label="Atlético Baleares">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="CD Coria" label="CD Coria">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="União de Leiria" label="União de Leiria">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Pescara" label="Pescara">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Pontevedra" label="Pontevedra">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Tarazona" label="Tarazona">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Sanluqueño" label="Sanluqueño">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Alcorcón" label="Alcorcón">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Europa" label="Europa">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="UD Logroñés" label="UD Logroñés">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Bilbao Athletic" label="Bilbao Athletic">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Teruel" label="Teruel">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Vilassar Mar" label="Vilassar Mar">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Toronto" label="Toronto">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.85" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Blau-Weiß Linz" label="Blau-Weiß Linz">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Dinamo de Moscú" label="Dinamo de Moscú">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Estoril" label="Estoril">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Clermont Foot" label="Clermont Foot">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Dinamo Kiev" label="Dinamo Kiev">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Coventry City" label="Coventry City">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Colorado Rapids" label="Colorado Rapids">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="3.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="AZ II" label="AZ II">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Racing Santander II" label="Racing Santander II">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="SD Logroñés" label="SD Logroñés">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Real Unión" label="Real Unión">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Sint-Truiden" label="Sint-Truiden">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Glasgow Rangers" label="Glasgow Rangers">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Algeciras" label="Algeciras">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Hamburgo" label="Hamburgo">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Khimki" label="Khimki">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="HJK Helsinki" label="HJK Helsinki">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="San Fernando CDI" label="San Fernando CDI">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Toulouse" label="Toulouse">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="2.0" />
+        </attvalues>
+      </node>
+      <node id="Basilea" label="Basilea">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="1.5" />
+        </attvalues>
+      </node>
+      <node id="Santos Laguna" label="Santos Laguna">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Farense" label="Farense">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Vissel Kobe" label="Vissel Kobe">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Mazatlán" label="Mazatlán">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Sampdoria" label="Sampdoria">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="OH Leuven" label="OH Leuven">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="NEC Nimega" label="NEC Nimega">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Vanspor" label="Vanspor">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Costa del Este" label="Costa del Este">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.5" />
+        </attvalues>
+      </node>
+      <node id="KP Legia Varsovia" label="KP Legia Varsovia">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Unionistas de Salamanca" label="Unionistas de Salamanca">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Gimnástica Segoviana" label="Gimnástica Segoviana">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Linense" label="Linense">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Sporting CP II" label="Sporting CP II">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Elche II" label="Elche II">
+        <attvalues>
+          <attvalue for="0" value="2ª" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Lausanne Sport" label="Lausanne Sport">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="UCAM Murcia" label="UCAM Murcia">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Xerez" label="Xerez">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="La Unión Atlético" label="La Unión Atlético">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Intercity" label="Intercity">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Europa FC" label="Europa FC">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Annecy" label="Annecy">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.1" />
+        </attvalues>
+      </node>
+      <node id="Slaven Koprivnica" label="Slaven Koprivnica">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.15" />
+        </attvalues>
+      </node>
+      <node id="Bragantino" label="Bragantino">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Al Kholood" label="Al Kholood">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Kansas City" label="Kansas City">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Piast Gliwice" label="Piast Gliwice">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Ebro" label="Ebro">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Radomiak Radom" label="Radomiak Radom">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Milan II" label="Milan II">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Atalanta II" label="Atalanta II">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Burgos Promesas" label="Burgos Promesas">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Decic" label="Decic">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Al Qadsiah" label="Al Qadsiah">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Náxara" label="Náxara">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Vitória Guimarães" label="Vitória Guimarães">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Al Najma" label="Al Najma">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Cracovia" label="Cracovia">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Real Salt Lake" label="Real Salt Lake">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Ferencvaros" label="Ferencvaros">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Kelab Bolasepak Johor Darul Ta'zim II FC" label="Kelab Bolasepak Johor Darul Ta'zim II FC">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="filial" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Orihuela" label="Orihuela">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Red Star" label="Red Star">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Juventud Torremolinos" label="Juventud Torremolinos">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+      <node id="Shandong Taishan" label="Shandong Taishan">
+        <attvalues>
+          <attvalue for="0" value="Extranjero" />
+          <attvalue for="1" value="external_club" />
+          <attvalue for="2" value="0.0" />
+          <attvalue for="3" value="0.0" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="Real Madrid" target="Olympique de Lyon" id="0" />
+      <edge source="Real Madrid" target="Bayer Leverkusen" id="1" />
+      <edge source="Real Madrid" target="Atlético Mineiro" id="2" />
+      <edge source="Real Madrid" target="Getafe" id="3" />
+      <edge source="Real Madrid" target="Elche" id="4" />
+      <edge source="Real Madrid" target="Milan" id="5" />
+      <edge source="Real Madrid" target="Albacete" id="6" />
+      <edge source="Real Madrid" target="Real Betis" id="7" />
+      <edge source="Olympique de Lyon" target="Real Madrid" id="8" />
+      <edge source="Olympique de Lyon" target="Real Sociedad" id="9" />
+      <edge source="Olympique de Lyon" target="Villarreal" id="10" />
+      <edge source="Olympique de Lyon" target="Getafe" id="11" />
+      <edge source="Olympique de Lyon" target="Real Zaragoza" id="12" />
+      <edge source="Bayer Leverkusen" target="Atlético de Madrid" id="13" />
+      <edge source="River Plate" target="Real Madrid" id="14" />
+      <edge source="River Plate" target="Sevilla" id="15" />
+      <edge source="River Plate" target="Getafe" id="16" />
+      <edge source="River Plate" target="Rayo Vallecano" id="17" />
+      <edge source="Getafe" target="Sevilla" id="18" />
+      <edge source="Getafe" target="Deportivo Alavés" id="19" />
+      <edge source="Getafe" target="Anderlecht" id="20" />
+      <edge source="Getafe" target="Real Valladolid" id="21" />
+      <edge source="Getafe" target="Crystal Palace" id="22" />
+      <edge source="Getafe" target="Granada" id="23" />
+      <edge source="Getafe" target="Sunderland" id="24" />
+      <edge source="Getafe" target="FC Cartagena" id="25" />
+      <edge source="Getafe" target="Atlanta United" id="26" />
+      <edge source="Getafe" target="Hellas Verona" id="27" />
+      <edge source="Getafe" target="Johor Darul Ta'zim" id="28" />
+      <edge source="Getafe" target="Ponferradina" id="29" />
+      <edge source="Getafe" target="Real Madrid" id="30" />
+      <edge source="Getafe" target="Celta de Vigo" id="31" />
+      <edge source="Getafe" target="Rennes" id="32" />
+      <edge source="Getafe" target="Górnik Zabrze" id="33" />
+      <edge source="Getafe" target="River Plate" id="34" />
+      <edge source="Getafe" target="Como" id="35" />
+      <edge source="Getafe" target="Sparta Praga" id="36" />
+      <edge source="Getafe" target="Hull City" id="37" />
+      <edge source="Getafe" target="Real Zaragoza" id="38" />
+      <edge source="Elche" target="FC Barcelona" id="39" />
+      <edge source="Elche" target="Atlético de Madrid" id="40" />
+      <edge source="Elche" target="Celta de Vigo" id="41" />
+      <edge source="Elche" target="Sevilla" id="42" />
+      <edge source="Elche" target="RCD Espanyol" id="43" />
+      <edge source="Elche" target="Granada" id="44" />
+      <edge source="Elche" target="Mirandés" id="45" />
+      <edge source="Elche" target="Aldosivi" id="46" />
+      <edge source="Elche" target="Tijuana" id="47" />
+      <edge source="Elche" target="AEK Larnaca" id="48" />
+      <edge source="Elche" target="Eldense" id="49" />
+      <edge source="Elche" target="Cultural Leonesa" id="50" />
+      <edge source="Elche" target="CD Leganés" id="51" />
+      <edge source="Elche" target="New York City" id="52" />
+      <edge source="Elche" target="Toluca" id="53" />
+      <edge source="Elche" target="Córdoba" id="54" />
+      <edge source="Elche" target="UD Las Palmas" id="55" />
+      <edge source="Elche" target="Sassuolo" id="56" />
+      <edge source="Elche" target="Villarreal CF B" id="57" />
+      <edge source="Elche" target="Rosario Central" id="58" />
+      <edge source="Elche" target="Bournemouth" id="59" />
+      <edge source="Elche" target="Anderlecht" id="60" />
+      <edge source="Elche" target="Rayo Majadahonda" id="61" />
+      <edge source="Elche" target="Dinamo Zagreb" id="62" />
+      <edge source="Elche" target="Cádiz" id="63" />
+      <edge source="Elche" target="Oporto" id="64" />
+      <edge source="Benfica" target="Real Madrid" id="65" />
+      <edge source="Benfica" target="Elche" id="66" />
+      <edge source="Albacete" target="Celta de Vigo" id="67" />
+      <edge source="Albacete" target="Valencia" id="68" />
+      <edge source="Albacete" target="CD Leganés" id="69" />
+      <edge source="Albacete" target="Córdoba" id="70" />
+      <edge source="Albacete" target="Granada" id="71" />
+      <edge source="Albacete" target="Eibar" id="72" />
+      <edge source="Deportivo de la Coruña" target="Real Madrid" id="73" />
+      <edge source="Deportivo de la Coruña" target="RCD Espanyol" id="74" />
+      <edge source="Deportivo de la Coruña" target="Académica" id="75" />
+      <edge source="Deportivo de la Coruña" target="Sassuolo" id="76" />
+      <edge source="Deportivo de la Coruña" target="Granada" id="77" />
+      <edge source="Deportivo de la Coruña" target="FC Andorra" id="78" />
+      <edge source="Deportivo de la Coruña" target="Sporting de Gijón" id="79" />
+      <edge source="Liverpool" target="Real Madrid" id="80" />
+      <edge source="Bournemouth" target="Real Madrid" id="81" />
+      <edge source="Real Betis" target="FC Barcelona" id="82" />
+      <edge source="Real Betis" target="Atlético de Madrid" id="83" />
+      <edge source="Real Betis" target="Celta de Vigo" id="84" />
+      <edge source="Real Betis" target="Real Zaragoza" id="85" />
+      <edge source="Real Betis" target="Cádiz" id="86" />
+      <edge source="Real Betis" target="Levante UD" id="87" />
+      <edge source="Real Betis" target="Rayo Vallecano" id="88" />
+      <edge source="Real Betis" target="Lille" id="89" />
+      <edge source="Real Betis" target="Pachuca" id="90" />
+      <edge source="Real Betis" target="Arouca" id="91" />
+      <edge source="Real Betis" target="Hércules" id="92" />
+      <edge source="Real Betis" target="Real Valladolid" id="93" />
+      <edge source="Real Betis" target="Castellón" id="94" />
+      <edge source="Real Betis" target="Como" id="95" />
+      <edge source="Real Betis" target="Getafe" id="96" />
+      <edge source="Real Betis" target="Al Shamal" id="97" />
+      <edge source="Real Betis" target="Sporting de Lisboa" id="98" />
+      <edge source="Real Betis" target="RCD Espanyol" id="99" />
+      <edge source="Real Betis" target="Al Duhail" id="100" />
+      <edge source="Real Betis" target="Fenerbahçe" id="101" />
+      <edge source="Real Betis" target="Granada" id="102" />
+      <edge source="Real Betis" target="Huesca" id="103" />
+      <edge source="Real Betis" target="Mirandés" id="104" />
+      <edge source="Inter de Milán" target="Real Madrid" id="105" />
+      <edge source="Inter de Milán" target="Villarreal" id="106" />
+      <edge source="Manchester City" target="Real Madrid" id="107" />
+      <edge source="Chelsea" target="Real Madrid" id="108" />
+      <edge source="Chelsea" target="Villarreal" id="109" />
+      <edge source="FC Barcelona" target="Paris Saint-Germain" id="110" />
+      <edge source="FC Barcelona" target="Girona" id="111" />
+      <edge source="FC Barcelona" target="Southampton" id="112" />
+      <edge source="FC Barcelona" target="Elche" id="113" />
+      <edge source="FC Barcelona" target="Al Nassr" id="114" />
+      <edge source="FC Barcelona" target="Sporting Braga" id="115" />
+      <edge source="FC Barcelona" target="Mallorca" id="116" />
+      <edge source="FC Barcelona" target="Granada" id="117" />
+      <edge source="FC Barcelona" target="Como" id="118" />
+      <edge source="FC Barcelona" target="AS Monaco" id="119" />
+      <edge source="FC Barcelona" target="Atlético de Madrid" id="120" />
+      <edge source="FC Barcelona" target="Dinamo Zagreb" id="121" />
+      <edge source="FC Barcelona" target="Chicago Fire" id="122" />
+      <edge source="FC Barcelona" target="Lyngby BK" id="123" />
+      <edge source="FC Barcelona" target="Panathinaikos" id="124" />
+      <edge source="FC Barcelona" target="Al Hilal" id="125" />
+      <edge source="FC Barcelona" target="Manchester United" id="126" />
+      <edge source="Paris Saint-Germain" target="Atlético de Madrid" id="127" />
+      <edge source="Paris Saint-Germain" target="Real Sociedad" id="128" />
+      <edge source="Paris Saint-Germain" target="Villarreal" id="129" />
+      <edge source="Paris Saint-Germain" target="RCD Espanyol" id="130" />
+      <edge source="Girona" target="FC Barcelona" id="131" />
+      <edge source="Girona" target="Atlético de Madrid" id="132" />
+      <edge source="Girona" target="Real Sociedad" id="133" />
+      <edge source="Girona" target="Athletic Club de Bilbao" id="134" />
+      <edge source="Girona" target="Ajax" id="135" />
+      <edge source="Girona" target="Manchester City" id="136" />
+      <edge source="Girona" target="FC Andorra" id="137" />
+      <edge source="Girona" target="Real Zaragoza" id="138" />
+      <edge source="Al Hilal" target="FC Barcelona" id="139" />
+      <edge source="Southampton" target="Mallorca" id="140" />
+      <edge source="Southampton" target="Real Zaragoza" id="141" />
+      <edge source="Al Nassr" target="Real Sociedad" id="142" />
+      <edge source="Al Nassr" target="Athletic Club de Bilbao" id="143" />
+      <edge source="Sporting Braga" target="RCD Espanyol" id="144" />
+      <edge source="Sporting Braga" target="Mirandés" id="145" />
+      <edge source="Manchester United" target="FC Barcelona" id="146" />
+      <edge source="Manchester United" target="Real Betis" id="147" />
+      <edge source="Mallorca" target="Athletic Club de Bilbao" id="148" />
+      <edge source="Mallorca" target="Valencia" id="149" />
+      <edge source="Mallorca" target="Cagliari" id="150" />
+      <edge source="Mallorca" target="Leeds United" id="151" />
+      <edge source="Mallorca" target="Roma" id="152" />
+      <edge source="Mallorca" target="Olympiakos de El Pireo" id="153" />
+      <edge source="Mallorca" target="Córdoba" id="154" />
+      <edge source="Mallorca" target="Ceuta" id="155" />
+      <edge source="Mallorca" target="Huesca" id="156" />
+      <edge source="FC Copenhague" target="FC Barcelona" id="157" />
+      <edge source="RCD Espanyol" target="FC Barcelona" id="158" />
+      <edge source="RCD Espanyol" target="Villarreal" id="159" />
+      <edge source="RCD Espanyol" target="Mirandés" id="160" />
+      <edge source="RCD Espanyol" target="Al Fateh" id="161" />
+      <edge source="RCD Espanyol" target="Racing de Santander" id="162" />
+      <edge source="RCD Espanyol" target="Cultural Leonesa" id="163" />
+      <edge source="RCD Espanyol" target="Alverca" id="164" />
+      <edge source="RCD Espanyol" target="Deportivo de la Coruña" id="165" />
+      <edge source="RCD Espanyol" target="Sporting de Gijón" id="166" />
+      <edge source="RCD Espanyol" target="Aris Salónica" id="167" />
+      <edge source="RCD Espanyol" target="Pau" id="168" />
+      <edge source="RCD Espanyol" target="Ajax" id="169" />
+      <edge source="RCD Espanyol" target="Tottenham Hotspur" id="170" />
+      <edge source="RCD Espanyol" target="Roma" id="171" />
+      <edge source="RCD Espanyol" target="Unión Berlín" id="172" />
+      <edge source="RCD Espanyol" target="SSC Nápoles" id="173" />
+      <edge source="RCD Espanyol" target="Málaga" id="174" />
+      <edge source="RCD Espanyol" target="Burnley" id="175" />
+      <edge source="RCD Espanyol" target="Torreense" id="176" />
+      <edge source="RCD Espanyol" target="Ceuta" id="177" />
+      <edge source="RCD Espanyol" target="Huesca" id="178" />
+      <edge source="Granada" target="FC Barcelona" id="179" />
+      <edge source="Granada" target="Real Betis" id="180" />
+      <edge source="Granada" target="Deportivo Alavés" id="181" />
+      <edge source="Granada" target="Rayo Vallecano" id="182" />
+      <edge source="Granada" target="RCD Espanyol" id="183" />
+      <edge source="Granada" target="Deportivo de la Coruña" id="184" />
+      <edge source="Granada" target="Elche" id="185" />
+      <edge source="Granada" target="Tenerife" id="186" />
+      <edge source="Granada" target="Toronto" id="187" />
+      <edge source="Granada" target="Sporting de Lisboa" id="188" />
+      <edge source="Granada" target="Aris Salónica" id="189" />
+      <edge source="Granada" target="Jagiellonia Białystok" id="190" />
+      <edge source="Granada" target="Blau-Weiß Linz" id="191" />
+      <edge source="Granada" target="Albacete" id="192" />
+      <edge source="Granada" target="Real Zaragoza" id="193" />
+      <edge source="Granada" target="Estoril" id="194" />
+      <edge source="Granada" target="Dinamo Kiev" id="195" />
+      <edge source="Granada" target="Coventry City" id="196" />
+      <edge source="Granada" target="Atalanta" id="197" />
+      <edge source="Granada" target="Real Madrid" id="198" />
+      <edge source="Granada" target="Dinamo Zagreb" id="199" />
+      <edge source="Granada" target="Colorado Rapids" id="200" />
+      <edge source="Granada" target="Real Oviedo" id="201" />
+      <edge source="Granada" target="Dinamo de Moscú" id="202" />
+      <edge source="Granada" target="Cornellà" id="203" />
+      <edge source="Atlético de Madrid" target="Inter Miami" id="204" />
+      <edge source="Atlético de Madrid" target="Atalanta" id="205" />
+      <edge source="Atlético de Madrid" target="Tottenham Hotspur" id="206" />
+      <edge source="Atlético de Madrid" target="Rayo Vallecano" id="207" />
+      <edge source="Atlético de Madrid" target="Osasuna" id="208" />
+      <edge source="Atlético de Madrid" target="Sevilla" id="209" />
+      <edge source="Atlético de Madrid" target="Girona" id="210" />
+      <edge source="Atlético de Madrid" target="Villarreal" id="211" />
+      <edge source="Atlético de Madrid" target="Flamengo" id="212" />
+      <edge source="Atlético de Madrid" target="Real Oviedo" id="213" />
+      <edge source="Atlético de Madrid" target="Málaga" id="214" />
+      <edge source="Atlético de Madrid" target="Tigres UANL" id="215" />
+      <edge source="Atlético de Madrid" target="Sunderland" id="216" />
+      <edge source="Atlético de Madrid" target="Real Betis" id="217" />
+      <edge source="Atlético de Madrid" target="RB Leipzig" id="218" />
+      <edge source="Atlético de Madrid" target="Vizela" id="219" />
+      <edge source="Atlético de Madrid" target="Orlando City" id="220" />
+      <edge source="Atlético de Madrid" target="Benfica" id="221" />
+      <edge source="Atlético de Madrid" target="Juventus" id="222" />
+      <edge source="Dinamo Zagreb" target="Elche" id="223" />
+      <edge source="Panathinaikos" target="CD Leganés" id="224" />
+      <edge source="Newcastle United" target="FC Barcelona" id="225" />
+      <edge source="Newcastle United" target="Sevilla" id="226" />
+      <edge source="Seattle Sounders" target="Atlético de Madrid" id="227" />
+      <edge source="Atalanta" target="Atlético de Madrid" id="228" />
+      <edge source="Inter Miami" target="Elche" id="229" />
+      <edge source="Tottenham Hotspur" target="Villarreal" id="230" />
+      <edge source="Rayo Vallecano" target="Atlético de Madrid" id="231" />
+      <edge source="Rayo Vallecano" target="Villarreal" id="232" />
+      <edge source="Rayo Vallecano" target="Mirandés" id="233" />
+      <edge source="Rayo Vallecano" target="Cádiz" id="234" />
+      <edge source="Rayo Vallecano" target="Qarabag" id="235" />
+      <edge source="Rayo Vallecano" target="Al Wakrah" id="236" />
+      <edge source="Rayo Vallecano" target="Leixões" id="237" />
+      <edge source="Rayo Vallecano" target="Córdoba" id="238" />
+      <edge source="Rayo Vallecano" target="Almería" id="239" />
+      <edge source="Rayo Vallecano" target="Racing Club" id="240" />
+      <edge source="Rayo Vallecano" target="Granada" id="241" />
+      <edge source="Osasuna" target="Celta de Vigo" id="242" />
+      <edge source="Osasuna" target="Athletic Club de Bilbao" id="243" />
+      <edge source="Osasuna" target="Deportivo Alavés" id="244" />
+      <edge source="Osasuna" target="Eldense" id="245" />
+      <edge source="Osasuna" target="Granada" id="246" />
+      <edge source="Osasuna" target="Bayern Múnich" id="247" />
+      <edge source="Osasuna" target="Panaitolikos" id="248" />
+      <edge source="Osasuna" target="CD Leganés" id="249" />
+      <edge source="Osasuna" target="Real Oviedo" id="250" />
+      <edge source="Osasuna" target="Racing de Ferrol" id="251" />
+      <edge source="Juventus" target="Atlético de Madrid" id="252" />
+      <edge source="Sevilla" target="Real Valladolid" id="253" />
+      <edge source="Sevilla" target="Elche" id="254" />
+      <edge source="Sevilla" target="Estrela" id="255" />
+      <edge source="Sevilla" target="Benfica" id="256" />
+      <edge source="Sevilla" target="AS Monaco" id="257" />
+      <edge source="Sevilla" target="Bayer Leverkusen" id="258" />
+      <edge source="Sevilla" target="Atlético de Madrid" id="259" />
+      <edge source="Sevilla" target="Arsenal" id="260" />
+      <edge source="Sevilla" target="Cádiz" id="261" />
+      <edge source="Sevilla" target="RAAL La Louvière" id="262" />
+      <edge source="Sevilla" target="Lille" id="263" />
+      <edge source="Sevilla" target="Olympique de Marsella" id="264" />
+      <edge source="Sevilla" target="Trabzonspor" id="265" />
+      <edge source="Sevilla" target="Antequera" id="266" />
+      <edge source="Sevilla" target="Villarreal" id="267" />
+      <edge source="Villarreal" target="Atlético de Madrid" id="268" />
+      <edge source="Villarreal" target="Sevilla" id="269" />
+      <edge source="Villarreal" target="Real Betis" id="270" />
+      <edge source="Villarreal" target="Rayo Vallecano" id="271" />
+      <edge source="Villarreal" target="Levante UD" id="272" />
+      <edge source="Villarreal" target="Crystal Palace" id="273" />
+      <edge source="Villarreal" target="Deportivo Alavés" id="274" />
+      <edge source="Villarreal" target="Real Oviedo" id="275" />
+      <edge source="Villarreal" target="Valencia" id="276" />
+      <edge source="Villarreal" target="Granada" id="277" />
+      <edge source="Villarreal" target="Everton" id="278" />
+      <edge source="Villarreal" target="Paris Saint-Germain" id="279" />
+      <edge source="Villarreal" target="Getafe" id="280" />
+      <edge source="Villarreal" target="RCD Espanyol" id="281" />
+      <edge source="Villarreal" target="Mallorca" id="282" />
+      <edge source="Villarreal" target="SSC Nápoles" id="283" />
+      <edge source="Almería" target="Atlético de Madrid" id="284" />
+      <edge source="Almería" target="CD Leganés" id="285" />
+      <edge source="Almería" target="FC Andorra" id="286" />
+      <edge source="Almería" target="Mirandés" id="287" />
+      <edge source="Almería" target="Real Zaragoza" id="288" />
+      <edge source="Feyenoord" target="Atlético de Madrid" id="289" />
+      <edge source="Real Oviedo" target="Atlético de Madrid" id="290" />
+      <edge source="Real Oviedo" target="Real Sociedad" id="291" />
+      <edge source="Real Oviedo" target="Villarreal" id="292" />
+      <edge source="Real Oviedo" target="Burgos" id="293" />
+      <edge source="Real Oviedo" target="Córdoba" id="294" />
+      <edge source="Real Oviedo" target="Huesca" id="295" />
+      <edge source="Real Oviedo" target="Mirandés" id="296" />
+      <edge source="Real Oviedo" target="Real Zaragoza" id="297" />
+      <edge source="Botafogo" target="Atlético de Madrid" id="298" />
+      <edge source="Málaga" target="Córdoba" id="299" />
+      <edge source="RB Leipzig" target="Celta de Vigo" id="300" />
+      <edge source="RB Leipzig" target="Elche" id="301" />
+      <edge source="Vizela" target="Sporting de Gijón" id="302" />
+      <edge source="Orlando City" target="Villarreal" id="303" />
+      <edge source="Sporting de Lisboa" target="Atlético de Madrid" id="304" />
+      <edge source="PAOK II" target="Atlético de Madrid" id="305" />
+      <edge source="Real Sociedad" target="Córdoba" id="306" />
+      <edge source="Real Sociedad" target="Valencia" id="307" />
+      <edge source="Real Sociedad" target="Osasuna" id="308" />
+      <edge source="Real Sociedad" target="Paris FC" id="309" />
+      <edge source="Real Sociedad" target="Real Oviedo" id="310" />
+      <edge source="Real Sociedad" target="RCD Espanyol" id="311" />
+      <edge source="Real Sociedad" target="Deportivo Alavés" id="312" />
+      <edge source="Real Sociedad" target="Mirandés" id="313" />
+      <edge source="Real Sociedad" target="Levante UD" id="314" />
+      <edge source="Real Sociedad" target="Arsenal" id="315" />
+      <edge source="Real Sociedad" target="West Ham United" id="316" />
+      <edge source="Real Sociedad" target="Eibar" id="317" />
+      <edge source="Real Sociedad" target="Al Nassr" id="318" />
+      <edge source="Real Sociedad" target="Olympique de Lyon" id="319" />
+      <edge source="Real Sociedad" target="PAOK" id="320" />
+      <edge source="Córdoba" target="Real Sociedad" id="321" />
+      <edge source="Córdoba" target="Villarreal" id="322" />
+      <edge source="Córdoba" target="Mallorca" id="323" />
+      <edge source="Córdoba" target="Real Valladolid" id="324" />
+      <edge source="Córdoba" target="Widzew Łódź" id="325" />
+      <edge source="Córdoba" target="Zalaegerszeg" id="326" />
+      <edge source="Córdoba" target="Puente Genil" id="327" />
+      <edge source="Córdoba" target="Lecce" id="328" />
+      <edge source="Córdoba" target="Grimsby Town" id="329" />
+      <edge source="Córdoba" target="União de Leiria" id="330" />
+      <edge source="Córdoba" target="Pescara" id="331" />
+      <edge source="Córdoba" target="Venecia" id="332" />
+      <edge source="Córdoba" target="Eldense" id="333" />
+      <edge source="Córdoba" target="Real Madrid Castilla" id="334" />
+      <edge source="Córdoba" target="Torreense" id="335" />
+      <edge source="Córdoba" target="Club Atlético de Madrid B" id="336" />
+      <edge source="Córdoba" target="Real Oviedo" id="337" />
+      <edge source="Córdoba" target="Villarreal CF B" id="338" />
+      <edge source="Córdoba" target="Hajduk Split" id="339" />
+      <edge source="Valencia" target="Celta de Vigo" id="340" />
+      <edge source="Valencia" target="Athletic Club de Bilbao" id="341" />
+      <edge source="Valencia" target="Real Valladolid" id="342" />
+      <edge source="Valencia" target="Mirandés" id="343" />
+      <edge source="Valencia" target="Hajduk Split" id="344" />
+      <edge source="Valencia" target="Rayo Vallecano" id="345" />
+      <edge source="Valencia" target="1. FC Colonia" id="346" />
+      <edge source="Valencia" target="Arsenal" id="347" />
+      <edge source="Valencia" target="PSV Eindhoven" id="348" />
+      <edge source="Valencia" target="Celta de Vigo II" id="349" />
+      <edge source="Valencia" target="Elche" id="350" />
+      <edge source="Valencia" target="Sevilla" id="351" />
+      <edge source="Valencia" target="Liverpool" id="352" />
+      <edge source="Valencia" target="Aston Villa" id="353" />
+      <edge source="Valencia" target="Oporto" id="354" />
+      <edge source="Valencia" target="Trabzonspor" id="355" />
+      <edge source="Valencia" target="PAOK" id="356" />
+      <edge source="Valencia" target="Leeds United" id="357" />
+      <edge source="Valencia" target="Fiorentina" id="358" />
+      <edge source="Deportivo Alavés" target="Real Sociedad" id="359" />
+      <edge source="Deportivo Alavés" target="Sevilla" id="360" />
+      <edge source="Deportivo Alavés" target="Villarreal" id="361" />
+      <edge source="Deportivo Alavés" target="Mirandés" id="362" />
+      <edge source="Deportivo Alavés" target="Birmingham City" id="363" />
+      <edge source="Deportivo Alavés" target="Anderlecht" id="364" />
+      <edge source="Deportivo Alavés" target="Real Zaragoza" id="365" />
+      <edge source="Deportivo Alavés" target="Racing de Santander" id="366" />
+      <edge source="Deportivo Alavés" target="Cultural Leonesa" id="367" />
+      <edge source="Deportivo Alavés" target="Atlético de Madrid" id="368" />
+      <edge source="Deportivo Alavés" target="Getafe" id="369" />
+      <edge source="Deportivo Alavés" target="Estrasburgo" id="370" />
+      <edge source="Deportivo Alavés" target="Tractor" id="371" />
+      <edge source="Deportivo Alavés" target="FC Andorra" id="372" />
+      <edge source="Deportivo Alavés" target="Istra 1961" id="373" />
+      <edge source="Deportivo Alavés" target="Racing Club" id="374" />
+      <edge source="Deportivo Alavés" target="Alverca" id="375" />
+      <edge source="Deportivo Alavés" target="Hércules" id="376" />
+      <edge source="Deportivo Alavés" target="RCD Espanyol" id="377" />
+      <edge source="Deportivo Alavés" target="Celta de Vigo" id="378" />
+      <edge source="Deportivo Alavés" target="Milan" id="379" />
+      <edge source="Deportivo Alavés" target="Spartak Moscú" id="380" />
+      <edge source="Deportivo Alavés" target="Fortaleza" id="381" />
+      <edge source="Deportivo Alavés" target="GAIS" id="382" />
+      <edge source="Deportivo Alavés" target="Huesca" id="383" />
+      <edge source="Mirandés" target="Real Sociedad" id="384" />
+      <edge source="Mirandés" target="Athletic Club de Bilbao" id="385" />
+      <edge source="Mirandés" target="Valencia" id="386" />
+      <edge source="Mirandés" target="Deportivo Alavés" id="387" />
+      <edge source="Mirandés" target="Osasuna" id="388" />
+      <edge source="Mirandés" target="RCD Espanyol" id="389" />
+      <edge source="Mirandés" target="Real Valladolid" id="390" />
+      <edge source="Mirandés" target="Elche" id="391" />
+      <edge source="Mirandés" target="Levante UD" id="392" />
+      <edge source="Mirandés" target="FC Andorra" id="393" />
+      <edge source="Mirandés" target="Real Sociedad B" id="394" />
+      <edge source="Mirandés" target="Eibar" id="395" />
+      <edge source="Mirandés" target="Ceuta" id="396" />
+      <edge source="Mirandés" target="Huesca" id="397" />
+      <edge source="Mirandés" target="Náxara" id="398" />
+      <edge source="Mirandés" target="Atlètic Lleida" id="399" />
+      <edge source="Mirandés" target="Real Zaragoza" id="400" />
+      <edge source="Mirandés" target="Real Oviedo" id="401" />
+      <edge source="Mirandés" target="Burgos" id="402" />
+      <edge source="Mirandés" target="UD Las Palmas" id="403" />
+      <edge source="Mirandés" target="Bilbao Athletic" id="404" />
+      <edge source="Mirandés" target="Girona" id="405" />
+      <edge source="Mirandés" target="Vitória Guimarães" id="406" />
+      <edge source="Mirandés" target="Villarreal CF B" id="407" />
+      <edge source="Wolverhampton Wanderers" target="Real Sociedad" id="408" />
+      <edge source="Wolverhampton Wanderers" target="Girona" id="409" />
+      <edge source="Levante UD" target="Celta de Vigo" id="410" />
+      <edge source="Levante UD" target="Athletic Club de Bilbao" id="411" />
+      <edge source="Levante UD" target="Real Betis" id="412" />
+      <edge source="Levante UD" target="Cultural Leonesa" id="413" />
+      <edge source="Levante UD" target="Mirandés" id="414" />
+      <edge source="Levante UD" target="Jagiellonia Białystok" id="415" />
+      <edge source="Levante UD" target="Valencia II" id="416" />
+      <edge source="Levante UD" target="Rio Ave" id="417" />
+      <edge source="Levante UD" target="Grasshopper" id="418" />
+      <edge source="Levante UD" target="FC Cartagena" id="419" />
+      <edge source="Levante UD" target="Almería" id="420" />
+      <edge source="Levante UD" target="Huesca" id="421" />
+      <edge source="Levante UD" target="AVS" id="422" />
+      <edge source="Levante UD" target="Marítimo" id="423" />
+      <edge source="Levante UD" target="Ceuta" id="424" />
+      <edge source="Levante UD" target="CD Leganés" id="425" />
+      <edge source="Levante UD" target="Villarreal CF B" id="426" />
+      <edge source="Levante UD" target="Sporting de Lisboa" id="427" />
+      <edge source="Levante UD" target="Génova" id="428" />
+      <edge source="Levante UD" target="Fiorentina" id="429" />
+      <edge source="Levante UD" target="Lille" id="430" />
+      <edge source="Arsenal" target="Villarreal" id="431" />
+      <edge source="West Ham United" target="Valencia" id="432" />
+      <edge source="Eibar" target="Huesca" id="433" />
+      <edge source="Eibar" target="UD Las Palmas" id="434" />
+      <edge source="Eibar" target="Arenas Getxo" id="435" />
+      <edge source="Eibar" target="Barakaldo" id="436" />
+      <edge source="Eibar" target="Tarazona" id="437" />
+      <edge source="Eibar" target="Villarreal" id="438" />
+      <edge source="Eibar" target="Albacete" id="439" />
+      <edge source="Eibar" target="Basilea" id="440" />
+      <edge source="Eibar" target="Toulouse" id="441" />
+      <edge source="Eibar" target="Hércules" id="442" />
+      <edge source="Eibar" target="Antequera" id="443" />
+      <edge source="Racing de Santander" target="Real Sociedad" id="444" />
+      <edge source="Racing de Santander" target="Celta de Vigo" id="445" />
+      <edge source="Racing de Santander" target="Athletic Club de Bilbao" id="446" />
+      <edge source="Racing de Santander" target="RCD Espanyol" id="447" />
+      <edge source="Racing de Santander" target="Real Valladolid" id="448" />
+      <edge source="Racing de Santander" target="FC Andorra" id="449" />
+      <edge source="Kyoto Sanga" target="Real Sociedad" id="450" />
+      <edge source="Kyoto Sanga" target="Real Sociedad B" id="451" />
+      <edge source="PAOK" target="Deportivo Alavés" id="452" />
+      <edge source="Celta de Vigo" target="Inter Miami" id="453" />
+      <edge source="Celta de Vigo" target="Wolverhampton Wanderers" id="454" />
+      <edge source="Celta de Vigo" target="Charlotte" id="455" />
+      <edge source="Celta de Vigo" target="Valencia" id="456" />
+      <edge source="Celta de Vigo" target="Girona" id="457" />
+      <edge source="Celta de Vigo" target="Racing de Santander" id="458" />
+      <edge source="Celta de Vigo" target="Levante UD" id="459" />
+      <edge source="Celta de Vigo" target="Aris Salónica" id="460" />
+      <edge source="Celta de Vigo" target="Málaga" id="461" />
+      <edge source="Celta de Vigo" target="Racing de Ferrol" id="462" />
+      <edge source="Celta de Vigo" target="Real Betis" id="463" />
+      <edge source="Celta de Vigo" target="Sevilla" id="464" />
+      <edge source="Celta de Vigo" target="FC Utrecht" id="465" />
+      <edge source="Celta de Vigo" target="Rosario Central" id="466" />
+      <edge source="Celta de Vigo" target="Crystal Palace" id="467" />
+      <edge source="Lazio" target="Celta de Vigo" id="468" />
+      <edge source="Bayern Múnich" target="Celta de Vigo" id="469" />
+      <edge source="Aris Salónica" target="Celta de Vigo" id="470" />
+      <edge source="Racing de Ferrol" target="Deportivo de la Coruña" id="471" />
+      <edge source="Racing de Ferrol" target="Burgos" id="472" />
+      <edge source="Racing de Ferrol" target="CD Leganés" id="473" />
+      <edge source="Racing de Ferrol" target="Ceuta" id="474" />
+      <edge source="Venecia" target="Celta de Vigo" id="475" />
+      <edge source="Real Valladolid" target="Celta de Vigo" id="476" />
+      <edge source="Real Valladolid" target="Real Betis" id="477" />
+      <edge source="Real Valladolid" target="Valencia" id="478" />
+      <edge source="Real Valladolid" target="Real Madrid C" id="479" />
+      <edge source="Real Valladolid" target="Arouca" id="480" />
+      <edge source="Real Valladolid" target="Rio Ave" id="481" />
+      <edge source="Real Valladolid" target="Al Riyadh" id="482" />
+      <edge source="Real Valladolid" target="Gaziantep FK" id="483" />
+      <edge source="Real Valladolid" target="UCV" id="484" />
+      <edge source="Real Valladolid" target="Moreirense" id="485" />
+      <edge source="Real Valladolid" target="Ajax" id="486" />
+      <edge source="Real Valladolid" target="Arenas Getxo" id="487" />
+      <edge source="Real Valladolid" target="Osasuna Promesas" id="488" />
+      <edge source="Real Valladolid" target="Arsenal" id="489" />
+      <edge source="Real Valladolid" target="Bayern Múnich" id="490" />
+      <edge source="Real Valladolid" target="Ceuta" id="491" />
+      <edge source="Real Valladolid" target="1899 Hoffenheim" id="492" />
+      <edge source="Real Valladolid" target="Venecia" id="493" />
+      <edge source="Real Valladolid" target="Real Madrid" id="494" />
+      <edge source="Real Valladolid" target="Pachuca" id="495" />
+      <edge source="Real Valladolid" target="Racing de Santander" id="496" />
+      <edge source="Real Valladolid" target="Getafe" id="497" />
+      <edge source="Real Valladolid" target="FC Utrecht" id="498" />
+      <edge source="Real Valladolid" target="Córdoba" id="499" />
+      <edge source="Brujas" target="Celta de Vigo" id="500" />
+      <edge source="Brujas" target="Getafe" id="501" />
+      <edge source="FC Utrecht" target="Deportivo Alavés" id="502" />
+      <edge source="FC Utrecht" target="Real Valladolid" id="503" />
+      <edge source="Crystal Palace" target="Getafe" id="504" />
+      <edge source="Athletic Club de Bilbao" target="Levante UD" id="505" />
+      <edge source="Athletic Club de Bilbao" target="Eibar" id="506" />
+      <edge source="Athletic Club de Bilbao" target="Racing de Santander" id="507" />
+      <edge source="Athletic Club de Bilbao" target="Girona" id="508" />
+      <edge source="Athletic Club de Bilbao" target="Al Gharafa" id="509" />
+      <edge source="Athletic Club de Bilbao" target="Valencia" id="510" />
+      <edge source="Athletic Club de Bilbao" target="Celta de Vigo" id="511" />
+      <edge source="Athletic Club de Bilbao" target="Racing de Ferrol" id="512" />
+      <edge source="Athletic Club de Bilbao" target="Cádiz" id="513" />
+      <edge source="Athletic Club de Bilbao" target="Udinese" id="514" />
+      <edge source="Al Gharafa" target="Athletic Club de Bilbao" id="515" />
+      <edge source="Pumas UNAM" target="Athletic Club de Bilbao" id="516" />
+      <edge source="Sporting de Gijón" target="Athletic Club de Bilbao" id="517" />
+      <edge source="Sporting de Gijón" target="Osasuna" id="518" />
+      <edge source="Sporting de Gijón" target="Johor Darul Ta'zim" id="519" />
+      <edge source="Sporting de Gijón" target="Atlas" id="520" />
+      <edge source="Sporting de Gijón" target="Celta de Vigo" id="521" />
+      <edge source="Sporting de Gijón" target="HJK Helsinki" id="522" />
+      <edge source="Sporting de Gijón" target="Deportivo Alavés" id="523" />
+      <edge source="Sporting de Gijón" target="Eibar" id="524" />
+      <edge source="Sporting de Gijón" target="Barça B" id="525" />
+      <edge source="Sporting de Gijón" target="Santos Laguna" id="526" />
+      <edge source="Sporting de Gijón" target="Sint-Truiden" id="527" />
+      <edge source="Cádiz" target="Rayo Vallecano" id="528" />
+      <edge source="Cádiz" target="Girona" id="529" />
+      <edge source="Cádiz" target="Elche" id="530" />
+      <edge source="Cádiz" target="UD Las Palmas" id="531" />
+      <edge source="Cádiz" target="Ceuta" id="532" />
+      <edge source="Cádiz" target="Huesca" id="533" />
+      <edge source="Udinese" target="Sevilla" id="534" />
+      <edge source="Udinese" target="Eibar" id="535" />
+      <edge source="Udinese" target="UD Las Palmas" id="536" />
+      <edge source="Castellón" target="Athletic Club de Bilbao" id="537" />
+      <edge source="Castellón" target="Rayo Vallecano" id="538" />
+      <edge source="Castellón" target="RCD Espanyol" id="539" />
+      <edge source="Olympique de Marsella" target="Sevilla" id="540" />
+      <edge source="Olympique de Marsella" target="Rayo Vallecano" id="541" />
+      <edge source="Olympique de Marsella" target="Deportivo de la Coruña" id="542" />
+      <edge source="Trabzonspor" target="Sevilla" id="543" />
+      <edge source="Oporto" target="Sevilla" id="544" />
+      <edge source="Middlesbrough" target="Sevilla" id="545" />
+      <edge source="UD Las Palmas" target="Sevilla" id="546" />
+      <edge source="UD Las Palmas" target="Villarreal" id="547" />
+      <edge source="UD Las Palmas" target="Getafe" id="548" />
+      <edge source="UD Las Palmas" target="FC Andorra" id="549" />
+      <edge source="UD Las Palmas" target="OH Leuven" id="550" />
+      <edge source="UD Las Palmas" target="Hull City" id="551" />
+      <edge source="UD Las Palmas" target="NEC Nimega" id="552" />
+      <edge source="UD Las Palmas" target="Vanspor" id="553" />
+      <edge source="UD Las Palmas" target="Ceuta" id="554" />
+      <edge source="UD Las Palmas" target="Dinamo Zagreb" id="555" />
+      <edge source="UD Las Palmas" target="Ponferradina" id="556" />
+      <edge source="UD Las Palmas" target="Almería" id="557" />
+      <edge source="UD Las Palmas" target="Clermont Foot" id="558" />
+      <edge source="UD Las Palmas" target="Liverpool" id="559" />
+      <edge source="UD Las Palmas" target="Wolverhampton Wanderers" id="560" />
+      <edge source="UD Las Palmas" target="Sporting de Lisboa" id="561" />
+      <edge source="UD Las Palmas" target="Sampdoria" id="562" />
+      <edge source="UD Las Palmas" target="Fiorentina" id="563" />
+      <edge source="UD Las Palmas" target="Udinese" id="564" />
+      <edge source="UD Las Palmas" target="KP Legia Varsovia" id="565" />
+      <edge source="UD Las Palmas" target="Vissel Kobe" id="566" />
+      <edge source="UD Las Palmas" target="Feyenoord" id="567" />
+      <edge source="Lille" target="Levante UD" id="568" />
+      <edge source="Le Havre" target="Sevilla" id="569" />
+      <edge source="Le Havre" target="CD Leganés" id="570" />
+      <edge source="Antequera" target="Córdoba" id="571" />
+      <edge source="Real Zaragoza" target="Deportivo Alavés" id="572" />
+      <edge source="Real Zaragoza" target="Getafe" id="573" />
+      <edge source="Real Zaragoza" target="Eibar" id="574" />
+      <edge source="Real Zaragoza" target="UD Las Palmas" id="575" />
+      <edge source="Real Zaragoza" target="Huesca" id="576" />
+      <edge source="Real Zaragoza" target="Cracovia" id="577" />
+      <edge source="Real Zaragoza" target="Jagiellonia Białystok" id="578" />
+      <edge source="Real Zaragoza" target="Tarazona" id="579" />
+      <edge source="Real Zaragoza" target="Kelab Bolasepak Johor Darul Ta'zim II FC" id="580" />
+      <edge source="Real Zaragoza" target="Cultural Leonesa" id="581" />
+      <edge source="Real Zaragoza" target="Red Star" id="582" />
+      <edge source="Real Zaragoza" target="Juventud Torremolinos" id="583" />
+      <edge source="Real Zaragoza" target="Eldense" id="584" />
+      <edge source="Real Zaragoza" target="Shandong Taishan" id="585" />
+      <edge source="Real Zaragoza" target="Almería" id="586" />
+      <edge source="Real Zaragoza" target="Deportivo Alavés B" id="587" />
+      <edge source="Real Zaragoza" target="Partizán de Belgrado" id="588" />
+      <edge source="Real Zaragoza" target="Hércules" id="589" />
+      <edge source="Real Zaragoza" target="Valencia" id="590" />
+      <edge source="Real Zaragoza" target="Athletic Club de Bilbao" id="591" />
+      <edge source="América" target="Real Betis" id="592" />
+      <edge source="Nacional" target="Real Betis" id="593" />
+      <edge source="Nacional" target="UD Las Palmas" id="594" />
+      <edge source="Fenerbahçe" target="Real Betis" id="595" />
+      <edge source="Monterrey" target="Real Betis" id="596" />
+      <edge source="Monterrey" target="Real Zaragoza" id="597" />
+      <edge source="Pachuca" target="Rayo Vallecano" id="598" />
+      <edge source="Vélez Sarsfield" target="Real Betis" id="599" />
+      <edge source="Vélez Sarsfield" target="Villarreal" id="600" />
+      <edge source="Arouca" target="Real Betis" id="601" />
+      <edge source="Arouca" target="Sporting de Gijón" id="602" />
+      <edge source="Toluca" target="Real Betis" id="603" />
+      <edge source="Leeds United" target="Real Betis" id="604" />
+      <edge source="Leeds United" target="Valencia" id="605" />
+      <edge source="Hércules" target="Real Betis" id="606" />
+      <edge source="Hércules" target="Deportivo Alavés" id="607" />
+      <edge source="Hércules" target="Tenerife" id="608" />
+      <edge source="Almere City" target="Real Betis" id="609" />
+      <edge source="SSC Nápoles" target="Real Betis" id="610" />
+      <edge source="SSC Nápoles" target="Villarreal" id="611" />
+      <edge source="SSC Nápoles" target="RCD Espanyol" id="612" />
+      <edge source="Fluminense" target="Real Betis" id="613" />
+      <edge source="Huesca" target="Real Betis" id="614" />
+      <edge source="Huesca" target="Deportivo Alavés" id="615" />
+      <edge source="Huesca" target="Mallorca" id="616" />
+      <edge source="Huesca" target="Levante UD" id="617" />
+      <edge source="Huesca" target="CD Leganés" id="618" />
+      <edge source="Huesca" target="Córdoba" id="619" />
+      <edge source="Huesca" target="Ceuta" id="620" />
+      <edge source="Huesca" target="Al Kholood" id="621" />
+      <edge source="Huesca" target="Osasuna Promesas" id="622" />
+      <edge source="Huesca" target="Tarazona" id="623" />
+      <edge source="Huesca" target="Gimnàstic Tarragona" id="624" />
+      <edge source="Huesca" target="Teruel" id="625" />
+      <edge source="Huesca" target="Piast Gliwice" id="626" />
+      <edge source="Huesca" target="Al Wakrah" id="627" />
+      <edge source="Huesca" target="Deportivo de la Coruña" id="628" />
+      <edge source="Huesca" target="Ebro" id="629" />
+      <edge source="Huesca" target="Radomiak Radom" id="630" />
+      <edge source="Huesca" target="RCD Espanyol" id="631" />
+      <edge source="Huesca" target="Almería" id="632" />
+      <edge source="Huesca" target="Atlético Baleares" id="633" />
+      <edge source="Huesca" target="Málaga" id="634" />
+      <edge source="Minnesota United" target="Villarreal" id="635" />
+      <edge source="CD Leganés" target="Villarreal" id="636" />
+      <edge source="CD Leganés" target="Valencia" id="637" />
+      <edge source="CD Leganés" target="Osasuna" id="638" />
+      <edge source="CD Leganés" target="Getafe" id="639" />
+      <edge source="CD Leganés" target="RCD Espanyol" id="640" />
+      <edge source="CD Leganés" target="Málaga" id="641" />
+      <edge source="CD Leganés" target="Panathinaikos" id="642" />
+      <edge source="CD Leganés" target="Almería" id="643" />
+      <edge source="CD Leganés" target="Al Riyadh" id="644" />
+      <edge source="CD Leganés" target="Getafe B" id="645" />
+      <edge source="CD Leganés" target="RB Leipzig" id="646" />
+      <edge source="CD Leganés" target="Guadalajara" id="647" />
+      <edge source="CD Leganés" target="Trabzonspor" id="648" />
+      <edge source="CD Leganés" target="Atlas" id="649" />
+      <edge source="Sant Andreu" target="Valencia" id="650" />
+      <edge source="Fiorentina" target="Valencia" id="651" />
+      <edge source="Fiorentina" target="Levante UD" id="652" />
+      <edge source="Fiorentina" target="UD Las Palmas" id="653" />
+      <edge source="Hajduk Split" target="Real Valladolid" id="654" />
+      <edge source="Young Boys" target="Valencia" id="655" />
+      <edge source="Rennes" target="Valencia" id="656" />
+      <edge source="Rennes" target="Real Valladolid" id="657" />
+      <edge source="PSV Eindhoven" target="Levante UD" id="658" />
+      <edge source="Celta de Vigo II" target="FC Andorra" id="659" />
+      <edge source="Celta de Vigo II" target="Real Oviedo" id="660" />
+      <edge source="Aston Villa" target="Getafe" id="661" />
+      <edge source="Talleres de Córdoba" target="Deportivo Alavés" id="662" />
+      <edge source="GAIS" target="Deportivo Alavés" id="663" />
+      <edge source="Istra 1961" target="Deportivo Alavés" id="664" />
+      <edge source="Birmingham City" target="Girona" id="665" />
+      <edge source="Anderlecht" target="Deportivo Alavés" id="666" />
+      <edge source="Anderlecht" target="Getafe" id="667" />
+      <edge source="Deportivo Alavés B" target="Deportivo Alavés" id="668" />
+      <edge source="Cultural Leonesa" target="Deportivo Alavés" id="669" />
+      <edge source="Cultural Leonesa" target="RCD Espanyol" id="670" />
+      <edge source="Cultural Leonesa" target="Deportivo de la Coruña" id="671" />
+      <edge source="Cultural Leonesa" target="Elche" id="672" />
+      <edge source="Cultural Leonesa" target="Levante UD" id="673" />
+      <edge source="Estrasburgo" target="UD Las Palmas" id="674" />
+      <edge source="Fortaleza" target="Deportivo Alavés" id="675" />
+      <edge source="Real Madrid Castilla" target="Deportivo Alavés" id="676" />
+      <edge source="Real Madrid Castilla" target="Osasuna" id="677" />
+      <edge source="Real Madrid Castilla" target="CD Leganés" id="678" />
+      <edge source="FC Andorra" target="Deportivo Alavés" id="679" />
+      <edge source="FC Andorra" target="Girona" id="680" />
+      <edge source="FC Andorra" target="Deportivo de la Coruña" id="681" />
+      <edge source="FC Andorra" target="Gimnàstic Tarragona" id="682" />
+      <edge source="FC Andorra" target="Eldense" id="683" />
+      <edge source="FC Andorra" target="UD Logroñés" id="684" />
+      <edge source="FC Andorra" target="Teruel" id="685" />
+      <edge source="FC Andorra" target="Racing de Ferrol" id="686" />
+      <edge source="FC Andorra" target="Vilassar Mar" id="687" />
+      <edge source="FC Andorra" target="Eupen" id="688" />
+      <edge source="FC Andorra" target="FC Cartagena" id="689" />
+      <edge source="FC Andorra" target="Atlètic Lleida" id="690" />
+      <edge source="FC Andorra" target="Granada" id="691" />
+      <edge source="FC Andorra" target="Real Oviedo" id="692" />
+      <edge source="FC Andorra" target="Girona II" id="693" />
+      <edge source="FC Andorra" target="Bilbao Athletic" id="694" />
+      <edge source="FC Andorra" target="Racing de Santander" id="695" />
+      <edge source="FC Andorra" target="Almería" id="696" />
+      <edge source="FC Andorra" target="Barça B" id="697" />
+      <edge source="FC Andorra" target="Sparta Praga" id="698" />
+      <edge source="Alverca" target="Deportivo Alavés" id="699" />
+      <edge source="Sestao River" target="Deportivo Alavés" id="700" />
+      <edge source="Sestao River" target="CD Leganés" id="701" />
+      <edge source="Sestao River" target="Huesca" id="702" />
+      <edge source="Real Sociedad B" target="Deportivo Alavés" id="703" />
+      <edge source="Real Sociedad B" target="AZ II" id="704" />
+      <edge source="Real Sociedad B" target="Cultural Leonesa" id="705" />
+      <edge source="Real Sociedad B" target="Racing Santander II" id="706" />
+      <edge source="Real Sociedad B" target="SD Logroñés" id="707" />
+      <edge source="Real Sociedad B" target="Barakaldo" id="708" />
+      <edge source="Real Sociedad B" target="Bilbao Athletic" id="709" />
+      <edge source="Real Sociedad B" target="Gimnàstic Tarragona" id="710" />
+      <edge source="Real Sociedad B" target="Kyoto Sanga" id="711" />
+      <edge source="Real Sociedad B" target="Sporting de Gijón" id="712" />
+      <edge source="Ajax" target="Osasuna" id="713" />
+      <edge source="Eldense" target="Rayo Vallecano" id="714" />
+      <edge source="Eldense" target="Real Valladolid" id="715" />
+      <edge source="Eldense" target="Elche" id="716" />
+      <edge source="Eldense" target="Levante UD" id="717" />
+      <edge source="Eldense" target="Burgos" id="718" />
+      <edge source="Eldense" target="Córdoba" id="719" />
+      <edge source="Eldense" target="Valencia II" id="720" />
+      <edge source="Eldense" target="Almería" id="721" />
+      <edge source="Eldense" target="CD Leganés" id="722" />
+      <edge source="Eldense" target="Ceuta" id="723" />
+      <edge source="Eldense" target="Huesca" id="724" />
+      <edge source="Mainz 05" target="Osasuna" id="725" />
+      <edge source="Sparta Praga" target="Getafe" id="726" />
+      <edge source="Sparta Praga" target="FC Andorra" id="727" />
+      <edge source="Hull City" target="Getafe" id="728" />
+      <edge source="Cornellà" target="Getafe" id="729" />
+      <edge source="Cornellà" target="Granada" id="730" />
+      <edge source="FC Cartagena" target="RCD Espanyol" id="731" />
+      <edge source="FC Cartagena" target="Deportivo de la Coruña" id="732" />
+      <edge source="FC Cartagena" target="Levante UD" id="733" />
+      <edge source="FC Cartagena" target="CD Leganés" id="734" />
+      <edge source="FC Cartagena" target="FC Andorra" id="735" />
+      <edge source="FC Cartagena" target="Real Zaragoza" id="736" />
+      <edge source="Atlanta United" target="Getafe" id="737" />
+      <edge source="Johor Darul Ta'zim" target="UD Las Palmas" id="738" />
+      <edge source="Valencia II" target="Getafe" id="739" />
+      <edge source="Valencia II" target="Granada" id="740" />
+      <edge source="Valencia II" target="Huesca" id="741" />
+      <edge source="Valencia II" target="Mirandés" id="742" />
+      <edge source="Ponferradina" target="Real Valladolid" id="743" />
+      <edge source="Ponferradina" target="FC Andorra" id="744" />
+      <edge source="Recreativo Huelva" target="Getafe" id="745" />
+      <edge source="Recreativo Huelva" target="Real Sociedad B" id="746" />
+      <edge source="Burgos" target="Getafe" id="747" />
+      <edge source="Burgos" target="Juventud" id="748" />
+      <edge source="Burgos" target="Tianjin Jinmen Tiger" id="749" />
+      <edge source="Burgos" target="Rubin Kazan" id="750" />
+      <edge source="Burgos" target="FC Cartagena" id="751" />
+      <edge source="Burgos" target="Eupen" id="752" />
+      <edge source="Burgos" target="Arka Gdynia" id="753" />
+      <edge source="Burgos" target="Huesca" id="754" />
+      <edge source="Burgos" target="Gil Vicente" id="755" />
+      <edge source="Burgos" target="Almería" id="756" />
+      <edge source="Burgos" target="RCD Espanyol" id="757" />
+      <edge source="Burgos" target="Ludogorets" id="758" />
+      <edge source="Burgos" target="Real Oviedo" id="759" />
+      <edge source="Burgos" target="Génova" id="760" />
+      <edge source="Burgos" target="FC Noah" id="761" />
+      <edge source="Girona II" target="Getafe" id="762" />
+      <edge source="Girona II" target="FC Andorra" id="763" />
+      <edge source="Utebo" target="Getafe" id="764" />
+      <edge source="Górnik Zabrze" target="Real Zaragoza" id="765" />
+      <edge source="Villarreal CF B" target="Getafe" id="766" />
+      <edge source="Villarreal CF B" target="Rayo Vallecano" id="767" />
+      <edge source="Villarreal CF B" target="RCD Espanyol" id="768" />
+      <edge source="Villarreal CF B" target="Córdoba" id="769" />
+      <edge source="Villarreal CF B" target="FC Andorra" id="770" />
+      <edge source="Villarreal CF B" target="Mirandés" id="771" />
+      <edge source="Al Okhdood" target="Getafe" id="772" />
+      <edge source="Al Wakrah" target="Rayo Vallecano" id="773" />
+      <edge source="Leixões" target="Rayo Vallecano" id="774" />
+      <edge source="Cremonese" target="RCD Espanyol" id="775" />
+      <edge source="Darmstadt 98" target="RCD Espanyol" id="776" />
+      <edge source="Burnley" target="RCD Espanyol" id="777" />
+      <edge source="Blackburn Rovers" target="RCD Espanyol" id="778" />
+      <edge source="Pau" target="RCD Espanyol" id="779" />
+      <edge source="Lugo" target="RCD Espanyol" id="780" />
+      <edge source="Lugo" target="Burgos" id="781" />
+      <edge source="Real Murcia" target="RCD Espanyol" id="782" />
+      <edge source="Real Murcia" target="Eibar" id="783" />
+      <edge source="Roma" target="Elche" id="784" />
+      <edge source="Ceuta" target="RCD Espanyol" id="785" />
+      <edge source="Ceuta" target="Mallorca" id="786" />
+      <edge source="Ceuta" target="UD Las Palmas" id="787" />
+      <edge source="Ceuta" target="Hércules" id="788" />
+      <edge source="Ceuta" target="Albacete" id="789" />
+      <edge source="Ceuta" target="Cádiz" id="790" />
+      <edge source="Ceuta" target="Mérida" id="791" />
+      <edge source="Ceuta" target="UD Ibiza" id="792" />
+      <edge source="Ceuta" target="UCAM Murcia" id="793" />
+      <edge source="Ceuta" target="La Unión Atlético" id="794" />
+      <edge source="Ceuta" target="Intercity" id="795" />
+      <edge source="Ceuta" target="Farense" id="796" />
+      <edge source="Ceuta" target="Europa FC" id="797" />
+      <edge source="Ceuta" target="Real Oviedo" id="798" />
+      <edge source="Ceuta" target="Lausanne Sport" id="799" />
+      <edge source="Galatasaray" target="Girona" id="800" />
+      <edge source="Galatasaray" target="FC Andorra" id="801" />
+      <edge source="Gimnàstic Tarragona" target="Girona" id="802" />
+      <edge source="Gimnàstic Tarragona" target="FC Andorra" id="803" />
+      <edge source="Lecce" target="Mallorca" id="804" />
+      <edge source="Lecce" target="Elche" id="805" />
+      <edge source="Danubio" target="Real Valladolid" id="806" />
+      <edge source="Barça B" target="Real Valladolid" id="807" />
+      <edge source="Barça B" target="FC Andorra" id="808" />
+      <edge source="Barça B" target="Sporting de Gijón" id="809" />
+      <edge source="Barça B" target="Eibar" id="810" />
+      <edge source="Real Madrid C" target="Real Valladolid" id="811" />
+      <edge source="Tromsø IL" target="Real Valladolid" id="812" />
+      <edge source="Borussia Dortmund B" target="Real Valladolid" id="813" />
+      <edge source="Lorient" target="Real Valladolid" id="814" />
+      <edge source="Arenas Getxo" target="Tenerife" id="815" />
+      <edge source="Arenas Getxo" target="FC Andorra" id="816" />
+      <edge source="Arenas Getxo" target="Real Sociedad B" id="817" />
+      <edge source="Arenas Getxo" target="Eibar" id="818" />
+      <edge source="APOEL" target="Real Valladolid" id="819" />
+      <edge source="Barakaldo" target="Real Valladolid" id="820" />
+      <edge source="Barakaldo" target="Real Sociedad B" id="821" />
+      <edge source="Barakaldo" target="Eibar" id="822" />
+      <edge source="Barakaldo" target="UD Las Palmas" id="823" />
+      <edge source="Sabadell" target="Real Valladolid" id="824" />
+      <edge source="Sabadell" target="UD Ibiza" id="825" />
+      <edge source="Chaves" target="Real Valladolid" id="826" />
+      <edge source="Arenteiro" target="Deportivo de la Coruña" id="827" />
+      <edge source="Arenteiro" target="CD Leganés" id="828" />
+      <edge source="Arenteiro" target="Huesca" id="829" />
+      <edge source="De Graafschap" target="Deportivo de la Coruña" id="830" />
+      <edge source="Ourense CF" target="Deportivo de la Coruña" id="831" />
+      <edge source="Sassuolo" target="Levante UD" id="832" />
+      <edge source="Colo Colo" target="Elche" id="833" />
+      <edge source="Defensa y Justicia" target="Elche" id="834" />
+      <edge source="West Bromwich Albion" target="Elche" id="835" />
+      <edge source="Club Atlético de Madrid B" target="Elche" id="836" />
+      <edge source="Club Atlético de Madrid B" target="Burgos" id="837" />
+      <edge source="Club Atlético de Madrid B" target="Córdoba" id="838" />
+      <edge source="Club Atlético de Madrid B" target="UD Las Palmas" id="839" />
+      <edge source="Club Atlético de Madrid B" target="Mirandés" id="840" />
+      <edge source="Saint-Étienne" target="Elche" id="841" />
+      <edge source="Talavera" target="Elche" id="842" />
+      <edge source="Talavera" target="Levante UD" id="843" />
+      <edge source="Jagiellonia Białystok" target="Huesca" id="844" />
+      <edge source="Lens" target="Levante UD" id="845" />
+      <edge source="AVS" target="Huesca" id="846" />
+      <edge source="Marítimo" target="Levante UD" id="847" />
+      <edge source="Génova" target="Levante UD" id="848" />
+      <edge source="Génova" target="Burgos" id="849" />
+      <edge source="Partizán de Belgrado" target="Levante UD" id="850" />
+      <edge source="Independiente" target="Burgos" id="851" />
+      <edge source="Rubin Kazan" target="Real Zaragoza" id="852" />
+      <edge source="Los Angeles" target="Burgos" id="853" />
+      <edge source="Tenerife" target="Burgos" id="854" />
+      <edge source="Tenerife" target="Rayo Majadahonda" id="855" />
+      <edge source="Tenerife" target="Girona" id="856" />
+      <edge source="Tenerife" target="Córdoba" id="857" />
+      <edge source="Tenerife" target="Granada" id="858" />
+      <edge source="Tenerife" target="Ceuta" id="859" />
+      <edge source="Tenerife" target="Mirandés" id="860" />
+      <edge source="Sevilla II" target="Burgos" id="861" />
+      <edge source="Sevilla II" target="Granada" id="862" />
+      <edge source="Mérida" target="Burgos" id="863" />
+      <edge source="Mérida" target="Ceuta" id="864" />
+      <edge source="Mérida" target="Huesca" id="865" />
+      <edge source="Mérida" target="Mirandés" id="866" />
+      <edge source="Shanghai Shenhua" target="CD Leganés" id="867" />
+      <edge source="Cambuur" target="CD Leganés" id="868" />
+      <edge source="Getafe B" target="Córdoba" id="869" />
+      <edge source="Getafe B" target="FC Andorra" id="870" />
+      <edge source="Wanderers" target="CD Leganés" id="871" />
+      <edge source="Real Betis II" target="CD Leganés" id="872" />
+      <edge source="Real Betis II" target="Mirandés" id="873" />
+      <edge source="Artis Brno" target="CD Leganés" id="874" />
+      <edge source="FC Volendam" target="CD Leganés" id="875" />
+      <edge source="Reddis" target="Sabadell" id="876" />
+      <edge source="Atlètic Lleida" target="Sabadell" id="877" />
+      <edge source="Atlètic Lleida" target="FC Andorra" id="878" />
+      <edge source="UD Ibiza" target="FC Andorra" id="879" />
+      <edge source="UD Ibiza" target="Sporting de Gijón" id="880" />
+      <edge source="UD Ibiza" target="Huesca" id="881" />
+      <edge source="Móstoles" target="Córdoba" id="882" />
+      <edge source="Atlético Baleares" target="Córdoba" id="883" />
+      <edge source="CD Coria" target="Córdoba" id="884" />
+      <edge source="Pontevedra" target="Córdoba" id="885" />
+      <edge source="Tarazona" target="Córdoba" id="886" />
+      <edge source="Tarazona" target="Eibar" id="887" />
+      <edge source="Sanluqueño" target="Córdoba" id="888" />
+      <edge source="Alcorcón" target="Córdoba" id="889" />
+      <edge source="Alcorcón" target="Real Zaragoza" id="890" />
+      <edge source="Europa" target="Córdoba" id="891" />
+      <edge source="UD Logroñés" target="FC Andorra" id="892" />
+      <edge source="Bilbao Athletic" target="FC Andorra" id="893" />
+      <edge source="Bilbao Athletic" target="Mirandés" id="894" />
+      <edge source="Teruel" target="FC Andorra" id="895" />
+      <edge source="Dinamo de Moscú" target="Granada" id="896" />
+      <edge source="Clermont Foot" target="Granada" id="897" />
+      <edge source="AZ II" target="Real Sociedad B" id="898" />
+      <edge source="Real Unión" target="Real Sociedad B" id="899" />
+      <edge source="Sint-Truiden" target="Sporting de Gijón" id="900" />
+      <edge source="Glasgow Rangers" target="Sporting de Gijón" id="901" />
+      <edge source="Algeciras" target="Sporting de Gijón" id="902" />
+      <edge source="Hamburgo" target="Sporting de Gijón" id="903" />
+      <edge source="Khimki" target="Sporting de Gijón" id="904" />
+      <edge source="San Fernando CDI" target="Sporting de Gijón" id="905" />
+      <edge source="Toulouse" target="Sporting de Gijón" id="906" />
+      <edge source="Basilea" target="Sporting de Gijón" id="907" />
+      <edge source="Farense" target="Eibar" id="908" />
+      <edge source="Vissel Kobe" target="UD Las Palmas" id="909" />
+      <edge source="Mazatlán" target="UD Las Palmas" id="910" />
+      <edge source="Sampdoria" target="UD Las Palmas" id="911" />
+      <edge source="NEC Nimega" target="Real Zaragoza" id="912" />
+      <edge source="Vanspor" target="UD Las Palmas" id="913" />
+      <edge source="Costa del Este" target="UD Las Palmas" id="914" />
+      <edge source="KP Legia Varsovia" target="UD Las Palmas" id="915" />
+      <edge source="Unionistas de Salamanca" target="UD Las Palmas" id="916" />
+      <edge source="Gimnástica Segoviana" target="UD Las Palmas" id="917" />
+      <edge source="Linense" target="UD Las Palmas" id="918" />
+      <edge source="Sporting CP II" target="UD Las Palmas" id="919" />
+      <edge source="Elche II" target="Ceuta" id="920" />
+      <edge source="Lausanne Sport" target="Ceuta" id="921" />
+      <edge source="Xerez" target="Ceuta" id="922" />
+      <edge source="Annecy" target="Huesca" id="923" />
+      <edge source="Slaven Koprivnica" target="Huesca" id="924" />
+      <edge source="Bragantino" target="Huesca" id="925" />
+      <edge source="Kansas City" target="Huesca" id="926" />
+      <edge source="Milan II" target="Mirandés" id="927" />
+      <edge source="Atalanta II" target="Mirandés" id="928" />
+      <edge source="Burgos Promesas" target="Mirandés" id="929" />
+      <edge source="Decic" target="Mirandés" id="930" />
+      <edge source="Al Qadsiah" target="Mirandés" id="931" />
+      <edge source="Al Najma" target="Real Zaragoza" id="932" />
+      <edge source="Real Salt Lake" target="Real Zaragoza" id="933" />
+      <edge source="Ferencvaros" target="Real Zaragoza" id="934" />
+      <edge source="Orihuela" target="Real Zaragoza" id="935" />
+    </edges>
+  </graph>
+</gexf>

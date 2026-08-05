@@ -25,8 +25,16 @@ let chartsModuleLoaded = false;
 
 const DATA_BASE_PATH = 'data/';
 
+// Versión de los assets/datos. Debe subirse cada vez que se regeneran los JSON
+// o se editan los .js/.css (y debe coincidir con el ?v= de index.html).
+// Con 'force-cache' y sin este sufijo el navegador servía datos viejos para
+// siempre, haciendo parecer que los arreglos no se aplicaban.
+const APP_VERSION = '20260805-2';
+window.APP_VERSION = APP_VERSION;
+
 async function fetchJSON(path) {
-    const res = await fetch(DATA_BASE_PATH + path, { cache: 'force-cache' });
+    const url = `${DATA_BASE_PATH}${path}?v=${APP_VERSION}`;
+    const res = await fetch(url, { cache: 'default' });
     if (!res.ok) {
         throw new Error(`No se pudo cargar ${path}: HTTP ${res.status}`);
     }
@@ -74,9 +82,9 @@ async function loadChartsModuleAndRender() {
 
     try {
         if (typeof Chart === 'undefined') {
-            await injectScript('assets/js/vendor/chart.min.js');
+            await injectScript(`assets/js/vendor/chart.min.js?v=${APP_VERSION}`);
         }
-        await injectScript('assets/js/charts.js');
+        await injectScript(`assets/js/charts.js?v=${APP_VERSION}`);
         chartsModuleLoaded = true;
         if (typeof renderAnalyticsCharts === 'function') renderAnalyticsCharts();
     } catch (err) {

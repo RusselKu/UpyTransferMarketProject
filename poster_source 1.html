@@ -198,7 +198,7 @@
     <div class="title-block">
       <div class="kicker">Social Network Analysis &nbsp;·&nbsp; Network Visualization Contest</div>
       <h1 class="title">Who Runs the Transfer Window?</h1>
-      <div class="subtitle">Mapping the First-Division trading network of LaLiga's 2025&ndash;2027 transfer market</div>
+      <div class="subtitle">Mapping the Heterogeneous (Club and Player) network of LaLiga's 2025&ndash;2027 transfer market</div>
     </div>
     <div class="header-right">
       <div class="badge">Engineering Week 2026</div>
@@ -209,7 +209,7 @@
 
   <div class="vis-panel">
     <div class="vis-title-row">
-      <div class="vis-title">First-Division Club Transfer Network</div>
+      <div class="vis-title">LaLiga Heterogeneous (Club + Player) Transfer Network</div>
     </div>
     <div class="vis-question">Which clubs act as hubs and bridges in LaLiga's transfer market, and how does the market split into trading communities?</div>
     <div class="graph-wrap">
@@ -224,8 +224,8 @@
       </div>
       <div class="legend-group">
         <div class="legend-title">Node type</div>
-        <div class="legend-row"><span class="swatch" style="background:linear-gradient(135deg,#511487,#DA9F34,#1C7A72)"></span> LaLiga First-Division club (color = community)</div>
-        <div class="legend-row"><span class="swatch" style="background:#F5F1E8; border:0.6mm solid #DA9F34;"></span> Aggregated foreign league / Rest of the World</div>
+        <div class="legend-row"><span class="swatch" style="background:linear-gradient(135deg,#511487,#DA9F34,#1C7A72)"></span> LaLiga Club (color = community)</div>
+        <div class="legend-row"><span class="swatch" style="background:#F5F1E8; border:0.6mm solid #DA9F34;"></span> Aggregated Foreign League / Rest of the World macro-node</div>
       </div>
       <div class="legend-group">
         <div class="legend-title">Node size &amp; edges</div>
@@ -242,7 +242,7 @@
       <div class="ficha-col">
         <div class="f-section">
           <div class="f-label">Network name</div>
-          <div class="f-value"><b>LaLiga First-Division Transfer Network</b> (2025&ndash;2027), filtered from the full UPY Transfer Market Project dataset.</div>
+          <div class="f-value"><b>LaLiga Transfer Network (Heterogeneous Model)</b> (2025&ndash;2027), modeled from the full UpyTransferMarketProject dataset.</div>
         </div>
         <div class="f-section">
           <div class="f-label">Source</div>
@@ -253,21 +253,21 @@
       <div class="ficha-col">
         <div class="f-section">
           <div class="f-label">Filtering &amp; methods (declared)</div>
-          <div class="f-value">Only the <b>24 current First-Division clubs</b> are kept; reserve/B teams (Alav&eacute;s B, Real Madrid B, etc.) were removed. Foreign-league transfers stay <b>aggregated exactly as provided</b> (Premier League, Serie A, Bundesliga, Ligue&nbsp;1, Rest of the World) &mdash; 5 macro-nodes. Metrics recomputed on this filtered graph with <b>NetworkX</b>; communities via <b>Louvain</b>.</div>
+          <div class="f-value">Includes Primera &amp; Segunda Div. clubs, filiales, and 5 international macro-nodes. Players are modeled as individual nodes connected to their selling club (departure edge) and buying club (arrival edge). Analysed with <b>NetworkX</b>; communities via <b>Greedy Modularity</b>.</div>
         </div>
       </div>
 
       <div class="ficha-col">
         <div class="f-section">
           <div class="f-label">Graph type</div>
-          <div class="f-value">Undirected, weighted, simple graph (aggregated from a directed weighted multigraph of individual transfers). Connected &mdash; 1 component.</div>
+          <div class="f-value">Directed, heterogeneous, bipartite-style graph (Clubs, Players, Leagues). Connected &mdash; 1 giant component.</div>
         </div>
         <div class="f-section">
           <div class="f-label">Centralities applied</div>
           <div class="f-value">
-            <b>Weighted degree</b> (players moved in+out) &middot;
-            <b>Betweenness</b> (bridge role) &middot;
-            <b>PageRank</b> (influence via transfer flow)
+            <b>Degree</b> (total transactions) &middot;
+            <b>Betweenness</b> (transfer bridges) &middot;
+            <b>PageRank</b> (prestige in directed transfer flows)
           </div>
         </div>
       </div>
@@ -275,19 +275,19 @@
       <hr class="sep">
 
       <div class="stat-grid" style="grid-column: 1 / -1;">
-        <div class="stat-box"><div class="stat-num">29</div><div class="stat-lbl">Nodes (24 clubs + 5 leagues)</div></div>
-        <div class="stat-box"><div class="stat-num">241</div><div class="stat-lbl">Unique connections</div></div>
-        <div class="stat-box"><div class="stat-num">496</div><div class="stat-lbl">Player transfers</div></div>
-        <div class="stat-box"><div class="stat-num">0.40</div><div class="stat-lbl">Density</div></div>
-        <div class="stat-box"><div class="stat-num">0.48</div><div class="stat-lbl">Avg. clustering</div></div>
-        <div class="stat-box"><div class="stat-num">3 / 1.62</div><div class="stat-lbl">Diameter / avg. path</div></div>
+        <div class="stat-box"><div class="stat-num">856</div><div class="stat-lbl">Nodes (56 clubs + 800 players)</div></div>
+        <div class="stat-box"><div class="stat-num">1,997</div><div class="stat-lbl">Directed connections</div></div>
+        <div class="stat-box"><div class="stat-num">1,034</div><div class="stat-lbl">Player transfers</div></div>
+        <div class="stat-box"><div class="stat-num">0.0027</div><div class="stat-lbl">Density</div></div>
+        <div class="stat-box"><div class="stat-num">-0.59</div><div class="stat-lbl">Assortativity (Type)</div></div>
+        <div class="stat-box"><div class="stat-num">6 / 3.51</div><div class="stat-lbl">Diameter / avg. path</div></div>
       </div>
 
-      <div class="f-label findings-label">2&ndash;3 findings <span style="font-weight:400; opacity:0.7; text-transform:none;">(LaLiga clubs only, leagues excluded)</span></div>
+      <div class="f-label findings-label">2&ndash;3 findings <span style="font-weight:400; opacity:0.7; text-transform:none;">(Ligas y clubes españoles)</span></div>
       <div class="findings-row">
-        <div class="finding"><span class="fnum">1</span><span><b>Atl&eacute;tico de Madrid</b> is the only club top&#8209;3 in all three centralities (degree 42, betweenness 0.068, PageRank 0.044) &mdash; hub <i>and</i> bridge.</span></div>
-        <div class="finding"><span class="fnum">2</span><span><b>Getafe</b> has the highest weighted degree (47) despite linking to only 11 clubs &mdash; high-volume, concentrated trading.</span></div>
-        <div class="finding"><span class="fnum">3</span><span><b>Celta de Vigo</b> tops betweenness (0.070) though mid-table in degree &mdash; a quiet bridge between communities.</span></div>
+        <div class="finding"><span class="fnum">1</span><span><b>Rest of the World</b> and <b>Premier League</b> act as the primary hubs (Degree 449, 63) &mdash; Spanish football depends heavily on foreign markets.</span></div>
+        <div class="finding"><span class="fnum">2</span><span><b>CD Mirand&eacute;s</b> (2nd Div) is the top Spanish club in activity (Degree 62) and bridge role (Betweenness 0.073), outperforming First Div. clubs.</span></div>
+        <div class="finding"><span class="fnum">3</span><span>Bipartite structure is confirmed by an assortativity of <b>-0.59</b> (Type), showing players act as exclusive connectors between clubs.</span></div>
       </div>
 
       <div class="f-section tools-row">
