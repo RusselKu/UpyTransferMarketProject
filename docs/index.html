@@ -8,8 +8,8 @@
     <!-- Cache-busting: el sufijo ?v= debe subirse en CADA cambio de CSS/JS.
          Sin él, Chrome/Edge sirven la versión vieja de los scripts en local y
          parece que los arreglos "no funcionan". -->
-    <link href="assets/css/app.css?v=20260805-2" rel="stylesheet">
-    <link href="assets/css/custom.css?v=20260805-2" rel="stylesheet">
+    <link href="assets/css/app.css?v=20260805-3" rel="stylesheet">
+    <link href="assets/css/custom.css?v=20260805-3" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <script type="text/javascript" src="assets/js/vendor/vis-network.min.js" defer></script>
@@ -324,62 +324,157 @@
     </div>
 
     <!-- Modal: Analytics -->
-    <div id="modal-analytics" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-md flex items-center justify-center z-50 p-4">
-        <div class="bg-slate-900 w-full max-w-5xl max-h-[92vh] overflow-y-auto rounded-3xl p-6 flex flex-col gap-5 border border-slate-800 shadow-2xl">
-            <div class="flex justify-between items-center border-b border-slate-800 pb-3">
-                <h2 class="text-lg font-bold text-violet-400 flex items-center gap-2">
-                    <span>📊 Analytics & SNA Insights Hub</span>
-                    <span class="text-[10px] bg-violet-950 border border-violet-800/80 text-violet-300 font-bold px-2 py-0.5 rounded-full uppercase">Estadísticas de Red</span>
-                </h2>
-                <button onclick="closeAnalyticsModal()" class="text-slate-400 hover:text-white p-1 rounded-lg bg-slate-950">✕</button>
+    <div id="modal-analytics" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-md flex items-center justify-center z-50 p-3 md:p-4">
+        <div class="bg-slate-900 w-full max-w-6xl max-h-[94vh] overflow-y-auto rounded-3xl p-5 md:p-6 flex flex-col gap-5 border border-slate-800 shadow-2xl">
+            <div class="flex justify-between items-start gap-3 border-b border-slate-800 pb-3">
+                <div class="flex flex-col gap-1">
+                    <h2 class="text-lg font-bold text-violet-400 flex items-center gap-2 flex-wrap">
+                        <span>&#128202; Analytics &amp; SNA Hub</span>
+                        <span class="text-[10px] bg-violet-950 border border-violet-800/80 text-violet-300 font-bold px-2 py-0.5 rounded-full uppercase">Project 3 &middot; Social Network Analysis</span>
+                    </h2>
+                    <span class="text-[10px] text-slate-500">Todas las medidas se calculan en vivo sobre la red cargada (simplificaci&oacute;n no dirigida <i>U</i>), igual que en NetworkX.</span>
+                </div>
+                <button onclick="closeAnalyticsModal()" class="text-slate-400 hover:text-white p-1 rounded-lg bg-slate-950 shrink-0">&#10005;</button>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Chart 1: Degree Distribution (Power Law) -->
-                <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800 flex flex-col gap-2 relative">
-                    <span class="text-xs font-bold text-slate-300">1. Distribución de Grados (Scale-Free)</span>
+
+            <!-- KPIs -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2.5">
+                <div class="bg-slate-950 p-3 rounded-2xl border border-slate-800 text-center">
+                    <span class="block text-2xl font-black text-violet-300" id="stat-avg-path">3.11</span>
+                    <span class="text-[9px] uppercase font-bold tracking-wider text-slate-400">Camino promedio</span>
+                </div>
+                <div class="bg-slate-950 p-3 rounded-2xl border border-slate-800 text-center">
+                    <span class="block text-2xl font-black text-cyan-300" id="stat-diameter">5</span>
+                    <span class="text-[9px] uppercase font-bold tracking-wider text-slate-400">Di&aacute;metro</span>
+                </div>
+                <div class="bg-slate-950 p-3 rounded-2xl border border-slate-800 text-center">
+                    <span class="block text-2xl font-black text-emerald-300" id="stat-transitivity">0.087</span>
+                    <span class="text-[9px] uppercase font-bold tracking-wider text-slate-400">Transitividad global</span>
+                </div>
+                <div class="bg-slate-950 p-3 rounded-2xl border border-slate-800 text-center">
+                    <span class="block text-2xl font-black text-amber-300" id="stat-auc">0.725</span>
+                    <span class="text-[9px] uppercase font-bold tracking-wider text-slate-400">AUC predicci&oacute;n</span>
+                </div>
+            </div>
+
+            <!-- 1. Caracteristicas basicas -->
+            <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800 flex flex-col gap-3">
+                <div class="flex items-center justify-between gap-2 flex-wrap">
+                    <span class="text-xs font-bold text-slate-200">1. Caracter&iacute;sticas b&aacute;sicas de la red</span>
+                    <span class="text-[9px] bg-slate-900 border border-slate-800 text-slate-400 font-bold px-2 py-0.5 rounded-full uppercase">Basic Measures</span>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-[11px] border-collapse">
+                        <thead>
+                            <tr class="text-[9px] uppercase tracking-wider text-slate-500 border-b border-slate-800">
+                                <th class="text-left pb-1.5 font-bold">M&eacute;trica</th>
+                                <th class="text-right pb-1.5 font-bold">Valor</th>
+                                <th class="text-left pb-1.5 font-bold hidden sm:table-cell">Interpretaci&oacute;n</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbl-basic-measures"></tbody>
+                    </table>
+                </div>
+                <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800/50 text-[10px] leading-relaxed text-slate-400" id="basic-measures-insight"></div>
+            </div>
+
+            <!-- 2 y 3. Distribucion de grados -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800 flex flex-col gap-2">
+                    <span class="text-xs font-bold text-slate-200">2. Distribuci&oacute;n de grados P(k)</span>
                     <div class="h-48 w-full"><canvas id="chart-degree"></canvas></div>
-                    <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800/50 mt-1 text-[10px] leading-relaxed text-slate-400">
-                        <span class="text-violet-400 font-bold block mb-0.5">📌 Lectura del Gráfico:</span>
-                        Demuestra la topología "Libre de Escala" (Ley de Potencias). Unos pocos clubes actúan como superhubs transaccionales, mientras que la inmensa mayoría tiene conexiones mínimas.
+                    <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800/50 text-[10px] leading-relaxed text-slate-400">
+                        <span class="text-violet-400 font-bold block mb-0.5">&#128204; Lectura:</span>
+                        Distribuci&oacute;n sesgada a la derecha: la mayor&iacute;a de clubes tiene pocos socios comerciales y unos cuantos hubs concentran el volumen. <b>Esper&aacute;bamos</b> dominio de hubs y se confirma.
                     </div>
                 </div>
-
-                <!-- Chart 2: Top Centrality Metrics -->
                 <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800 flex flex-col gap-2">
-                    <span class="text-xs font-bold text-slate-300">2. Centralidad de Intermediación (Bridge Roles)</span>
-                    <div class="h-48 w-full"><canvas id="chart-centrality"></canvas></div>
-                    <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800/50 mt-1 text-[10px] leading-relaxed text-slate-400">
-                        <span class="text-violet-400 font-bold block mb-0.5">📌 Lectura del Gráfico:</span>
-                        Mide la intermediación (Betweenness). Identifica los clubes puente clave que canalizan el flujo de jugadores de un sector del mercado a otro.
+                    <span class="text-xs font-bold text-slate-200">3. Misma distribuci&oacute;n en escala log&ndash;log</span>
+                    <div class="h-48 w-full"><canvas id="chart-degree-loglog"></canvas></div>
+                    <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800/50 text-[10px] leading-relaxed text-slate-400">
+                        <span class="text-violet-400 font-bold block mb-0.5">&#128204; Lectura:</span>
+                        En log&ndash;log una ley de potencias ser&iacute;a una recta. Aqu&iacute; la tendencia es de <b>cola pesada pero no una power-law limpia</b>: es m&aacute;s honesto reportarlo as&iacute; que forzar el ajuste.
                     </div>
                 </div>
+            </div>
 
-                <!-- Chart 3: Financial Spending -->
-                <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800 flex flex-col gap-2">
-                    <span class="text-xs font-bold text-slate-300">3. Volumen Financiero por Club (€ Millones)</span>
-                    <div class="h-48 w-full"><canvas id="chart-financial"></canvas></div>
-                    <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800/50 mt-1 text-[10px] leading-relaxed text-slate-400">
-                        <span class="text-violet-400 font-bold block mb-0.5">📌 Lectura del Gráfico:</span>
-                        Contraste directo entre lo gastado e ingresado. Las barras permiten auditar qué clubes financian la red (compradores netos) vs cuáles la abastecen (vendedores netos).
+            <!-- 4. Centralidad -->
+            <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800 flex flex-col gap-3">
+                <div class="flex items-center justify-between gap-2 flex-wrap">
+                    <span class="text-xs font-bold text-slate-200">4. Centralidad: qui&eacute;n mueve m&aacute;s y qui&eacute;n conecta</span>
+                    <span class="text-[9px] bg-slate-900 border border-slate-800 text-slate-400 font-bold px-2 py-0.5 rounded-full uppercase">Grado &middot; Betweenness &middot; PageRank</span>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="h-52 w-full"><canvas id="chart-betweenness"></canvas></div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-[10.5px] border-collapse">
+                            <thead>
+                                <tr class="text-[9px] uppercase tracking-wider text-slate-500 border-b border-slate-800">
+                                    <th class="text-left pb-1.5 font-bold">#</th>
+                                    <th class="text-left pb-1.5 font-bold">Mayor grado</th>
+                                    <th class="text-left pb-1.5 font-bold">Mayor intermediaci&oacute;n</th>
+                                    <th class="text-left pb-1.5 font-bold">Mayor PageRank</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbl-centrality"></tbody>
+                        </table>
                     </div>
                 </div>
+                <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800/50 text-[10px] leading-relaxed text-slate-400" id="centrality-insight"></div>
+            </div>
 
-                <!-- Chart 4: Assortativity Insights -->
+            <!-- 5 y 6. Composicion + financiero -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800 flex flex-col gap-2">
-                    <span class="text-xs font-bold text-slate-300">4. Coeficiente de Homofilia por División</span>
-                    <div class="h-48 w-full flex items-center justify-center flex-col gap-1.5 p-4 text-center">
-                        <span class="text-3xl font-black text-emerald-400" id="stat-assortativity">-0.2175</span>
-                        <span class="text-xs font-extrabold uppercase tracking-wider text-slate-300">Asortatividad por División / Liga</span>
-                        <div class="max-w-md text-[10.5px] leading-relaxed text-slate-400 mt-1.5">
-                            Al expandir los clubes extranjeros individuales en lugar de colapsarlos en ligas, el coeficiente es de <b>-0.2175 (Disasortativo)</b>. Esto demuestra cuantitativamente que el mercado español no es cerrado: los clubes prefieren transaccionar con divisiones diferentes y con el extranjero en lugar de cerrarse en transacciones domésticas.
+                    <span class="text-xs font-bold text-slate-200">5. Composici&oacute;n por divisi&oacute;n y homofilia</span>
+                    <div class="h-44 w-full"><canvas id="chart-divisions"></canvas></div>
+                    <div class="flex items-baseline gap-2 justify-center">
+                        <span class="text-2xl font-black text-emerald-400" id="stat-assortativity">-0.1123</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Asortatividad por divisi&oacute;n</span>
+                    </div>
+                    <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800/50 text-[10px] leading-relaxed text-slate-400" id="assortativity-insight"></div>
+                </div>
+                <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800 flex flex-col gap-2">
+                    <span class="text-xs font-bold text-slate-200">6. Volumen financiero por club (M&euro;)</span>
+                    <div class="h-52 w-full"><canvas id="chart-financials"></canvas></div>
+                    <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800/50 text-[10px] leading-relaxed text-slate-400" id="financial-insight"></div>
+                </div>
+            </div>
+
+            <!-- 7. Prediccion de enlaces -->
+            <div class="bg-slate-950 p-4 rounded-2xl border border-violet-900/60 flex flex-col gap-3">
+                <div class="flex items-center justify-between gap-2 flex-wrap">
+                    <span class="text-xs font-bold text-violet-200">7. Predicci&oacute;n de enlaces &mdash; &iquest;qu&eacute; traspaso falta por ocurrir?</span>
+                    <span class="text-[9px] bg-violet-950 border border-violet-800/80 text-violet-300 font-bold px-2 py-0.5 rounded-full uppercase">Link Prediction</span>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="h-56 w-full"><canvas id="chart-linkpred"></canvas></div>
+                    <div class="flex flex-col gap-3">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-[10.5px] border-collapse">
+                                <thead>
+                                    <tr class="text-[9px] uppercase tracking-wider text-slate-500 border-b border-slate-800">
+                                        <th class="text-left pb-1.5 font-bold">Medida</th>
+                                        <th class="text-left pb-1.5 font-bold">Par predicho (sin traspaso previo)</th>
+                                        <th class="text-right pb-1.5 font-bold">Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbl-linkpred"></tbody>
+                            </table>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2.5">
+                            <div class="bg-slate-900/80 p-2.5 rounded-xl border border-slate-800 text-center">
+                                <span class="block text-xl font-black text-violet-300" id="stat-precision50">14.0%</span>
+                                <span class="text-[9px] uppercase font-bold tracking-wider text-slate-400">Precision@50</span>
+                            </div>
+                            <div class="bg-slate-900/80 p-2.5 rounded-xl border border-slate-800 text-center">
+                                <span class="block text-sm font-black text-amber-300 leading-tight pt-1.5" id="stat-lp-hidden">156 aristas ocultas (20%)</span>
+                                <span class="text-[9px] uppercase font-bold tracking-wider text-slate-400">Validaci&oacute;n hold-out</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800/50 text-[10px] leading-relaxed text-slate-400">
-                        <span class="text-violet-400 font-bold block mb-0.5">📌 Lectura SNA:</span>
-                        Un valor negativo confirma la disasortatividad (atracción entre distintos tipos de nodos), validando la dinámica de globalización e intercambio entre ligas en el mercado actual.
-                    </div>
                 </div>
+                <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800/50 text-[10px] leading-relaxed text-slate-400" id="linkpred-insight"></div>
             </div>
         </div>
     </div>
@@ -517,8 +612,8 @@
     </div>
 
     <!-- Scripts: ui.js y network.js definen funciones globales; main.js hace el fetch y arranca la app -->
-    <script src="assets/js/ui.js?v=20260805-2" defer></script>
-    <script src="assets/js/network.js?v=20260805-2" defer></script>
-    <script src="assets/js/main.js?v=20260805-2" defer></script>
+    <script src="assets/js/ui.js?v=20260805-3" defer></script>
+    <script src="assets/js/network.js?v=20260805-3" defer></script>
+    <script src="assets/js/main.js?v=20260805-3" defer></script>
 </body>
 </html>

@@ -29,7 +29,7 @@ const DATA_BASE_PATH = 'data/';
 // o se editan los .js/.css (y debe coincidir con el ?v= de index.html).
 // Con 'force-cache' y sin este sufijo el navegador servía datos viejos para
 // siempre, haciendo parecer que los arreglos no se aplicaban.
-const APP_VERSION = '20260805-2';
+const APP_VERSION = '20260805-3';
 window.APP_VERSION = APP_VERSION;
 
 async function fetchJSON(path) {
